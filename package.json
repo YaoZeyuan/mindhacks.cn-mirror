@@ -2,9 +2,9 @@
   "name": "mindhacks-mirror",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "fetch.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node fetch.js"
   },
   "keywords": [],
   "author": "",

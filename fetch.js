@@ -1,10 +1,19 @@
 import axios from "axios";
-import cheerio from "cheerio";
+import * as cheerio from "cheerio";
 import fs from "fs-extra";
 import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const proxyConfig = {
+  protocol: 'http',
+  host:"127.0.0.1",
+  port:1080
+}
+const http = axios.create({
+  proxy:proxyConfig
+})
 
 const SNAPSHOT = "20160826175025";
 const ARCHIVE_ROOT =
@@ -26,7 +35,7 @@ async function download(url, localPath) {
   if (await fs.pathExists(localPath)) return;
 
   console.log("↓", url);
-  const res = await axios.get(url, { responseType: "arraybuffer" });
+  const res = await http.get(url, { responseType: "arraybuffer" });
   await fs.ensureDir(path.dirname(localPath));
   await fs.writeFile(localPath, res.data);
 }
@@ -35,7 +44,7 @@ async function download(url, localPath) {
  * 抓 archives 页面，提取文章链接
  */
 async function getPostLinks() {
-  const html = (await axios.get(ENTRY)).data;
+  const html = (await http.get(ENTRY)).data;
   const $ = cheerio.load(html);
 
   const links = new Set();
@@ -59,7 +68,7 @@ async function fetchPost(postPath) {
   const url = ARCHIVE_ROOT + "http://mindhacks.cn/" + postPath;
   console.log("📄", url);
 
-  const html = (await axios.get(url)).data;
+  const html = (await http.get(url)).data;
   const $ = cheerio.load(html);
 
   // 处理资源
