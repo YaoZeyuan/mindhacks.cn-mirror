@@ -5,7 +5,8 @@
   "main": "fetch.js",
   "type": "module",
   "scripts": {
-    "start": "node fetch.js"
+    "fetch": "node fetch.js",
+    "postContent": "node post-content.js"
   },
   "keywords": [],
   "author": "",
