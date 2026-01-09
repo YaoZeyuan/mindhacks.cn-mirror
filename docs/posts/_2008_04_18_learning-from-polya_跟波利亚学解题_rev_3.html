@@ -1,5 +1,5 @@
-<!DOCTYPE html><html lang="en-US"><head>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app227.us.archive.org';v.server_ms=297;archive_analytics.send_pageview({});});</script>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"><head profile="http://gmpg.org/xfn/11">
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app227.us.archive.org';v.server_ms=1066;archive_analytics.send_pageview({});});</script>
 
 
 <script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
@@ -9,485 +9,75 @@
 
 <!-- End Wayback Rewrite JS Include -->
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge" charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link rel="profile" href="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>跟波利亚学解题(rev#3)</title>
+<meta name="description" content="波利亚在他著名的《How To Solve It》中讲了这么一个有趣的心理学实验：
 
-<link rel="shortcut icon" href="../assets/wp-content/themes/lavish-pro-child/favicon.ico">
+用一个缺了一条边的正方形围栏围住一只动物（狗、黑猩猩、母鸡、人类婴儿），在围栏的另一侧放上一个被试很想要的物体（对动物来说是食物，对人类婴儿来说是有趣的玩具），然后观察他们各自的行为。发现，狗在扒着围栏吠了几声发现无法通过的时候，不久便学会了从围栏的缺口的那一边绕出去，母鸡则朝着围栏一个劲的扑腾，不会想到绕弯子。此外，人类婴儿很快就学会了绕过障碍；而黑猩猩也学得很快（黑猩猩是和人类最近的灵长类亲属）。这个实验有力的证明了，动物解决问题的能力是进化而来的、天生的、硬编码在大脑的神经元网络里面的。">
 
-<title>跟波利亚学解题(rev#3) – 刘未鹏 | Mind Hacks</title>
-<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
-<link rel="dns-prefetch" href="http://s.w.org/">
-<link rel="alternate" type="application/rss+xml" title="刘未鹏 | Mind Hacks � Feed" href="../assets/feed/">
-<link rel="alternate" type="application/rss+xml" title="刘未鹏 | Mind Hacks � Comments Feed" href="../assets/comments/feed/">
+<link rel="alternate" type="application/rss+xml" href="../assets/feed/" title="刘未鹏 | Mind Hacks latest posts">
+
+<link rel="alternate" type="application/rss+xml" href="../assets/comments/feed/" title="刘未鹏 | Mind Hacks latest comments">
+
+
+
+<link rel="shortcut icon" href="../assets/favicon.ico">
+
+
 <link rel="alternate" type="application/rss+xml" title="刘未鹏 | Mind Hacks � 跟波利亚学解题(rev#3) Comments Feed" href="../assets/2008/04/18/learning-from-polya/feed/">
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/web.archive.org\/web\/20180102113643\/https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/web.archive.org\/web\/20180102113643\/https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/web.archive.org\/web\/20180102113643\/http:\/\/mindhacks.cn\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.8"}};
-			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-<link rel="stylesheet" id="parent-theme-css-css" href="../assets/wp-content/themes/lavish-pro/style.css?ver=4.7.8" type="text/css" media="all">
-<link rel="stylesheet" id="lavish-bootstrap-css" href="../assets/wp-content/themes/lavish-pro/css/bootstrap.min.css?ver=2018-01-02%2019:36:45" type="text/css" media="all">
-<link rel="stylesheet" id="font-awesome-css" href="../assets/wp-content/themes/lavish-pro/css/font-awesome.min.css?ver=1.0.0" type="text/css" media="all">
-<link rel="stylesheet" id="lavish-woocommerce-css" href="../assets/wp-content/themes/lavish-pro/css/woocommerce.css?ver=1.0.0" type="text/css" media="all">
-<link rel="stylesheet" id="lavish_wow-css" href="../assets/wp-content/themes/lavish-pro/css/animate.css?ver=1.0.0" type="text/css" media="all">
-<link rel="stylesheet" id="lavish_style_portfolio-css" href="../assets/wp-content/themes/lavish-pro/css/style_portfolio.css?ver=1.0.0" type="text/css" media="all">
-<link rel="stylesheet" id="lavish-css" href="../assets/wp-content/themes/lavish-pro/css/navmenu.css?ver=1.0.0" type="text/css" media="all">
-<link rel="stylesheet" id="lavish-style-css" href="../assets/wp-content/themes/lavish-pro-child/style.css?ver=1.0.0" type="text/css" media="all">
-<link rel="stylesheet" id="lavish-open-sans-css" href="http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%2C600&amp;ver=4.7.8" type="text/css" media="all">
-<link rel="stylesheet" id="lavish-lato-css" href="http://fonts.googleapis.com/css?family=Lato%3A400%2C700%2C900&amp;ver=4.7.8" type="text/css" media="all">
+<link rel="stylesheet" id="wp-pagenavi-css" href="../assets/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70" type="text/css" media="all">
+<script type="text/javascript">
+var duoshuoQuery = {"short_name":"pongba","sso":{"login":"https:\/\/web.archive.org\/web\/20160819001850\/http:\/\/mindhacks.cn\/wp-login.php?action=duoshuo_login","logout":"https:\/\/web.archive.org\/web\/20160819001850\/http:\/\/mindhacks.cn\/wp-login.php?action=logout&_wpnonce=489a10f2e2"}};
+duoshuoQuery.sso.login += '&redirect_to=' + encodeURIComponent(window.location.href);
+duoshuoQuery.sso.logout += '&redirect_to=' + encodeURIComponent(window.location.href);
+</script>
+
+
+
 
 
 
 
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../assets/wp-includes/wlwmanifest.xml"> 
+<link rel="index" title="刘未鹏 | Mind Hacks" href="../assets/">
+<link rel="start" title="数学之美番外篇：进化论中的概率论" href="../assets/2007/12/02/probability-theory-in-evolution/">
 <link rel="prev" title="阅读与思考" href="../assets/2008/04/08/reading-method/">
 <link rel="next" title="学习与记忆" href="../assets/2008/06/05/how-memory-works/">
-<meta name="generator" content="WordPress 4.7.8">
+<meta name="generator" content="WordPress 3.0.1">
 <link rel="canonical" href="../assets/2008/04/18/learning-from-polya/">
 <link rel="shortlink" href="../assets/?p=93">
-
-
+<link rel="stylesheet" type="text/css" href="../assets/wp-content/plugins/wp-recaptcha/recaptcha.css"><link rel="stylesheet" href="../assets/wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection"><link rel="stylesheet" href="../assets/wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css">
+<!-- Generated by Arras WP Theme -->
 <style type="text/css">
-body {
-	font-size: 100%; 
-	background-color:; 
-}
-h1, 
-h1 a {
-	color: ;
-	font-size: ;
-}
-h2,
-h2 a {
-	color: ; 
-	font-size: ;
-}
-h3,
-h3 a {
-	color: ; 
-	font-size: ;
-}
-h4,
-h4 a {
-	color: ; 
-	font-size: ;
-}
-h5,
-h5 a {
-	color: ; 
-	font-size: ;
-}
-h6,
-h6 a {
-	color: ; 
-	font-size: ;
-}
-p, 
-p a {
-	color: ; 
-	font-size: ;
-}
-a {
-	color: ; 
-	font-size: ;
-}
-#la-banner {
-	min-height: 150px !important;
-	background-repeat: no-repeat;
-}
-a:hover, 
-a:focus,
-a:visited {
-	color: ;
-}
-li {
-	color: ; 
-	font-size: ;
-}
-.btn,
-.btn1,
-.btn1, 
-.btn a {
-	color: !important; 
-	background-color: ;
-}
-.btn:hover, 
-.btn:focus, 
-.btn a:hover, 
-.btn a:focus, 
-.btn a:visited {
-	color:  !important; 
-	background-color: ;
-}
-.btn1:hover, 
-.btn1:focus, 
-.btn1 a:hover, 
-.btn1 a:focus, 
-.btn1 a:visited {
-	color:  !important; 
-	background-color: ;
-}
-/*
-=================================================
-Header Top Customizer Color
-=================================================
-*/
-.lavish_top .two,
-.lavish_top {
-	background-color:; 
-	color:;
-}
-.lavish_head {
-	background-color: !important;
-}
-.lavish_head {
-	background-color:rgba(0, 0, 0, 0.4) !important;
-}
+	.posts-default li  { width: 205px; height: 225px; }
+	.posts-default img, .posts-default .entry-thumbnails-link { width: 195px; height: 110px; }
+	.posts-default .entry-meta { width: 195px; }
+	.posts-default .entry-thumbnails { width: 205px; height: 120px; }
+			.posts-quick .entry-thumbnails img { width: 115px; height: 115px; }
+		.posts-quick .entry-meta { width: 115px; }
+			.featured { height: 260px; }
+	.featured-article { width: 640px; height: 250px; }
+	.featured-article img { width: 640px; height: 250px; }
+	#controls { width: 610px; top: 110px; }
+	#controls .next { left: 610px; }
+	.featured-entry { height: 84px; top: -84px; }
+	.featured-slideshow-inner { height: 250px }
+		.featured-stories-summary  { margin-left: 51px; }
+	.single .post .entry-photo img, .single-post .entry-photo img  { width: 620px; height: 250px; }
+		.footer-sidebar  { width: 920px; }
+	</style>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
 
-ul.header_extra li {color:}
-#social-icons ul li a,
-#social-icons ul li a,
-#social-icons ul li a,
-#social-icons ul li a {
-	background-color:!important; 
-	color:!important; 
-}
-#social-icons ul li a:hover,
-#social-icons ul li a:hover,
-#social-icons ul li a:hover,
-#social-icons ul li a:hover {
-	background-color:!important; 
-	color:!important; 
-}
-.secondary_menu,
-.secondary_menu_middle {
-	background-color:; 
-}
-/*
-=================================================
-Menu Coloring
-=================================================
-*/
-ul.navmenu  > li >  a,
-ul.navmenu1  > li >  a, 
-ul.navmenu2 > li >  a,
-ul.mobilemenu > li > a {
-	background-color:; 
-	color:; 
-}
-ul.navmenu > li > a:hover, 
-ul.navmenu > li > a:focus, 
-ul.navmenu > li > a:active, 
-ul.navmenu1 > li > a:hover, 
-ul.navmenu1 > li > a:focus, 
-ul.navmenu1 > li > a:active, 
-ul.navmenu2 > li > a:hover, 
-ul.navmenu2 > li > a:focus, 
-ul.navmenu2 > li > a:active, 
-ul.mobilemenu > li > a:hover,	
-ul.mobilemenu > li > a:focus, 
-ul.mobilemenu > li > a:active {
-	background-color:; 
-	color:; 
-}
-.navmenu .current_page_item > a, 
-.navmenu .current_page_ancestor > a, 
-.navmenu .current-menu-item > a, 
-.navmenu .current-menu-ancestor > a,
-.navmenu1 .current_page_item > a, 
-.navmenu1 .current_page_ancestor > a, 
-.navmenu1 .current-menu-item > a, 
-.navmenu1 .current-menu-ancestor > a,
-.navmenu2 .current_page_item > a, 
-.navmenu2 .current_page_ancestor > a, 
-.navmenu2 .current-menu-item > a, 
-.navmenu2 .current-menu-ancestor > a,
-.mobilemenu .current_page_item > a, 
-.mobilemenu .current_page_ancestor > a, 
-.mobilemenu .current-menu-item > a, 
-.mobilemenu .current-menu-ancestor > a {
-	background-color: ; 
-	color: ;
-}
-ul.navmenu ul.sub-menu,
-ul.navmenu1 ul.sub-menu,
-ul.navmenu2 ul.sub-menu, 
-ul.mobilemenu ul.sub-menu {
-	background-color: ; 
-	border-bottom-color:;
-	border-right-color:;
-	border-left-color:;
-}
-ul.navmenu ul.sub-menu:before,
-ul.navmenu1 ul.sub-menu:before,
-ul.navmenu2 ul.sub-menu:before {
-	border-bottom-color: ; 
-	border-top-color: }
-ul.navmenu ul.sub-menu > li,
-ul.navmenu1 ul.sub-menu > li,
-ul.navmenu2 ul.sub-menu > li {
-	border-bottom-color: ; 
-}
-ul.navmenu > li:hover > a,
-ul.navmenu1 > li:hover > a,
-ul.navmenu2 > li:hover > a {
-	background-color:!important; 
-	color: !important; 
-}
-ul.navmenu ul.sub-menu > li > a,
-ul.navmenu1 ul.sub-menu > li > a,
-ul.navmenu2 ul.sub-menu > li > a, 
-ul.mobilemenu ul.sub-menu > li > a {
-	color:;
-}
-ul.navmenu ul.sub-menu .current_page_item > a, 
-ul.navmenu ul.sub-menu .current_page_ancestor > a, 
-ul.navmenu ul.sub-menu .current-menu-item > a, 
-ul.navmenu ul.sub-menu .current-menu-ancestor > a, 
-ul.navmenu1 ul.sub-menu .current_page_item > a, 
-ul.navmenu1 ul.sub-menu .current_page_ancestor > a, 
-ul.navmenu1 ul.sub-menu .current-menu-item > a, 
-ul.navmenu1 ul.sub-menu .current-menu-ancestor > a, 
-ul.navmenu2 ul.sub-menu .current_page_item > a, 
-ul.navmenu2 ul.sub-menu .current_page_ancestor > a, 
-ul.navmenu2 ul.sub-menu .current-menu-item > a, 
-ul.navmenu2 ul.sub-menu .current-menu-ancestor > a,  
-ul.mobilemenu ul.sub-menu .current_page_item > a, 
-ul.mobilemenu ul.sub-menu .current_page_ancestor > a, 
-ul.mobilemenu ul.sub-menu .current-menu-item > a, 
-ul.mobilemenu ul.sub-menu .current-menu-ancestor > a {
-	background-color:!important; 
-	color:;
-}
-ul.navmenu ul.sub-menu > li > a:hover,
-ul.navmenu ul.sub-menu > li > a:focus, 
-ul.navmenu ul.sub-menu > li > a:active, 
-ul.navmenu1 ul.sub-menu > li > a:hover, 
-ul.navmenu1 ul.sub-menu > li > a:focus, 
-ul.navmenu1 ul.sub-menu > li > a:active, 
-ul.navmenu2 ul.sub-menu > li > a:hover, 
-ul.navmenu2 ul.sub-menu > li > a:focus, 
-ul.navmenu2 ul.sub-menu > li > a:active, 
-ul.navmenu3 ul.sub-menu > li > a:hover, 
-ul.navmenu3 ul.sub-menu > li > a:focus, 
-ul.navmenu3 ul.sub-menu > li > a:active, 
-ul.navmenu4 ul.sub-menu > li > a:hover, 
-ul.navmenu4 ul.sub-menu > li > a:focus, 
-ul.navmenu4 ul.sub-menu > li > a:active, 
-ul.mobilemenu ul.sub-menu > li > a:hover, 
-ul.mobilemenu ul.sub-menu > li > a:focus,
-ul.mobilemenu ul.sub-menu > li > a:active {
-	background-color:!important; 
-	color:;
-}
-ul.navmenu ul.sub-menu > li  {
-	border-top-color:;
-}
-/*
-=================================================
-Menu Sizes Customizer
-=================================================
-*/
-ul.navmenu > li > a {font-size: ; }
-ul.navmenu ul.sub-menu > li > a,
-ul.navmenu ul.sub-menu > li > a > span
-{
-	font-size:; 
-}
+$('.multi-sidebar').tabs();
 
-ul.navmenu ul.sub-menu > li > ul.sub-menu > li > a {font-size:; }
+$('.sf-menu').superfish({autoArrows: true, speed: 'fast', dropShadows: 'true'});
 
-.lavish_footer {background-color:; color: ;}
-.lavish_footer p {color: ;}
-.lr_widgets_bottom_widget {background-color:; color:;  border-top-color:;}
-.lr_widget_content_bottom {background-color:;}
-.lr_widget_inset_bottom {background-color:;}
-.widget_inset_bottom1 {background-color:;}
-.left_sidebar {background-color:;}
-.right_sidebar {background-color:;}
-.lr_widgets_insettop1 {background-color:;}
-.la-contents {background-color:;}
-.manosarywide, .boxedwide, .manosaryleft, .boxedleft, .manosaryright, .boxedright {
-	border-top-color:; border-left-color:;
-}
-.manosarywide, .boxedwide, .manosaryleft, .boxedleft, .manosaryright, .boxedright {
-	background-color:; 
-}
-.manosarywide h2.entry-title a,
-.post.type-post h2.entry-title a,
-.boxedwide h2.entry-title a,
-.manosaryleft h2.entry-title a,
-.boxedleft h2.entry-title a,
-.manosaryright h2.entry-title a,
-.boxedright h2.entry-title a {
-	color: }
-
-.post.type-post .entry-meta,
-.post.type-post .entry-meta span,
-.post.type-post .entry-meta a,
-.manosarywide .entry-meta,
-.manosarywide .entry-meta span,
-.manosarywide .entry-meta a,
-.boxedwide .entry-meta,
-.boxedwide .entry-meta span,
-.boxedwide .entry-meta a,
-.manosaryleft .entry-meta,
-.manosaryleft .entry-meta span,
-.manosaryleft .entry-meta a,
-.boxedleft .entry-meta,
-.boxedleft .entry-meta span,
-.boxedleft .entry-meta a,
-.manosaryright .entry-meta,
-.manosaryright .entry-meta span,
-.manosaryright .entry-meta a,
-.boxedright .entry-meta,
-.boxedright .entry-meta span
-.boxedright .entry-meta a {
-	color: }
-.link_post_type {
-	background-color: ;
-}
-.link_post_type:hover {
-	background-color: ;
-}
-/*
-=================================================
-Pagination Links Color
-=================================================
-*/
-.page_pagination span  {
-	background-color: ;
-	color: ;
-}
-.page_pagination a {
-	background-color: ;
-	color: ;
-}
-.page_pagination a:hover {
-	background-color: ;
-	color: ;
-}
-
-.testomonials_background {border-left-color:; border-bottom-color:;}
-.lr_faqs {border-right-color:; border-bottom-color:;}
-.effect-st-portfolio {border-color:;}
-.lr_widgets_insettop {background-color:;}
-.lr_top_widgets {background-color:;}
-.lr_widgets_cta {background-color:;}
-.style_breadcrumbs {background-color:;}
-.style_breadcrumbs h1 {color:;}
-.style_breadcrumbs span {color:;}
-.style_breadcrumbs span  a {color:;}
-.style_breadcrumbs span  a:hover {color:;}
-.breadcrumb_items {color:;}
-/*.lavish_header {background-color:; }*/
-
-/*site title */
-#la-site-title a {color:#fff;}
-#la-logo-group, #la-text-group {padding: 5px 0px 5px 0px}
-            
-/*Navmenu Customizer */
+$('#commentform').validate();
 
 
-
-	#secondary-nav .nav-menu li a, #secondary-nav .nav-menu li.home a {color:#ffffff;}
-	#secondary-nav .nav-menu li a:hover {color:#6c603c;}
-	#secondary-nav ul.nav-menu ul a,#secondary-nav .nav-menu ul ul a {color: #ffffff;}
-	#secondary-nav ul.nav-menu ul a:hover,#secondary-nav .nav-menu ul ul a:hover,#secondary-nav .nav-menu .current_page_item > a,#secondary-nav .nav-menu .current_page_ancestor > a,#secondary-nav .nav-menu .current-menu-item > a,#secondary-nav .nav-menu .current-menu-ancestor > a {color:#6c603c;}			
-	#secondary-nav ul.sub-menu .current_page_item > a,#secondary-nav ul.sub-menu .current_page_ancestor > a,#secondary-nav ul.sub-menu .current-menu-item > a,#secondary-nav ul.sub-menu .current-menu-ancestor > a {background-color: #d7c58c;}						
-	#secondary-nav ul.nav-menu li:hover > ul,#secondary-nav .nav-menu ul li:hover > ul {background-color: #c6b274;border-color:#707070;}			
-	#secondary-nav ul.nav-menu li:hover > ul li:hover {background-color: #d7c58c;}			
-	.la-breadcrumbs-wrapper span {color:;}
-	.la-breadcrumbs-wrapper span  a {color:;}
-	.la-breadcrumbs-wrapper span  a:hover {color:;}
-	.wsb_primary {background-color: !important;}
+});	</script>
 	
-	.wsb_primary:hover, .wsb_primary:focus {background-color: !important;}
-	.added_to_cart:hover, .added_to_cart:focus {background-color: !important;}
-	.wsb_secondary {background-color: !important;}
-	.wsb_secondary:hover, .wsb_secondary:focus {background-color: !important;}
-	
-	.woocommerce_product_title {color: !important;}
-
-/*
-=================================================
-Content Color Customizer
-=================================================
-*/
-.la-contents .entry-content,
-.la-contents .entry-content p {
-	color:}
-.la-contents .entry-content a {
-	color:}
-
-/*
-==========================================================================
-Footer Widget Title Color settig
-==========================================================================
-*/
-.lr_widgets_bottom_widget h3{
-	color:}
-</style>
-<script type="text/javascript">
-	(function ( $ ) {
-		$(document).ready(function(){
-			var active = "";
-			var scroll_number = "180";
-			var top_activated = "1";
-			if (top_activated == 1) {
-				$('#la-banner').css({"min-height" : "110px"});
-			}
-            
-            	
-
-            //if navigation menu is First One
-            
-            	if (active == 1) {
-            			$(window).scroll(function() {
-
-								if ($(window).scrollTop() > scroll_number) {
-									 $(".lavish_top").hide();
-									 $(".lavish_header.header_two").css({"position":"fixed", "right":"0px", "left":"0px", "top": "0px","z-index":"400"});
-									 $(".lavish_header.header_one").css({"position":"fixed", "right":"0px", "left":"0px", "top": "0px","z-index":"400"});
-									 $(".lavish_header.header_two").css({'marginTop': '0px'});
-								}
-								else {
-				                    $(".lavish_top").show();
-				                    $(".lavish_header.header_two").css({"position":"absolute", 'box-shadow':'none', "width": "100%", "z-index":"400"});
-				                    $(".lavish_header.header_one").css({"position":"relative", 'box-shadow':'none', "width": "100%", "z-index":"400"});
-				                    $(".lavish_header.header_two").css({'marginTop': '15px'});
-				            }
-			   				});
-            			}
-
-            			
-     	 
-			
-		});
-})(jQuery);
-
-</script>
-
-            <style type="text/css">
-                   .blog .style_breadcrumbs,
-                   .archive .style_breadcrumbs,
-                   .category .style_breadcrumbs{display:none;}
-            </style>
-  
 	<!-- Clean Archives Reloaded v3.2.0 | http://www.viper007bond.com/wordpress-plugins/clean-archives-reloaded/ -->
 	<style type="text/css">.car-collapse .car-yearmonth { cursor: s-resize; } </style>
 	<script type="text/javascript">
@@ -513,14 +103,15 @@ Footer Widget Title Color settig
 		/* ]]> */
 	</script>
 
-</head>
-<body class="post-template-default single single-post postid-93 single-format-standard"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<link rel="stylesheet" href="../assets/wp-content/themes/arras-child/style.css" type="text/css" media="screen,projection"></head>
+
+<body class="single single-post postid-93 layout-2c-r-fixed no-js style-default"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
 
 <div id="wm-ipp-base" lang="en" style="display:none;direction:ltr;" toolbar-mode="auto">
 <div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;">
 <div id="donato" style="position:relative;width:100%;height:0;">
   <div id="donato-base">
-    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20180102113643/http%3A//mindhacks.cn/2008/04/18/learning-from-polya/" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20160819001850/http%3A//mindhacks.cn/2008/04/18/learning-from-polya" scrolling="no" frameborder="0" style="width:100%; height:100%">
     </iframe>
   </div>
 </div><div id="wm-ipp-inside">
@@ -529,11 +120,11 @@ Footer Widget Title Color settig
       <a href="/web/" title="Wayback Machine home page"><img src="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-100.png, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0"></a>
     </div>
     <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
-      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://mindhacks.cn/2008/04/18/learning-from-polya/" onfocus="this.focus();this.select();" style="flex:1;"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20180102113643"><input type="submit" value="Go">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://mindhacks.cn/2008/04/18/learning-from-polya" onfocus="this.focus();this.select();" style="flex:1;"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20160819001850"><input type="submit" value="Go">
       </form>
       <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
                 <div class="s" id="wm-nav-captures" style="flex:1;">
-                    <a class="t" href="/web/20180102113643*/http://mindhacks.cn/2008/04/18/learning-from-polya/" title="See a list of every capture for this URL">223 captures</a>
+                    <a class="t" href="/web/20160819001850*/http://mindhacks.cn/2008/04/18/learning-from-polya" title="See a list of every capture for this URL">223 captures</a>
           <div class="r" title="Timespan for captures of this URL">11 Feb 2009 - 25 Feb 2024</div>
           </div>
         <div class="k">
@@ -550,21 +141,21 @@ Footer Widget Title Color settig
         <tbody>
           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
           <tr class="m">
-            <td class="b" nowrap="nowrap">Dec</td>
-            <td class="c" id="displayMonthEl" title="You are here: 11:36:43 Jan 02, 2018">JAN</td>
-            <td class="f" nowrap="nowrap">Feb</td>
+            <td class="b" nowrap="nowrap">Jul</td>
+            <td class="c" id="displayMonthEl" title="You are here: 00:18:50 Aug 19, 2016">AUG</td>
+            <td class="f" nowrap="nowrap">Sep</td>
           </tr>
           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
           <tr class="d">
             <td class="b" nowrap="nowrap"><span class="ta"></span></td>
-            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 11:36:43 Jan 02, 2018">02</td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 00:18:50 Aug 19, 2016">19</td>
             <td class="f" nowrap="nowrap"><span class="ta"></span></td>
           </tr>
           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
           <tr class="y">
-            <td class="b" nowrap="nowrap">2017</td>
-            <td class="c" id="displayYearEl" title="You are here: 11:36:43 Jan 02, 2018">2018</td>
-            <td class="f" nowrap="nowrap">2019</td>
+            <td class="b" nowrap="nowrap">2015</td>
+            <td class="c" id="displayYearEl" title="You are here: 00:18:50 Aug 19, 2016">2016</td>
+            <td class="f" nowrap="nowrap">2017</td>
           </tr>
         </tbody>
       </table>
@@ -586,14 +177,14 @@ Footer Widget Title Color settig
         <a id="wm-tb-close" href="#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
       </div>
       <div id="wm-share" class="xxs">
-        <a href="http://web.archive.org/screenshot/http://mindhacks.cn/2008/04/18/learning-from-polya/" id="wm-screenshot" title="screenshot">
+        <a href="http://web.archive.org/screenshot/http://mindhacks.cn/2008/04/18/learning-from-polya" id="wm-screenshot" title="screenshot">
           <span class="wm-icon-screen-shot"></span>
         </a>
         <a href="#" id="wm-video" title="video">
           <span class="iconochive-movies"></span>
         </a>
-        <a id="wm-share-facebook" href="#" data-url="https://web.archive.org/web/20180102113643/http://mindhacks.cn:80/2008/04/18/learning-from-polya/" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
-        <a id="wm-share-twitter" href="#" data-url="https://web.archive.org/web/20180102113643/http://mindhacks.cn:80/2008/04/18/learning-from-polya/" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+        <a id="wm-share-facebook" href="#" data-url="https://web.archive.org/web/20160819001850/http://mindhacks.cn:80/2008/04/18/learning-from-polya/" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="#" data-url="https://web.archive.org/web/20160819001850/http://mindhacks.cn:80/2008/04/18/learning-from-polya/" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
       </div>
       <div style="padding-right:2px;text-align:right;white-space:nowrap;">
         <a id="wm-expand" class="wm-btn wm-closed" href="#expand"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
@@ -630,120 +221,78 @@ Footer Widget Title Color settig
       <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading"></div>
     </div>
     </div>
-  </div></div></div></div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20180102113643/http://mindhacks.cn:80/2008/04/18/learning-from-polya/</div>
+  </div></div></div></div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20160819001850/http://mindhacks.cn:80/2008/04/18/learning-from-polya/</div>
 
 <!-- END WAYBACK TOOLBAR INSERT -->
  
-    <div id="la-wrapper" style="border-color:#000000;">
-                <div class="lavish_header header_two "><!--Header Starts Here-->
-                                        <div class="lavish_head">
-                    <div class="container">
-                        <div class="lavish_logo"><!--Logo Starts Here -->
-        
-			<div id="la-text-group">
-                    <div id="la-site-title-group" style="margin: 10px 10px 10px 10px;">
-                        <h1 id="la-site-title"><a href="../assets/" title="刘未鹏 | Mind Hacks" rel="home" style="color: ;">刘未鹏 | Mind Hacks</a></h1>
-                        <h2 id="la-site-tagline" style="color: #a3a3a3;">思维改变生活</h2>
-                    </div>	
-                        </div>
-            		
-		
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
 
-    </div><!--End of Logo Here -->
-                            
-                                    <div class="lavish_menus">
-                        <div class="lavish_menu"><!--Primary Navigation Starts Here -->
-                            <ul id="menu-categories" class="navmenu"><li id="menu-item-447" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-447"><a href="../assets/topics/%e5%bf%83%e6%99%ba%e6%8e%a2%e5%af%bb/">心智探寻</a></li>
-<li id="menu-item-285" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-285"><a href="../assets/topics/mind/">思维改变生活</a></li>
-<li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-284"><a href="../assets/topics/learning-method/">学习方法</a></li>
-<li id="menu-item-288" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-288"><a href="../assets/topics/algorithms/">算法</a></li>
-<li id="menu-item-290" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-290"><a href="../assets/topics/computer-science/">计算机科学</a></li>
-<li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-286"><a href="../assets/topics/math/">数学</a></li>
-<li id="menu-item-287" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-287"><a href="../assets/topics/machine-learning/">机器学习与人工智能</a></li>
-<li id="menu-item-289" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-289"><a href="../assets/topics/programming/">编程</a></li>
-</ul>                        </div>
-                        
-                        <div class="header_extras">
-                            
-                            <ul class="header_extra">
-                                
-                                <li class="search_triger"><i class="fa fa-search"></i></li>
+<div id="top-menu" class="clearfix">
+	<div id="top-menu-content" class="menu-pages-container"><ul id="menu-pages" class="sf-menu menu clearfix"><li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-280"><a href="../assets/about/">Mind Hacks 的含义</a></li>
+<li id="menu-item-283" class="menu-item menu-item-type-post_type menu-item-283"><a href="../assets/former-life-of-mindhacks/">前世档案 | C++的罗浮宫</a></li>
+<li id="menu-item-279" class="menu-item menu-item-type-post_type menu-item-279"><a href="../assets/archives/">所有文章</a></li>
+<li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-281"><a href="../assets/about-toplanguage/">TopLanguage 讨论组</a></li>
+<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-282"><a href="../assets/friend-links/">价值博客们</a></li>
+</ul></div></div><!-- #top-menu -->
 
-                            </ul>
-                                                    <a class="toggle_button_lavish_menu"></a>
-                        </div><!--End of Primary Navigation -->
-                        
-                    </div>
-   
-                             
-                    </div>
-                     
-                    </div>
-                        <div class="dropdown_search">
-        <div class="container">
-            <div class="col-md-12">
-                <p style="float:left" class="search_triggered_close">X</p>
-                
-<form role="search" method="get" class="search-form" action="https://web.archive.org/web/20180102113643/http://mindhacks.cn/">
-
-<div class="input-group">
-<input type="text" class="form-control" placeholder="Search …" value="" name="s">
-<div class="input-group-addon">
-<button class="btn btn-primary" type="submit" value="Search"><i class="fa fa-search"></i> </button>
-</div>
-</div>
-
-</form>    
-            </div>
-        </div>
-    </div>
-                        <div style="background-color:#fff">
-        <ul id="menu-categories-1" class="mobilemenu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-447"><a href="../assets/topics/%e5%bf%83%e6%99%ba%e6%8e%a2%e5%af%bb/">心智探寻</a></li>
-<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-285"><a href="../assets/topics/mind/">思维改变生活</a></li>
-<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-284"><a href="../assets/topics/learning-method/">学习方法</a></li>
-<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-288"><a href="../assets/topics/algorithms/">算法</a></li>
-<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-290"><a href="../assets/topics/computer-science/">计算机科学</a></li>
-<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-286"><a href="../assets/topics/math/">数学</a></li>
-<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-287"><a href="../assets/topics/machine-learning/">机器学习与人工智能</a></li>
-<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-289"><a href="../assets/topics/programming/">编程</a></li>
-</ul>    </div>
-                    </div>
-                    <aside id="la-banner" class="lr_responsive_banner " style="background-color: #EAEAEA; background-image: url(https://web.archive.org/web/20180102113643im_/http://mindhacks.cn/wp-content/uploads/2016/12/mountain_sz.jpg); color: #ffffff;">
-        
-
-
-
-    </aside>
-    	<div class="style_breadcrumbs">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					  
-
-						<h1> 跟波利亚学解题(rev#3) </h1>
-									</div>
-				<div class="col-md-6 breadcrumb_items">
-					                    
-				</div>
+<div id="header">
+	<div id="branding" class="clearfix">
+	<div class="logo">
+				<span class="blog-name"><a href="../assets/">刘未鹏 | Mind Hacks</a></span>
+		<span class="blog-description">思维改变生活</span>
 			</div>
-		</div>
-	</div>
+	<div id="searchbar"><form method="get" class="searchform clearfix" action="https://web.archive.org/web/20160819001850/http://mindhacks.cn/">
+ <input type="text" value="Search..." name="s" class="s" onfocus="this.value=''">
+ <input type="submit" class="searchsubmit" value="Search" title="Search 刘未鹏 | Mind Hacks">
+</form>
+</div>
+	</div><!-- #branding -->
+</div><!-- #header -->
+
+<div id="nav">
+	<div id="nav-content" class="clearfix">
+	<div class="menu-categories-container"><ul id="menu-categories" class="sf-menu menu clearfix"><li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-284"><a href="../assets/topics/learning-method/">学习方法</a></li>
+<li id="menu-item-285" class="menu-item menu-item-type-taxonomy current-post-ancestor current-menu-parent current-post-parent menu-item-285"><a href="../assets/topics/mind/">思维改变生活</a></li>
+<li id="menu-item-288" class="menu-item menu-item-type-taxonomy current-post-ancestor current-menu-parent current-post-parent menu-item-288"><a href="../assets/topics/algorithms/">算法</a></li>
+<li id="menu-item-290" class="menu-item menu-item-type-taxonomy menu-item-290"><a href="../assets/topics/computer-science/">计算机科学</a></li>
+<li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-286"><a href="../assets/topics/math/">数学</a></li>
+<li id="menu-item-287" class="menu-item menu-item-type-taxonomy menu-item-287"><a href="../assets/topics/machine-learning/">机器学习与人工智能</a></li>
+<li id="menu-item-289" class="menu-item menu-item-type-taxonomy menu-item-289"><a href="../assets/topics/programming/">编程</a></li>
+</ul></div>		<ul class="quick-nav clearfix">
+					<li><a id="rss" title="刘未鹏 | Mind Hacks RSS Feed" href="../assets/feed/">RSS Feed</a></li>
+				
+						
+						
+			</ul>
+	</div><!-- #nav-content -->
+</div><!-- #nav -->
+
+<div id="wrapper">
 	
+	  
+	<div id="main" class="clearfix">
+    <div id="container" class="clearfix">
 
-<section id="la-content-area" class="la-contents" role="main">
+<div id="content" class="section">
 
-<div class="container"><div class="row"><div class="col-md-8" role="main">
+		<div id="post-93" class="post-93 post type-post hentry category-mind category-algorithms tag-24 tag-27 clearfix single-post">
 
-<article id="post-93" class="post-93 post type-post status-publish format-standard hentry category-mind category-algorithms tag-24 tag-27">
-            <div class="entry-content clearfix">
-        <p><b>一些故事</b></p>
+        <h1 class="entry-title"><a href="../assets/2008/04/18/learning-from-polya/" rel="bookmark">跟波利亚学解题(rev#3)</a></h1><div class="entry-info"><div class="entry-author">By <address class="author vcard"><a class="url fn n" href="../assets/author/pongba/" title="刘未鹏">刘未鹏</a></address></div> – <abbr class="published" title="2008-04-18T21:37:00+00:00">April 18, 2008</abbr><span class="entry-cat"><strong>Posted in: </strong><a href="../assets/topics/mind/">思维改变生活</a>, <a href="../assets/topics/algorithms/">算法</a></span></div>        
+        <div class="entry-content clearfix">
+		<p><b>一些故事</b></p>
 <p><a href="http://en.wikipedia.org/wiki/Polya">波利亚</a>在他著名的<a href="http://www.douban.com/subject/1456890/">《How To Solve It》</a>中讲了这么一个有趣的心理学实验：</p>
-<blockquote>
-<p>用一个缺了一条边的正方形围栏围住一只动物（狗、黑猩猩、母鸡、人类婴儿），在围栏的另一侧放上一个被试很想要的物体（对动物来说是食物，对人类婴儿来说是有趣的玩具），然后观察他们各自的行为。发现，狗在扒着围栏吠了几声发现无法通过的时候，不久便学会了从围栏的缺口的那一边绕出去，母鸡则朝着围栏一个劲的扑腾，不会想到绕弯子。此外，人类婴儿很快就学会了绕过障碍；而黑猩猩也学得很快（黑猩猩是和人类最近的灵长类亲属）。这个实验有力的证明了，动物解决问题的能力是进化而来的、天生的、硬编码在大脑的神经元网络里面的。<a href="../assets/wp-content/uploads/2009/02/clip-image0011.jpg"><img style="border-bottom: 0px; border-left: 0px; display: inline; margin-left: 0px; border-top: 0px; margin-right: 0px; border-right: 0px" title="clip_image001" border="0" alt="clip_image001" align="right" src="/assets/wp-content/uploads/2009/02/clip-image001-thumb1.jpg" width="102" height="154"></a></p>
+<blockquote><p>用一个缺了一条边的正方形围栏围住一只动物（狗、黑猩猩、母鸡、人类婴儿），在围栏的另一侧放上一个被试很想要的物体（对动物来说是食物，对人类婴儿来说是有趣的玩具），然后观察他们各自的行为。发现，狗在扒着围栏吠了几声发现无法通过的时候，不久便学会了从围栏的缺口的那一边绕出去，母鸡则朝着围栏一个劲的扑腾，不会想到绕弯子。此外，人类婴儿很快就学会了绕过障碍；而黑猩猩也学得很快（黑猩猩是和人类最近的灵长类亲属）。这个实验有力的证明了，动物解决问题的能力是进化而来的、天生的、硬编码在大脑的神经元网络里面的。<a href="../assets/wp-content/uploads/2009/02/clip-image0011.jpg"><img style="border-bottom: 0px; border-left: 0px; display: inline; margin-left: 0px; border-top: 0px; margin-right: 0px; border-right: 0px" title="clip_image001" border="0" alt="clip_image001" align="right" src="/assets/wp-content/uploads/2009/02/clip-image001-thumb1.jpg" width="102" height="154"></a></p>
 </blockquote>
 <p>事实上，不仅解决问题方面是如此，人类整个认知系统中绝大部分功能从本质上都是硬编码的，能在后天习得的只是“程度”的不同，而不是“本质”的不同。<a href="http://www.douban.com/subject/1712350/">《动机心理学》</a>中有一个令人印象深刻的一个例子： </p>
-<blockquote>
-<p>先给小鼠喝某种甜味水（称为“可口水”），然后用X射线促使其产生反胃感，能使小鼠形成对这种味道的水的厌恶和回避（经典条件反射）。但如果不是在水里面加味道，而是在它喝水的时候伴随强光刺激（即让它喝“光噪水”），然后同样刺激其反胃，却无法使它养成对“光噪水”的厌恶。另一方面，如果不是促使其反胃（身体不适），而是用电击惩罚，则它无法形成对“可口水”的厌恶，而是形成对“光噪水“的厌恶。显然，小鼠对事件之间的关联的归因也具有着某种硬编码好了的倾向。在这个例子中，老鼠的大脑里面硬编码了“将身体不适（内部事件）归因于食物而不是闪光”、”将电击（外部事件）归因于闪光而非食物” 这种逻辑。</p>
+<blockquote><p>先给小鼠喝某种甜味水（称为“可口水”），然后用X射线促使其产生反胃感，能使小鼠形成对这种味道的水的厌恶和回避（经典条件反射）。但如果不是在水里面加味道，而是在它喝水的时候伴随强光刺激（即让它喝“光噪水”），然后同样刺激其反胃，却无法使它养成对“光噪水”的厌恶。另一方面，如果不是促使其反胃（身体不适），而是用电击惩罚，则它无法形成对“可口水”的厌恶，而是形成对“光噪水“的厌恶。显然，小鼠对事件之间的关联的归因也具有着某种硬编码好了的倾向。在这个例子中，老鼠的大脑里面硬编码了“将身体不适（内部事件）归因于食物而不是闪光”、”将电击（外部事件）归因于闪光而非食物” 这种逻辑。</p>
 </blockquote>
 <p>而人类也有类似的归因倾向。金出武雄在<a href="http://www.douban.com/subject/1867455/">《像外行一样思考，像专家一样实践》</a>中也提到，他认为人类的直觉实际上也是计算，捷径式的计<a href="../assets/wp-content/uploads/2009/02/clip-image002.jpg"><img style="border-bottom: 0px; border-left: 0px; display: inline; margin-left: 0px; border-top: 0px; margin-right: 0px; border-right: 0px" title="clip_image002" border="0" alt="clip_image002" align="right" src="/assets/wp-content/uploads/2009/02/clip-image002-thumb.jpg" width="101" height="155"></a>算，只不过由于我们目前还不了解人类大脑内神经元的全部结构（或者说“感性”的物质基础）这才把“感性”当成人类所特有的；金出武雄的这种观点跟心理学中的认知捷径不谋而合。实际上，越是高等的动物，大脑中用于处理特定问题的硬编码神经元回路就越是多和复杂。例如，达尔文早在<a href="http://www.douban.com/subject/1049670/">《人类和动物的情绪表达》</a>中就先知先觉的提出了动物情绪的适应价值；<a href="http://www.douban.com/subject/1128662/">《Mean Genes》</a>列出了用于解决生存繁衍问题的特定认知倾向；<a href="http://www.douban.com/subject/1193621/">《决策与判断》</a>里面则列出了人类在解决更具一般性的决策问题中的一些系统性的、可预测的认知偏差；而<a href="http://www.douban.com/subject/2990015/">《Predictably Irrational》</a>更是把这个认识提高到方法论的层面，主张人类的非理性实际上是完全可预知的。事实上，所有这些观点都建立在一个基本事实的基础上，即人类大脑中的千亿神经元是由在漫长的进化过程中被塑造出来的分工明确的、<a href="http://en.wikipedia.org/wiki/Ad_hoc">ad hoc</a>的一组子系统构成的。</p>
 <p>越是高等的动物，解题能力越高，猩猩能够进行某种顿悟，在脑子里就构想出通过堆放墙角的箱子来帮助获取高高吊着的香蕉；而出于进化之树 顶端的人类则具有非比寻常的大脑，在人类整个进化的过程中，解决问题的能力一直在进化，所以说人脑中的神经元最重要的部分是为了解题而存在的也不为过。不同的人只是在解题能力程度上不同，并没有本质上能与不能的差异。</p>
@@ -851,759 +400,54 @@ Footer Widget Title Color settig
 <p>解题练习的最重要目的不是将特定的题目解出来，而是在于反思解题过程中的一般性的，跨问题的思维法则。简单的将题目解出来（或者解不出来看答案，然后 “恍然大悟”），只能得到最少的东西，解出来固然能够强化导致解出来的那个思维过程和方法，但缺少反思的话便不能抽取出一般性的东西供更多的题目所用。而解不出来，看答案然后“哦”的一声更是等同于没有收获，因为“理解”和“运用”相差何止十万八千里。每个人都有过这样的经历：一道题目苦思冥想不得要领，经某个人一指点其中的关键一步，顿时恍然大悟——这是理解。但这个理解是因为别人已经将新的知识（那个关键的一步）放到你脑子里了，故而你才能理解。而要运用的话，则需要自己去想出那关键的一步。因此，去揣测和总结别人的思维是如何触及那关键的一步，而你自己的思维又为什么触及不到它，有一些一般性的原则可以指导你下次也能想到那个“关键的一步”吗，是很有意义的。我们很多时候会发现，一道题目，解不出来，最终在提示下面解出来之后，发现其中并没有用到任何自己不知道的知识，那么不仅就要问，既然那个知识是在脑子里的，为什么我们当时愣是提取不出来呢？而为什么别人又能够提取出来呢？我怎么才能像别人那样也提取出相应的知识呢？实际上这涉及到关于记忆的最深刻的<a href="../assets/wp-content/uploads/2009/02/clip-image012.jpg"><img style="border-bottom: 0px; border-left: 0px; display: inline; margin-left: 0px; border-top: 0px; margin-right: 0px; border-right: 0px" title="clip_image012" border="0" alt="clip_image012" align="right" src="/assets/wp-content/uploads/2009/02/clip-image012-thumb.jpg" width="103" height="153"></a>原理，实际上文中已经提到了一些。（有兴趣的建议参考以下几本书：<a href="http://www.douban.com/subject/1944205/">《追寻记忆的痕迹》</a>，<a href="http://www.douban.com/subject/1315575/">《找寻逝去的自我》</a>，<a href="http://www.douban.com/subject/2345245/">《Synaptic Self》</a>，<a href="http://www.douban.com/subject/2845839/">《Psychology of Problem Solving》</a>）一般性的思维法则除了对于辅助联想（起关键的知识）之外，另一个作用就是辅助演绎/归纳（助探），一开始学解题的时候，我们基本上是先读懂题目条件，做可能的一些显然的演绎。如果还没推到答案的话，基本就只能愣在那里等着那个关键的步骤从脑子里冒出来了。而所谓的启发式思维方法，就是在这个时候可以运用一些一般性的，所有题目都适用的探索手法，进一步去探索问题中蕴含的知识，从而增大成功解题的可能性。启发式的思维方法有很多，从一般到特殊，最具一般性的，在波利亚的《How to Solve It》中已经基本全部都介绍了。一些更为特殊性的（譬如“如果全局搜索空间没有递归结构，那么考虑分割搜索空间”，譬如那些“看到XX，要想到YY”的联系），则需要自己在练习中不断抽象总结。</p>
 <p><b>一句结尾</b></p>
 <p>“我想我就在这里结束”——如果你知道我在说什么的话:-)</p>
-        <!-- <div style="border-bottom:1px solid #EAEAEA;"></div> -->
-        <!-- <h5><i class="fa fa-quote-left"></i> &nbsp;跟波利亚学解题(rev#3)</h5> -->
-    </div>
-    
-    <div class="blog_seperator"></div></article><!-- #post-## -->
-   
-    <nav class="navigation post-navigation" role="navigation">
-        <div class="post-nav-links">
-            <div class="nav-previous">&nbsp;<a href="../assets/2007/12/02/probability-theory-in-evolution/" rel="prev"><i class="fa fa-long-arrow-left"></i> 数学之美番外篇：进化论中的概率论</a> </div><div class="nav-next">&nbsp;<a href="../assets/2008/06/05/how-memory-works/" rel="next"> 学习与记忆 <i class="fa fa-long-arrow-right"></i></a></div>        </div><!-- .nav-links -->
-    </nav><!-- .navigation -->
-    
-<div id="comments" class="comments-area clearfix">
+  
+        		</div>
 
-	
-			<h2 class="comments-title">
-            43 Comments         
-		</h2>
+		<div class="tags"><strong>Tags:</strong> <a href="../assets/tags/%e6%80%9d%e7%bb%b4%e6%94%b9%e5%8f%98%e7%94%9f%e6%b4%bb/" rel="tag">思维改变生活</a>, <a href="../assets/tags/%e7%ae%97%e6%b3%95/" rel="tag">算法</a> </div>
+        
+		<div class="about-author clearfix">
+			<a href="../assets/author/pongba/"></a>
+			<div class="author-meta">
+				<h4>About 刘未鹏</h4>
+			
+			</div>
+		</div>
+	    </div>
+    
+		<a name="comments"></a>
+    <a name="comments"></a>
+
+<div class="ds-thread" data-thread-key="93" data-author-key="2" data-title="跟波利亚学解题(rev#3)" data-url="https://web.archive.org/web/20160819001850oe_/http://mindhacks.cn/2008/04/18/learning-from-polya/"></div>
+
+<script type="text/javascript">
+	if (typeof DUOSHUO !== 'undefined')
+		DUOSHUO.EmbedThread('.ds-thread');
+</script>
+	<div id="ds-ssr">
 
 		
-		<ol class="comment-list">
-			
-    <li id="comment-39728" class="comment even thread-even depth-1">
-        <article id="div-comment-39728" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/523a8dc520ef5644e8e10f904785b4c8?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/523a8dc520ef5644e8e10f904785b4c8?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn"><a href="http://shaxiaolun.wang/" rel="external nofollow" class="url">江湖话不多</a></cite> |                    <!-- .comment-author -->
-                    <time datetime="2017-04-28T17:39:50+00:00">
-                        April 28, 2017 at 5:39 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=39728" onclick="return addComment.moveForm( &quot;div-comment-39728&quot;, &quot;39728&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to 江湖话不多">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>看到一小半就困得不行，然而看之前还喝了杯咖啡很精神。 思维体力还是什么，似乎从来都不能阅读这种难懂的文字，听课也同样。</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-38554" class="pingback odd alt thread-odd thread-alt depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://bkcoding.cn/archives/517.html" rel="external nofollow" class="url">知其所以然之永不遗忘的算法 | BkCoding</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-38260" class="comment even thread-even depth-1">
-        <article id="div-comment-38260" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/d1728c8b8d453b303fbef4b16ea0e49a?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/d1728c8b8d453b303fbef4b16ea0e49a?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn">aikens</cite> |                    <!-- .comment-author -->
-                    <time datetime="2017-01-18T14:01:25+00:00">
-                        January 18, 2017 at 2:01 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=38260" onclick="return addComment.moveForm( &quot;div-comment-38260&quot;, &quot;38260&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to aikens">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>“你可以拿1~这堆里面所有剩下的个橘子，谁拿到最后一个橘子谁赢”，不知道怎么读起来有些别扭？</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-36271" class="pingback odd alt thread-odd thread-alt depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://aes.jypc.org/?p=48480" rel="external nofollow" class="url">知其所以然之永不遗忘的算法 – 项目经验积累与分享</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-36198" class="pingback even thread-even depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://jichangxin.cn/archives/278.html" rel="external nofollow" class="url">知其所以然之永不遗忘的算法-ios学习从入门到精通尽在姬长信 - 姬长信</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-35024" class="comment odd alt thread-odd thread-alt depth-1">
-        <article id="div-comment-35024" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/5f7e145dd504687fbb09db75d6fa269d?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/5f7e145dd504687fbb09db75d6fa269d?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn">条形马</cite> |                    <!-- .comment-author -->
-                    <time datetime="2016-05-14T16:49:26+00:00">
-                        May 14, 2016 at 4:49 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=35024" onclick="return addComment.moveForm( &quot;div-comment-35024&quot;, &quot;35024&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to 条形马">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>你提到了一个有趣的词，叫“我所学习的年代”。我觉得这个词一定程度上表面了，你不是一个坚定的众生学习者。这真是一件让人遗憾的事。7年过去了，不知道你是不是也有些遗憾呢？</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-34620" class="duoshuo even thread-even depth-1">
-        <article id="div-comment-34620" class="comment-wrapper">
-            <div class="comment-avatar">
-                            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn"><a href="http://t.qq.com/H8745963" rel="external nofollow" class="url">胡正岱</a></cite> |                    <!-- .comment-author -->
-                    <time datetime="2015-10-19T13:54:51+00:00">
-                        October 19, 2015 at 1:54 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=34620" onclick="return addComment.moveForm( &quot;div-comment-34620&quot;, &quot;34620&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to 胡正岱">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>其实我看完有个小问题。就是在polya解题这一章，你写到了关于heuristics(我觉得中文没翻译好，有误导性所以我用的英文)的东西。我不太清楚你对heuristics的定义，但是我觉得至少在心理学中heuristics是相对于算法存在的(虽然也有heuristic algorithm这种混合体)。你最开始说人思考应该避免思维捷径，但很多时候heuristics本身就是一种思维捷径啊。E.g., availability heuristics &amp; representative heuristics. 那请问你是怎么解释用思维捷径来避免思维捷径的呢</p>
-<p>可能我的理解不太全面，求解释</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-33343" class="pingback odd alt thread-odd thread-alt depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://pm90.net/2014/05/27/how-to-write-a-logical-long-article/" rel="external nofollow" class="url">如何有逻辑地写长文 | 90后产品经理</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-33296" class="comment even thread-even depth-1">
-        <article id="div-comment-33296" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/6e39d0d513d4c32e4ce2ba333620dc00?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/6e39d0d513d4c32e4ce2ba333620dc00?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn"><a href="http://www.zhouleyu.com/life/skinny-essential-oils-work-again" rel="external nofollow" class="url">zhouleyu</a></cite> |                    <!-- .comment-author -->
-                    <time datetime="2014-04-30T14:40:42+00:00">
-                        April 30, 2014 at 2:40 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=33296" onclick="return addComment.moveForm( &quot;div-comment-33296&quot;, &quot;33296&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to zhouleyu">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>原来一致收敛是这么来的。。。</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-33294" class="comment odd alt thread-odd thread-alt depth-1">
-        <article id="div-comment-33294" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn"><a href="http://www.renren.com/profile.do?id=250670594" rel="external nofollow" class="url">胡秉诚</a></cite> |                    <!-- .comment-author -->
-                    <time datetime="2014-04-29T19:22:09+00:00">
-                        April 29, 2014 at 7:22 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=33294" onclick="return addComment.moveForm( &quot;div-comment-33294&quot;, &quot;33294&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to 胡秉诚">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>原来一致收敛是这么来的。。。</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-32931" class="comment even thread-even depth-1">
-        <article id="div-comment-32931" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/de89c93ca94b75c80d73e555f823d294?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/de89c93ca94b75c80d73e555f823d294?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn">陈新辉</cite> |                    <!-- .comment-author -->
-                    <time datetime="2013-11-29T20:59:59+00:00">
-                        November 29, 2013 at 8:59 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=32931" onclick="return addComment.moveForm( &quot;div-comment-32931&quot;, &quot;32931&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to 陈新辉">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>看了一遍，记得不深，需要再看一遍，感觉比较客观的分析，只是情绪由物质构成，可以量化吗</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-32912" class="comment odd alt thread-odd thread-alt depth-1">
-        <article id="div-comment-32912" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/044c1ec6a1704795ddc65f6efa6bb7a4?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/044c1ec6a1704795ddc65f6efa6bb7a4?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn">Ziyu</cite> |                    <!-- .comment-author -->
-                    <time datetime="2013-11-22T18:11:37+00:00">
-                        November 22, 2013 at 6:11 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=32912" onclick="return addComment.moveForm( &quot;div-comment-32912&quot;, &quot;32912&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to Ziyu">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>想说说个人一点感受，首先，看这样一篇文章，就想是学了一个系列的知识！让人受益匪浅。<br>
-其次，很多部分读起来还是挺费脑、吃力的，特别是一些术语，虽然给出了维基的链接，但是对于一个刚着手学习这个博客的人（不是数学、计算机甚至不是理科专业的，没读过很多相关方面书籍）来说，觉得在一些术语后面直接给出一点简易的解释会让人读的比较顺畅。</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-32702" class="comment even thread-even depth-1">
-        <article id="div-comment-32702" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn"><a href="http://weibo.com/2177401093" rel="external nofollow" class="url">蒙面超人23</a></cite> |                    <!-- .comment-author -->
-                    <time datetime="2013-08-13T21:27:33+00:00">
-                        August 13, 2013 at 9:27 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=32702" onclick="return addComment.moveForm( &quot;div-comment-32702&quot;, &quot;32702&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to 蒙面超人23">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>人与人的区别主要在于思维方法，能力程度那些都可以经过后天的培养与增强。解决问题的工具有联想、知识体系、习惯、练习、启发法、总结等。解决问题的方法有很多种，都是通过寻求突破口、关键点，但有时我们难免会陷入思维定势，卡死在某个环节，这时就需要跳出原先自己设定的思维陷阱，通过反思找出问题环节进行修改。发散思维听起来不错，不过要发散得了才行，最好的办法还是脚踏实地，一步一步的来，并把过程记录下来。虽然笨拙，但准确，日后肯定也能快速，熟能生巧嘛~</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-32650" class="comment odd alt thread-odd thread-alt depth-1">
-        <article id="div-comment-32650" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn"><a href="http://www.renren.com/profile.do?id=700414564" rel="external nofollow" class="url">宋景涛</a></cite> |                    <!-- .comment-author -->
-                    <time datetime="2013-07-26T17:02:17+00:00">
-                        July 26, 2013 at 5:02 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=32650" onclick="return addComment.moveForm( &quot;div-comment-32650&quot;, &quot;32650&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to 宋景涛">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>波利亚</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-32589" class="comment even thread-even depth-1">
-        <article id="div-comment-32589" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn"><a href="http://www.douban.com/people/63041482/" rel="external nofollow" class="url">安然</a></cite> |                    <!-- .comment-author -->
-                    <time datetime="2013-07-11T16:03:15+00:00">
-                        July 11, 2013 at 4:03 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=32589" onclick="return addComment.moveForm( &quot;div-comment-32589&quot;, &quot;32589&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to 安然">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>在我看来，没有什么能比探索发明的源头还要重要，它远比发明本身更重要。——	莱布尼兹，现代计算机实质上的发明者<br>
-无论是在解题还是在学习的过程中，问自己一个问题“我是不是已经掌握了这个知识最深刻最本质的东西”是非常有益的。</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-32391" class="comment odd alt thread-odd thread-alt depth-1">
-        <article id="div-comment-32391" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn"><a href="http://weibo.com/3374545840" rel="external nofollow" class="url">香辛料-Jenny</a></cite> |                    <!-- .comment-author -->
-                    <time datetime="2013-05-08T16:10:32+00:00">
-                        May 8, 2013 at 4:10 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=32391" onclick="return addComment.moveForm( &quot;div-comment-32391&quot;, &quot;32391&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to 香辛料-Jenny">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>虽然我的数学很差，但是我不讨厌他，他真的难捉摸。看了这文，意思是我的思维程度不够呀</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-28573" class="pingback even thread-even depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://blog.chiapp.com/html/2012-08-09/4159.html" rel="external nofollow" class="url">知其所以然（三）：为什么算法这么难？ | 吃杂烩</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-22989" class="pingback odd alt thread-odd thread-alt depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://www.yanren.net/archives/326.html" rel="external nofollow" class="url">看不见的牢笼（上） | 嫣人</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-22810" class="pingback even thread-even depth-1">
-        <div class="comment-body">
-            Pingback: <a href="../assets/2012/06/04/escape-from-your-shawshank-part5-the-invisible-cage/" rel="external nofollow" class="url">逃出你的肖申克（五）：看不见的牢笼（上）</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-20238" class="pingback odd alt thread-odd thread-alt depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://liuxh.me/2010/04/11/%e4%b9%a6%e5%86%99%e6%98%af%e4%b8%ba%e4%ba%86%e6%9b%b4%e5%a5%bd%e7%9a%84%e6%80%9d%e8%80%83%ef%bc%bb%e8%bd%ac%ef%bc%bd/" rel="external nofollow" class="url">刘向辉 | Thinker » 书写是为了更好的思考［转］</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-19930" class="pingback even thread-even depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://www.microyu.com/living/live-think/646.html" rel="external nofollow" class="url">书写是为了更好的思考 | 微钰工作室</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-19708" class="pingback odd alt thread-odd thread-alt depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://www.techpot.net/?p=20392" rel="external nofollow" class="url">T客网 ︱ Techpot » Blog Archive » [BetterExplained]书写是为了更好的思考</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-18531" class="pingback even thread-even depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://www.nmg.tc/archives/10" rel="external nofollow" class="url">书写是为了更好的思考 | 内蒙古同城</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-17601" class="comment odd alt thread-odd thread-alt depth-1">
-        <article id="div-comment-17601" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/2e2264ff8ca9c08c1c297b210e359aa6?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/2e2264ff8ca9c08c1c297b210e359aa6?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn"><a href="http://blog.yxwang.me/" rel="external nofollow" class="url">zellux</a></cite> |                    <!-- .comment-author -->
-                    <time datetime="2011-11-02T17:58:44+00:00">
-                        November 2, 2011 at 5:58 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=17601" onclick="return addComment.moveForm( &quot;div-comment-17601&quot;, &quot;17601&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to zellux">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>挑个标点的错，在《暗时间》上看到的。</p>
-<p>《动机心理学》的那段引文中，「而是形成对“光噪水“的厌恶」「”将电击（外部事件）归因于闪光而非食物” 」这里两个引号的方向错了。</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-17599" class="comment even thread-even depth-1">
-        <article id="div-comment-17599" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/2e2264ff8ca9c08c1c297b210e359aa6?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/2e2264ff8ca9c08c1c297b210e359aa6?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn"><a href="http://blog.yxwang.me/" rel="external nofollow" class="url">zellux</a></cite> |                    <!-- .comment-author -->
-                    <time datetime="2011-11-02T17:57:42+00:00">
-                        November 2, 2011 at 5:57 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=17599" onclick="return addComment.moveForm( &quot;div-comment-17599&quot;, &quot;17599&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to zellux">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>挑个标点的错，在《暗时间》上看到的。《动机心理学》的那段引文中，「而是形成对“光噪水“的厌恶」「”将电击（外部事件）归因于闪光而非食物” 」这里两个引号的方向错了。</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-17364" class="pingback odd alt thread-odd thread-alt depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://blog69.tk/?p=530" rel="external nofollow" class="url">知其所以然（三）：为什么算法这么难？ | 风的天地</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-17213" class="pingback even thread-even depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://zwcspace.comeze.com/write-for-better-thinking/" rel="external nofollow" class="url">草草de小站 » 转载文章测试二</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-17208" class="pingback odd alt thread-odd thread-alt depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://zwcspace.comeze.com/http:/zwcspace.comeze.com/topics/iosdevelopment/" rel="external nofollow" class="url">草草de小站 - 专注开发，努力走向专业</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-17204" class="pingback even thread-even depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://zwcspace.comeze.com/http:/zwcspace.comeze.com/topics/iosdevelopment/" rel="external nofollow" class="url">草草de小站 -</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-15440" class="pingback odd alt thread-odd thread-alt depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://southmagic.sinaapp.com/?p=18" rel="external nofollow" class="url">转：为什么算法这么难？ | South♂楠个人博客</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-15412" class="pingback even thread-even depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://www.whoisnerd.com/2011/07/31/%e6%8e%a8%e8%8d%90%e8%af%bb%e4%b9%a6%e3%80%8a%e6%9a%97%e6%97%b6%e9%97%b4%e3%80%8b/" rel="external nofollow" class="url">推荐读书《暗时间》</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-15236" class="pingback odd alt thread-odd thread-alt depth-1">
-        <div class="comment-body">
-            Pingback: <a href="http://kindmi.com/archives/%e4%b9%a6%e5%86%99%e6%98%af%e4%b8%ba%e4%ba%86%e6%9b%b4%e5%a5%bd%e7%9a%84%e6%80%9d%e8%80%83/" rel="external nofollow" class="url">书写是为了更好的思考 | 友米网</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-15115" class="pingback even thread-even depth-1">
-        <div class="comment-body">
-            Pingback: <a href="../assets/2011/07/10/the-importance-of-knowing-why-part3/" rel="external nofollow" class="url">知其所以然（三）——为什么算法这么难？</a>         </div>
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-12549" class="comment odd alt thread-odd thread-alt depth-1">
-        <article id="div-comment-12549" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/c19a8979faa2d8c548225d98055846d6?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/c19a8979faa2d8c548225d98055846d6?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn"><a href="http://xinshenghu.gotoip2.com/" rel="external nofollow" class="url">frog</a></cite> |                    <!-- .comment-author -->
-                    <time datetime="2011-02-26T04:50:58+00:00">
-                        February 26, 2011 at 4:50 am                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=12549" onclick="return addComment.moveForm( &quot;div-comment-12549&quot;, &quot;12549&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to frog">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>很佩服作者的文章。<br>
-nakeman提的问题有点意思<br>
-我觉得大脑思维规则可以考究的地方并不多，比如长时记忆，比如潜意识<br>
-关键是了解这个复杂的外部世界，是外部世界的规则转化为思维规则。<br>
-思维习惯具有创造性似乎跟大脑的感性部分有关系</p>
-<p>我觉得他说的有道理，如果抛弃想的内容，单说如何想，其实就那些吧。<br>
-外部世界的规则转化为思维规则 这点有没有例子呢 看不懂啊<br>
-虽然我觉得思维是可以变化的，但是现实生活中就是这样，一看这人的长相就知道这人是死心眼还是浮躁，绝大多数人都和性格有关。</p>
-<p>如何应用这几种思维，什么时候用什么样的思维，是我学到的。<br>
-有多少人的思维和性格无关呢。我是一个。</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-11128" class="comment even thread-even depth-1">
-        <article id="div-comment-11128" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/520724bd7fc3d7fd9c109656c78e76a3?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/520724bd7fc3d7fd9c109656c78e76a3?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn">luffy</cite> |                    <!-- .comment-author -->
-                    <time datetime="2010-12-10T17:38:49+00:00">
-                        December 10, 2010 at 5:38 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=11128" onclick="return addComment.moveForm( &quot;div-comment-11128&quot;, &quot;11128&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to luffy">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>我是最近才发现的你的博客，不过这几天已经看了很多你写的文章，十分佩服，这篇文章也很不错，但是我想问一个与主题无关的问题，你文中所提及的书你都读过了吗？好牛啊，你对思维这方面问题好深入，很佩服</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-765" class="comment odd alt thread-odd thread-alt depth-1">
-        <article id="div-comment-765" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/46c00ec5b044652c7e6c0a093b6990a1?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/46c00ec5b044652c7e6c0a093b6990a1?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn">hereis</cite> |                    <!-- .comment-author -->
-                    <time datetime="2010-02-02T23:34:13+00:00">
-                        February 2, 2010 at 11:34 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=765" onclick="return addComment.moveForm( &quot;div-comment-765&quot;, &quot;765&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to hereis">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>读到你的文章,我想起了不久之前我思考的一个问题—-我们是如何学习获得新知识的?为什么在同一个老师的指导下,同学们的学习结果会有那么大的差异?在当时,我的理解是,对于知识,每个人本身就有自己的先验的框架,无论数学,英语还是物理,化学.在学习这些之前,我们都有一个关于知识的自我体系,而在老师教授这些知识时,我们只是将其对应到自己的已有的框子里.有的人框子大,联系起来的就多,而有些人框子小,能联系起来为自己所用的也就有限.这样便导致了同龄人,在同一环境下的差异.<br>
-另外,文章开头的一句话本身就能说明很多问题:对动物来说是食物，对人类婴儿来说是有趣的玩具.<br>
-对动物而言,吸引它的只有食物,只是最基本的生理需要.只有这个能在它身上产生共鸣,它自身的理解范围,仅仅局限于这一层次.而对婴儿,能引起他兴趣的已不仅仅是食物,他已经能理解”有趣”和“玩具”，而在他的自身深处早已存在这一模型，玩具只是一个投影，一个结果。<br>
-比如，一只普通的哺乳动物，由于像人类一样的积累磨练过程，所以暂时根本不会有数学，物理化学等方面的理解与学习，而一个人却可以学习这些。<br>
-综上，我想学习过程只是一个结果，是一个相当漫长的过程的积累，这个过程不是几十年，几百年。</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-744" class="comment even thread-even depth-1">
-        <article id="div-comment-744" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/6ea4a8a791d4a901a3ad76719d3acac8?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/6ea4a8a791d4a901a3ad76719d3acac8?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn">EricS</cite> |                    <!-- .comment-author -->
-                    <time datetime="2010-01-15T05:53:37+00:00">
-                        January 15, 2010 at 5:53 am                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=744" onclick="return addComment.moveForm( &quot;div-comment-744&quot;, &quot;744&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to EricS">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>请问名人问题的英文是什么？想找一些有关这个问题的算法资料，能推荐一些吗？</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-487" class="comment odd alt thread-odd thread-alt depth-1 parent">
-        <article id="div-comment-487" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/27ac26017af51269b740e81542d62317?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/27ac26017af51269b740e81542d62317?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn">leiw</cite> |                    <!-- .comment-author -->
-                    <time datetime="2009-06-01T16:25:06+00:00">
-                        June 1, 2009 at 4:25 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=487" onclick="return addComment.moveForm( &quot;div-comment-487&quot;, &quot;487&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to leiw">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>我是一直很反感目前大部分教科书那般罗列知识的方式。<br>
-那仅仅是罗列，没有告诉我们，为什么是这样的，以及我们的先辈是怎么样发现的？<br>
-如果仅仅是罗列的话，估计谁的记忆好，谁的学习更占优势了。<br>
-按照认知规律，应该把事物从源头开始…都告诉我们。<br>
-某些的知识的介绍，应该更像侦探小说。</p>
-<p>可惜的是，我很难看到波利亚式的老师。我的记忆中，我遇到的老师，类似波利亚（注意是某种程度像）仅仅一两个而已。</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <ul class="children">
-
-    <li id="comment-598" class="comment even depth-2 parent">
-        <article id="div-comment-598" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/03de473d37ce0a0f3b8baf4d451b1ab9?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/03de473d37ce0a0f3b8baf4d451b1ab9?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn">郑勤思</cite> |                    <!-- .comment-author -->
-                    <time datetime="2009-09-30T11:40:55+00:00">
-                        September 30, 2009 at 11:40 am                    </time> 
-                    
-                     |
-                    
-                     
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>@leiw 波利亚式的老师很少，但是你可以去看波利亚的书呀！他用浅显的数学讲明白了解决问题的道理，绝对值得一读。</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-640" class="comment odd alt depth-2">
-        <article id="div-comment-640" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/27ac26017af51269b740e81542d62317?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/27ac26017af51269b740e81542d62317?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn">leiw</cite> |                    <!-- .comment-author -->
-                    <time datetime="2009-11-14T16:21:05+00:00">
-                        November 14, 2009 at 4:21 pm                    </time> 
-                    
-                     |
-                    
-                     
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>To 郑勤思:<br>
-首先，感谢你的回复。能多看看波利亚的书，当然好。<br>
-不过，我所在学习的年代，没有那么多的参考书，没有现在那么强大的网络，书店里面的书很少。图书馆的书，你能查询到，但是你未必就能借到，因为借的人很多，能否借到，需要运气和耐心。</p>
-<p>今天的学生在这方面实在是非常幸福的。书店的书相比以前多了很多。无论什么方向的，理工的，文学的，…..，出现了很多来自西方的著作。并不是说西方的书都好，至少开阔了大家的眼界。实在借不到书，或者买不到书，可以上网找，只要有耐心，什么书找不到呢？</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-</ul><!-- .children -->
-<!-- #comment-## -->
-
-    <li id="comment-131" class="comment even thread-even depth-1 parent">
-        <article id="div-comment-131" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/95f4a346b8ee98872adc006a48dc299b?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/95f4a346b8ee98872adc006a48dc299b?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn"><a href="http://blog.csdn.net/keminlau" rel="external nofollow" class="url">nakeman</a></cite> |                    <!-- .comment-author -->
-                    <time datetime="2009-02-24T22:00:53+00:00">
-                        February 24, 2009 at 10:00 pm                    </time> 
-                    
-                     |
-                    
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/04/18/learning-from-polya/?replytocom=131" onclick="return addComment.moveForm( &quot;div-comment-131&quot;, &quot;131&quot;, &quot;respond&quot;, &quot;93&quot; )" aria-label="Reply to nakeman">Reply</a></span> 
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>从这句“知识是解题过程中的罗塞塔碑石。一道几何题为什么欧几里德能够做出来我们不能，是因为欧几里德比我们所有人都更了解几何图形有哪些性质，借助于一个性质，他很容易就能抵达问题的彼岸；”我看到了，解题的关键应该是“题”，不是“解”，也就是你在此文中所寻找的“思维法则”。按照逻辑学说，人大脑先验的思维规则就那么几个，大脑可能只简单地在做概念间对比和处理而已，而所有概念都是来自外部世界。所以我觉得大脑思维规则可以考究的地方并不多，比如长时记忆，比如潜意识，关键是了解这个复杂的外部世界，是外部世界的规则转化为思维规则。<br>
+            <ol id="commentlist">
+                		<li class="comment even thread-even depth-1" id="li-comment-131">
+			<article id="comment-131" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="http://blog.csdn.net/keminlau" rel="external nofollow" class="url">nakeman</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2009-02-24T22:00:53+00:00">February 24, 2009 at 10:00 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>从这句“知识是解题过程中的罗塞塔碑石。一道几何题为什么欧几里德能够做出来我们不能，是因为欧几里德比我们所有人都更了解几何图形有哪些性质，借助于一个性质，他很容易就能抵达问题的彼岸；”我看到了，解题的关键应该是“题”，不是“解”，也就是你在此文中所寻找的“思维法则”。按照逻辑学说，人大脑先验的思维规则就那么几个，大脑可能只简单地在做概念间对比和处理而已，而所有概念都是来自外部世界。所以我觉得大脑思维规则可以考究的地方并不多，比如长时记忆，比如潜意识，关键是了解这个复杂的外部世界，是外部世界的规则转化为思维规则。<br>
 这是我粗略拜读你文的一个拙见，不妥的地方请指教</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <ul class="children">
-
-    <li id="comment-134" class="comment byuser comment-author-pongba bypostauthor odd alt depth-2 parent">
-        <article id="div-comment-134" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/109cedab8860874a295a8fc193940761?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/109cedab8860874a295a8fc193940761?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn"><a href="../assets/" rel="external nofollow" class="url">刘未鹏</a></cite> |                    <!-- .comment-author -->
-                    <time datetime="2009-02-24T22:23:21+00:00">
-                        February 24, 2009 at 10:23 pm                    </time> 
-                    
-                     |
-                    
-                     
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>你看得很仔细，谢谢。我赞同你说的这句：</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		<ul class="children">
+		<li class="comment byuser comment-author-pongba bypostauthor odd alt depth-2" id="li-comment-134">
+			<article id="comment-134" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="../assets/" rel="external nofollow" class="url">刘未鹏</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2009-02-24T22:23:21+00:00">February 24, 2009 at 10:23 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>你看得很仔细，谢谢。我赞同你说的这句：</p>
 <blockquote><p>
 人大脑先验的思维规则就那么几个，大脑可能只简单地在做概念间对比和处理而已，而所有概念都是来自外部世界。
 </p></blockquote>
@@ -1613,61 +457,420 @@ nakeman提的问题有点意思<br>
 </p></blockquote>
 <p>我并不完全赞同。关键在于我们的思维有很多特性（有好的，也有不好的），两个知识差不多的人，我们常常会说一个人有创造性另一个没有，或者一个思维缜密而另一个则不，为什么？区别不在于知识，而在于思维差异（虽然关于思维特性的知识也是知识），如果不了解思维本身的特性和弱点，又如何有效地利用它呢？<br>
 关于思维的弱点，一个最好的例子就是认知偏差（cognitive biases），你可以到<a href="http://en.wikipedia.org/wiki/List_of_cognitive_biases" rel="nofollow">wikipedia的List of Cognitive Biases条目概览一下</a>，这些思维盲点很大程度上阻碍了我们的客观思考，所以了解它对于清晰的思维是有帮助而且必要的，也正因此我在豆瓣上有一个豆列<a href="http://www.douban.com/doulist/127649/" rel="nofollow">“思维的技术与艺术”</a>专门列了这方面的一些书。</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-
-    <li id="comment-12261" class="comment even depth-2">
-        <article id="div-comment-12261" class="comment-wrapper">
-            <div class="comment-avatar">
-                <img alt="" src="https://www.gravatar.com/avatar/95f4a346b8ee98872adc006a48dc299b?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180102113643im_/https://www.gravatar.com/avatar/95f4a346b8ee98872adc006a48dc299b?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
-            <div class="comment-body">
-                <div class="comment-author vcard">          
-                    <cite class="fn"><a href="http://arttech.us/" rel="external nofollow" class="url">nakeman</a></cite> |                    <!-- .comment-author -->
-                    <time datetime="2011-02-13T20:29:23+00:00">
-                        February 13, 2011 at 8:29 pm                    </time> 
-                    
-                     |
-                    
-                     
-            
-                                    </div><!-- .comment author -->
-    
-                <div class="comment-content">
-                    <p>是不是我们对思维规则的定义有出入？你所指的思维规则特性的优缺点，表现时有思维的内容参与么？如果有，则是思维+内容所表现的特点，不是思维本身的特点。我所指思维规则是没有思维内容的思维操作。另外，你提到创造性，这个很有意思。思想激进的人和好奇心强的人通常具有比较强创造性，这个看似是天生硬编码进人的思维偏向？思维习惯具有创造性似乎跟大脑的感性部分有关系，是这样的吗？</p>
-                </div><!-- .comment-content -->
-            </div>
-
-
-        </article><!-- .comment-body -->
-    </li>
-    <!-- #comment-## -->
-</ul><!-- .children -->
-<!-- #comment-## -->
-		</ol><!-- .comment-list -->
-
-		
+</div>
+				
+			</article><!-- #comment-## -->
+		<ul class="children">
+		<li class="comment even depth-3" id="li-comment-12261">
+			<article id="comment-12261" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="http://arttech.us/" rel="external nofollow" class="url">nakeman</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2011-02-13T20:29:23+00:00">February 13, 2011 at 8:29 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
 	
+				<div class="comment-content"><p>是不是我们对思维规则的定义有出入？你所指的思维规则特性的优缺点，表现时有思维的内容参与么？如果有，则是思维+内容所表现的特点，不是思维本身的特点。我所指思维规则是没有思维内容的思维操作。另外，你提到创造性，这个很有意思。思想激进的人和好奇心强的人通常具有比较强创造性，这个看似是天生硬编码进人的思维偏向？思维习惯具有创造性似乎跟大脑的感性部分有关系，是这样的吗？</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+</ul>
+</li>
+</ul>
+</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-487">
+			<article id="comment-487" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn">leiw</span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2009-06-01T16:25:06+00:00">June 1, 2009 at 4:25 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
 	
-		<div id="respond" class="comment-respond">
-		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="../assets/2008/04/18/learning-from-polya/" style="display:none;">Cancel reply</a></small></h3>			<form action="https://web.archive.org/web/20180102113643/http://mindhacks.cn/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
-				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><div class="form-group comment-form-comment">
-             
-            <textarea class="form-control" id="comment" name="comment-62e498b497df79d8abed1db558908d" cols="45" rows="8" aria-required="true"></textarea><textarea name="comment" rows="1" cols="1" style="display:none"></textarea>
-        </div><input type="hidden" name="comment-replaced" value="true"><div class="form-group comment-form-author"><label for="author">Name <span class="required">*</span></label> <input class="form-control" id="author" name="author" type="text" value="" size="30" aria-required="true"></div>
-<div class="form-group comment-form-email"><label for="email">Email <span class="required">*</span></label> <input class="form-control" id="email" name="email" type="email" value="" size="30" aria-required="true"></div>
-<div class="form-group comment-form-url"><label for="url">Website</label> <input class="form-control" id="url" name="url" type="url" value="" size="30"></div>
-<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="93" id="comment_post_ID">
-<input type="hidden" name="comment_parent" id="comment_parent" value="0">
-</p><p style="display:none;"><input type="text" name="nxts" value="1514893005"><input type="text" name="nxts_signed" value="18cf9fed7dd8abcef98627f7b8b3e50a50ab45e3"><input type="text" name="bd44e4ff7cb01d" value=""><input type="text" name="a4447981a813ff9e04fe" value="bd465eb08490f058ccbf2d"></p>			</form>
-			</div><!-- #respond -->
+				<div class="comment-content"><p>我是一直很反感目前大部分教科书那般罗列知识的方式。<br>
+那仅仅是罗列，没有告诉我们，为什么是这样的，以及我们的先辈是怎么样发现的？<br>
+如果仅仅是罗列的话，估计谁的记忆好，谁的学习更占优势了。<br>
+按照认知规律，应该把事物从源头开始…都告诉我们。<br>
+某些的知识的介绍，应该更像侦探小说。</p>
+<p>可惜的是，我很难看到波利亚式的老师。我的记忆中，我遇到的老师，类似波利亚（注意是某种程度像）仅仅一两个而已。</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		<ul class="children">
+		<li class="comment even depth-2" id="li-comment-598">
+			<article id="comment-598" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn">郑勤思</span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2009-09-30T11:40:55+00:00">September 30, 2009 at 11:40 am</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
 	
-</div><!-- #comments -->
-</div><div class="col-md-4 right_sidebar"><aside id="la-right" role="complementary"><div id="text-3" class="widget widget_text"><h3><span class="dotbox"></span>关于</h3><div class="dotlinebox"><span class="dot"></span></div>			<div class="textwidget"><div id="me_as_info_source">
+				<div class="comment-content"><p>@leiw 波利亚式的老师很少，但是你可以去看波利亚的书呀！他用浅显的数学讲明白了解决问题的道理，绝对值得一读。</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		<ul class="children">
+		<li class="comment odd alt depth-3" id="li-comment-640">
+			<article id="comment-640" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn">leiw</span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2009-11-14T16:21:05+00:00">November 14, 2009 at 4:21 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>To 郑勤思:<br>
+首先，感谢你的回复。能多看看波利亚的书，当然好。<br>
+不过，我所在学习的年代，没有那么多的参考书，没有现在那么强大的网络，书店里面的书很少。图书馆的书，你能查询到，但是你未必就能借到，因为借的人很多，能否借到，需要运气和耐心。</p>
+<p>今天的学生在这方面实在是非常幸福的。书店的书相比以前多了很多。无论什么方向的，理工的，文学的，…..，出现了很多来自西方的著作。并不是说西方的书都好，至少开阔了大家的眼界。实在借不到书，或者买不到书，可以上网找，只要有耐心，什么书找不到呢？</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+</ul>
+</li>
+</ul>
+</li>
+		<li class="comment even thread-even depth-1" id="li-comment-744">
+			<article id="comment-744" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn">EricS</span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2010-01-15T05:53:37+00:00">January 15, 2010 at 5:53 am</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>请问名人问题的英文是什么？想找一些有关这个问题的算法资料，能推荐一些吗？</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-765">
+			<article id="comment-765" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn">hereis</span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2010-02-02T23:34:13+00:00">February 2, 2010 at 11:34 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>读到你的文章,我想起了不久之前我思考的一个问题—-我们是如何学习获得新知识的?为什么在同一个老师的指导下,同学们的学习结果会有那么大的差异?在当时,我的理解是,对于知识,每个人本身就有自己的先验的框架,无论数学,英语还是物理,化学.在学习这些之前,我们都有一个关于知识的自我体系,而在老师教授这些知识时,我们只是将其对应到自己的已有的框子里.有的人框子大,联系起来的就多,而有些人框子小,能联系起来为自己所用的也就有限.这样便导致了同龄人,在同一环境下的差异.<br>
+另外,文章开头的一句话本身就能说明很多问题:对动物来说是食物，对人类婴儿来说是有趣的玩具.<br>
+对动物而言,吸引它的只有食物,只是最基本的生理需要.只有这个能在它身上产生共鸣,它自身的理解范围,仅仅局限于这一层次.而对婴儿,能引起他兴趣的已不仅仅是食物,他已经能理解”有趣”和“玩具”，而在他的自身深处早已存在这一模型，玩具只是一个投影，一个结果。<br>
+比如，一只普通的哺乳动物，由于像人类一样的积累磨练过程，所以暂时根本不会有数学，物理化学等方面的理解与学习，而一个人却可以学习这些。<br>
+综上，我想学习过程只是一个结果，是一个相当漫长的过程的积累，这个过程不是几十年，几百年。</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment even thread-even depth-1" id="li-comment-11128">
+			<article id="comment-11128" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn">luffy</span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2010-12-10T17:38:49+00:00">December 10, 2010 at 5:38 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>我是最近才发现的你的博客，不过这几天已经看了很多你写的文章，十分佩服，这篇文章也很不错，但是我想问一个与主题无关的问题，你文中所提及的书你都读过了吗？好牛啊，你对思维这方面问题好深入，很佩服</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12549">
+			<article id="comment-12549" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="http://xinshenghu.gotoip2.com/" rel="external nofollow" class="url">frog</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2011-02-26T04:50:58+00:00">February 26, 2011 at 4:50 am</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>很佩服作者的文章。<br>
+nakeman提的问题有点意思<br>
+我觉得大脑思维规则可以考究的地方并不多，比如长时记忆，比如潜意识<br>
+关键是了解这个复杂的外部世界，是外部世界的规则转化为思维规则。<br>
+思维习惯具有创造性似乎跟大脑的感性部分有关系</p>
+<p>我觉得他说的有道理，如果抛弃想的内容，单说如何想，其实就那些吧。<br>
+外部世界的规则转化为思维规则 这点有没有例子呢 看不懂啊<br>
+虽然我觉得思维是可以变化的，但是现实生活中就是这样，一看这人的长相就知道这人是死心眼还是浮躁，绝大多数人都和性格有关。</p>
+<p>如何应用这几种思维，什么时候用什么样的思维，是我学到的。<br>
+有多少人的思维和性格无关呢。我是一个。</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="post pingback">
+			<p>Pingback: <a href="../assets/2011/07/10/the-importance-of-knowing-why-part3/" rel="external nofollow" class="url">知其所以然（三）——为什么算法这么难？</a></p>
+		</li>
+		<li class="post pingback">
+			<p>Pingback: <a href="http://kindmi.com/archives/%e4%b9%a6%e5%86%99%e6%98%af%e4%b8%ba%e4%ba%86%e6%9b%b4%e5%a5%bd%e7%9a%84%e6%80%9d%e8%80%83/" rel="external nofollow" class="url">书写是为了更好的思考 | 友米网</a></p>
+		</li>
+		<li class="post pingback">
+			<p>Pingback: <a href="http://www.whoisnerd.com/2011/07/31/%e6%8e%a8%e8%8d%90%e8%af%bb%e4%b9%a6%e3%80%8a%e6%9a%97%e6%97%b6%e9%97%b4%e3%80%8b/" rel="external nofollow" class="url">推荐读书《暗时间》</a></p>
+		</li>
+		<li class="post pingback">
+			<p>Pingback: <a href="http://southmagic.sinaapp.com/?p=18" rel="external nofollow" class="url">转：为什么算法这么难？ | South♂楠个人博客</a></p>
+		</li>
+		<li class="post pingback">
+			<p>Pingback: <a href="http://zwcspace.comeze.com/http:/zwcspace.comeze.com/topics/iosdevelopment/" rel="external nofollow" class="url">草草de小站 -</a></p>
+		</li>
+		<li class="post pingback">
+			<p>Pingback: <a href="http://zwcspace.comeze.com/http:/zwcspace.comeze.com/topics/iosdevelopment/" rel="external nofollow" class="url">草草de小站 - 专注开发，努力走向专业</a></p>
+		</li>
+		<li class="post pingback">
+			<p>Pingback: <a href="http://zwcspace.comeze.com/write-for-better-thinking/" rel="external nofollow" class="url">草草de小站 » 转载文章测试二</a></p>
+		</li>
+		<li class="post pingback">
+			<p>Pingback: <a href="http://blog69.tk/?p=530" rel="external nofollow" class="url">知其所以然（三）：为什么算法这么难？ | 风的天地</a></p>
+		</li>
+		<li class="comment even thread-even depth-1" id="li-comment-17599">
+			<article id="comment-17599" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="http://blog.yxwang.me/" rel="external nofollow" class="url">zellux</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2011-11-02T17:57:42+00:00">November 2, 2011 at 5:57 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>挑个标点的错，在《暗时间》上看到的。《动机心理学》的那段引文中，「而是形成对“光噪水“的厌恶」「”将电击（外部事件）归因于闪光而非食物” 」这里两个引号的方向错了。</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-17601">
+			<article id="comment-17601" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="http://blog.yxwang.me/" rel="external nofollow" class="url">zellux</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2011-11-02T17:58:44+00:00">November 2, 2011 at 5:58 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>挑个标点的错，在《暗时间》上看到的。</p>
+<p>《动机心理学》的那段引文中，「而是形成对“光噪水“的厌恶」「”将电击（外部事件）归因于闪光而非食物” 」这里两个引号的方向错了。</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="post pingback">
+			<p>Pingback: <a href="http://www.nmg.tc/archives/10" rel="external nofollow" class="url">书写是为了更好的思考 | 内蒙古同城</a></p>
+		</li>
+		<li class="post pingback">
+			<p>Pingback: <a href="http://www.techpot.net/?p=20392" rel="external nofollow" class="url">T客网 ︱ Techpot » Blog Archive » [BetterExplained]书写是为了更好的思考</a></p>
+		</li>
+		<li class="post pingback">
+			<p>Pingback: <a href="http://www.microyu.com/living/live-think/646.html" rel="external nofollow" class="url">书写是为了更好的思考 | 微钰工作室</a></p>
+		</li>
+		<li class="post pingback">
+			<p>Pingback: <a href="http://liuxh.me/2010/04/11/%e4%b9%a6%e5%86%99%e6%98%af%e4%b8%ba%e4%ba%86%e6%9b%b4%e5%a5%bd%e7%9a%84%e6%80%9d%e8%80%83%ef%bc%bb%e8%bd%ac%ef%bc%bd/" rel="external nofollow" class="url">刘向辉 | Thinker » 书写是为了更好的思考［转］</a></p>
+		</li>
+		<li class="post pingback">
+			<p>Pingback: <a href="../assets/2012/06/04/escape-from-your-shawshank-part5-the-invisible-cage/" rel="external nofollow" class="url">逃出你的肖申克（五）：看不见的牢笼（上）</a></p>
+		</li>
+		<li class="post pingback">
+			<p>Pingback: <a href="http://www.yanren.net/archives/326.html" rel="external nofollow" class="url">看不见的牢笼（上） | 嫣人</a></p>
+		</li>
+		<li class="post pingback">
+			<p>Pingback: <a href="http://blog.chiapp.com/html/2012-08-09/4159.html" rel="external nofollow" class="url">知其所以然（三）：为什么算法这么难？ | 吃杂烩</a></p>
+		</li>
+		<li class="comment even thread-even depth-1" id="li-comment-32391">
+			<article id="comment-32391" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="http://weibo.com/3374545840" rel="external nofollow" class="url">香辛料-Jenny</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2013-05-08T16:10:32+00:00">May 8, 2013 at 4:10 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>虽然我的数学很差，但是我不讨厌他，他真的难捉摸。看了这文，意思是我的思维程度不够呀</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-32489">
+			<article id="comment-32489" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="http://www.abcsnk.com/" rel="external nofollow" class="url">ナイキ 通販</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2013-06-19T10:10:53+00:00">June 19, 2013 at 10:10 am</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>researching is a thing all of us loves to implement (specially me), when i don’t skills but researching is a activity gives us eminence peace and relaxation back-links we really are tired or possibly frustrated or possibly irritated, but along with the ever enhancing targets and additionally office update it consists of became  <a href="http://www.abcsnk.com/adidas-スパイクサッカー-アディピュア-11pro-c-22_23_29.html" rel="nofollow">http://www.abcsnk.com/adidas-スパイクサッカー-アディピュア-11pro-c-22_23_29.html</a> アディピュア11pro   hard for us to know some moments to hang out with  <a href="../assets/www.sportrakuten.com" rel="nofollow">http:///www.sportrakuten.com</a> サングラス通販   these relatives and buddies and enjoy the period while rooming around  <a href="http://www.sportrakuten.com/categories/1369471366-179.html" rel="nofollow">http://www.sportrakuten.com/categories/1369471366-179.html</a> レイバン サングラス   relating to the streets about market.</p>
+<p>But once we always say there is a formula for every different problem and additionally situation anywhere, all you decide to do is locate that formula with ‘something different’ mentality. And employing very reason that we all located a cool method about shopping in which know like online researching method. But simply being this practice new unique variations of quarries which you’ll find there on the mind of individuals related to same and people are here to resolve those its own matters.</p>
+<p>But today there is thousands about products that could be purchased right from  <a href="http://www.abcsnk.com/" rel="nofollow">http://www.abcsnk.com</a> ナイキ 通販   an retailer starting in a bugger towards flat along with  <a href="http://www.abcsnk.com/adidas-スパイクサッカー-プレデター-アディダス-11-c-22_23_25.html" rel="nofollow">http://www.abcsnk.com/adidas-スパイクサッカー-プレデター-アディダス-11-c-22_23_25.html</a> adidas プレデター   being impossible for american to cover all the in a  <a href="../assets/www.sportrakuten.com/categories/1369471516-183.html" rel="nofollow">http:///www.sportrakuten.com/categories/1369471516-183.html</a> レイバン(RAY BAN)   discussion its own matters therefore today we are only showing you facts pertains to online researching of athletic shoes for men of all ages.</p>
+<p>Buying established your most popular Adidas athletic shoes from these online websites is about the easiest thing anywhere, but to earn it literally easy you’ve gotten to address few for the things or possibly points which you’ll find listed here.</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment even thread-even depth-1" id="li-comment-32514">
+			<article id="comment-32514" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="http://fansunion.cn/" rel="external nofollow" class="url">FansUnion</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2013-06-20T14:24:19+00:00">June 20, 2013 at 2:24 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>这篇文章有点长，读起来压力很大。<br>
+数学，o(︶︿︶)o 唉<br>
+我的博客 <a href="http://fansunion.cn，欢迎来踩~/" rel="nofollow">http://FansUnion.cn，欢迎来踩~</a></p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-32572">
+			<article id="comment-32572" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn">wang</span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2013-07-05T10:13:37+00:00">July 5, 2013 at 10:13 am</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p><a href="http://www.sportsbrand-nike.com/nddbc.html" rel="nofollow">http://www.sportsbrand-nike.com/nddbc.html</a><br>
+<a href="http://www.hotsneak.com/categories/nddbc.html'" rel="nofollow"></a><a href="http://www.hotsneak.com/categories/nddbc.html" rel="nofollow">http://www.hotsneak.com/categories/nddbc.html</a>‘<br>
+<a href="http://www.jordanjpsneaker.com/nddbc.html" rel="nofollow">http://www.jordanjpsneaker.com/nddbc.html</a></p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment even thread-even depth-1" id="li-comment-32589">
+			<article id="comment-32589" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="http://www.douban.com/people/63041482/" rel="external nofollow" class="url">安然</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2013-07-11T16:03:15+00:00">July 11, 2013 at 4:03 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>在我看来，没有什么能比探索发明的源头还要重要，它远比发明本身更重要。——	莱布尼兹，现代计算机实质上的发明者<br>
+无论是在解题还是在学习的过程中，问自己一个问题“我是不是已经掌握了这个知识最深刻最本质的东西”是非常有益的。</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-32612">
+			<article id="comment-32612" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn">http://www.yoikuz.com</span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2013-07-20T11:01:53+00:00">July 20, 2013 at 11:01 am</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p><a href="http://www.kutmus.com/" rel="nofollow">http://www.kutmus.com</a><br>
+<a href="http://www.kutmus.com/" rel="nofollow">http://www.kutmus.com</a><br>
+<a href="http://www.kutmus.com/" rel="nofollow">http://www.kutmus.com</a><br>
+<a href="http://www.kutmus.com/" rel="nofollow">http://www.kutmus.com</a><br>
+<a href="http://www.kutmus.com/" rel="nofollow">http://www.kutmus.com</a><br>
+<a href="http://www.kutmus.com/" rel="nofollow">http://www.kutmus.com</a></p>
+<p><a href="http://www.shunika.com/" rel="nofollow">http://www.shunika.com</a><br>
+<a href="http://www.shunika.com/" rel="nofollow">http://www.shunika.com</a><br>
+<a href="http://www.shunika.com/" rel="nofollow">http://www.shunika.com</a><br>
+<a href="http://www.shunika.com/" rel="nofollow">http://www.shunika.com</a><br>
+<a href="http://www.shunika.com/" rel="nofollow">http://www.shunika.com</a><br>
+<a href="http://www.shunika.com/" rel="nofollow">http://www.shunika.com</a></p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment even thread-even depth-1" id="li-comment-32650">
+			<article id="comment-32650" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="http://www.renren.com/profile.do?id=700414564" rel="external nofollow" class="url">宋景涛</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2013-07-26T17:02:17+00:00">July 26, 2013 at 5:02 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>波利亚</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-32702">
+			<article id="comment-32702" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="http://weibo.com/2177401093" rel="external nofollow" class="url">蒙面超人23</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2013-08-13T21:27:33+00:00">August 13, 2013 at 9:27 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>人与人的区别主要在于思维方法，能力程度那些都可以经过后天的培养与增强。解决问题的工具有联想、知识体系、习惯、练习、启发法、总结等。解决问题的方法有很多种，都是通过寻求突破口、关键点，但有时我们难免会陷入思维定势，卡死在某个环节，这时就需要跳出原先自己设定的思维陷阱，通过反思找出问题环节进行修改。发散思维听起来不错，不过要发散得了才行，最好的办法还是脚踏实地，一步一步的来，并把过程记录下来。虽然笨拙，但准确，日后肯定也能快速，熟能生巧嘛~</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment even thread-even depth-1" id="li-comment-32912">
+			<article id="comment-32912" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn">Ziyu</span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2013-11-22T18:11:37+00:00">November 22, 2013 at 6:11 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>想说说个人一点感受，首先，看这样一篇文章，就想是学了一个系列的知识！让人受益匪浅。<br>
+其次，很多部分读起来还是挺费脑、吃力的，特别是一些术语，虽然给出了维基的链接，但是对于一个刚着手学习这个博客的人（不是数学、计算机甚至不是理科专业的，没读过很多相关方面书籍）来说，觉得在一些术语后面直接给出一点简易的解释会让人读的比较顺畅。</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-32931">
+			<article id="comment-32931" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn">陈新辉</span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2013-11-29T20:59:59+00:00">November 29, 2013 at 8:59 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>看了一遍，记得不深，需要再看一遍，感觉比较客观的分析，只是情绪由物质构成，可以量化吗</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment even thread-even depth-1" id="li-comment-33294">
+			<article id="comment-33294" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="http://www.renren.com/profile.do?id=250670594" rel="external nofollow" class="url">胡秉诚</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2014-04-29T19:22:09+00:00">April 29, 2014 at 7:22 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>原来一致收敛是这么来的。。。</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-33296">
+			<article id="comment-33296" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="http://www.zhouleyu.com/life/skinny-essential-oils-work-again" rel="external nofollow" class="url">zhouleyu</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2014-04-30T14:40:42+00:00">April 30, 2014 at 2:40 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>原来一致收敛是这么来的。。。</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="duoshuo even thread-even depth-1" id="li-comment-34620">
+			<article id="comment-34620" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="http://t.qq.com/H8745963" rel="external nofollow" class="url">胡正岱</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2015-10-19T13:54:51+00:00">October 19, 2015 at 1:54 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>其实我看完有个小问题。就是在polya解题这一章，你写到了关于heuristics(我觉得中文没翻译好，有误导性所以我用的英文)的东西。我不太清楚你对heuristics的定义，但是我觉得至少在心理学中heuristics是相对于算法存在的(虽然也有heuristic algorithm这种混合体)。你最开始说人思考应该避免思维捷径，但很多时候heuristics本身就是一种思维捷径啊。E.g., availability heuristics &amp; representative heuristics. 那请问你是怎么解释用思维捷径来避免思维捷径的呢</p>
+<p>可能我的理解不太全面，求解释</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-34947">
+			<article id="comment-34947" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn"><a href="http://t.qq.com/ZM466015532" rel="external nofollow" class="url">lz</a></span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2016-03-30T16:53:49+00:00">March 30, 2016 at 4:53 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>顶顶顶顶顶</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+		<li class="comment even thread-even depth-1" id="li-comment-35024">
+			<article id="comment-35024" class="comment">
+				<footer class="comment-meta">
+					<cite class="comment-author vcard">
+						<span class="fn">条形马</span> on <a rel="nofollow" href="../assets/2008/04/18/learning-from-polya/comment-page-1/"><time pubdate="" datetime="2016-05-14T16:49:26+00:00">May 14, 2016 at 4:49 pm</time></a> <span class="says">said:</span>					</cite><!-- .comment-author .vcard -->
+				</footer>
+	
+				<div class="comment-content"><p>你提到了一个有趣的词，叫“我所学习的年代”。我觉得这个词一定程度上表面了，你不是一个坚定的众生学习者。这真是一件让人遗憾的事。7年过去了，不知道你是不是也有些遗憾呢？</p>
+</div>
+				
+			</article><!-- #comment-## -->
+		</li>
+            </ol>
+
+		            
+    </div>	    
+
+</div><!-- #content -->
+
+</div><!-- #container -->
+
+
+<div id="primary" class="aside main-aside sidebar">
+  
+	<ul class="xoxo">
+		<li id="text-3" class="widgetcontainer clearfix"><h5 class="widgettitle">关于</h5>			<div class="textwidget"><div id="me_as_info_source">
     如果你对我的文章感兴趣，那么<strong>很可能你也对我平时的阅读感兴趣</strong>，以下是一些你可以参考或订阅的资源：
     <ol>
     <li><a href="http://www.douban.com/people/pongba/">我在豆瓣</a>上的豆列列举了一些看过的好书：<a href="http://www.douban.com/doulist/46003/">[只读经典]思维改变生活</a> | <a href="http://www.douban.com/doulist/127649/">[只读经典]思考的技术与艺术</a> | <a href="http://www.douban.com/doulist/197706/">决策与判断</a> | <a href="http://www.douban.com/doulist/176513/">机器学习与人工智能书籍资源导引</a> </li>
@@ -1680,80 +883,74 @@ nakeman提的问题有点意思<br>
     </ol>
     我写的书：
     <ol>
-    <li><a href="http://book.douban.com/subject/6709809/"><img src="https://img3.doubanio.com/mpic/s6586365.jpg"></a></li>
-    </ol>
-	我的公号：
-    <ol>
-    <li><img src="/assets/wp-content/uploads/2016/12/card1.png"></li>
+    <li><a href="http://book.douban.com/subject/6709809/"><img src="http://img3.douban.com/mpic/s6586365.jpg"></a></li>
     </ol>
 </div></div>
-		</div><div id="views-3" class="widget widget_views"><h3><span class="dotbox"></span>被阅读得最多的</h3><div class="dotlinebox"><span class="dot"></span></div><ul>
-<li><a href="../assets/2008/09/21/the-magical-bayesian-method/" title="数学之美番外篇：平凡而又神奇的贝叶斯方法">数学之美番外篇：平凡而又神奇的贝叶斯方法</a> - 637,244 views</li><li><a href="../assets/2011/11/04/how-to-interview-a-person-for-two-years/" title="怎样花两年时间去面试一个人">怎样花两年时间去面试一个人</a> - 449,470 views</li><li><a href="../assets/2009/02/15/why-you-should-start-blogging-now/" title="[BetterExplained]为什么你应该（从现在开始就）写博客">[BetterExplained]为什么你应该（从现在开始就）写博客</a> - 312,150 views</li><li><a href="../assets/2009/12/20/dark-time/" title="暗时间">暗时间</a> - 288,826 views</li><li><a href="../assets/2009/05/17/seven-years-in-nju/" title="我在南大的七年">我在南大的七年</a> - 259,666 views</li><li><a href="../assets/2009/03/28/effective-learning-and-memorization/" title="[BetterExplained]如何有效地记忆与学习">[BetterExplained]如何有效地记忆与学习</a> - 252,988 views</li><li><a href="../assets/2009/03/15/preconception-explained/" title="逃出你的肖申克（二）：仁者见仁智者见智？从视觉错觉到偏见">逃出你的肖申克（二）：仁者见仁智者见智？从视觉错觉到偏见</a> - 244,335 views</li><li><a href="../assets/2009/01/18/escape-from-your-shawshank-part1/" title="逃出你的肖申克（一）：为什么一定要亲身经历了之后才能明白？">逃出你的肖申克（一）：为什么一定要亲身经历了之后才能明白？</a> - 229,105 views</li><li><a href="../assets/2009/02/09/writing-is-better-thinking/" title="[BetterExplained]书写是为了更好的思考">[BetterExplained]书写是为了更好的思考</a> - 176,684 views</li><li><a href="../assets/2010/03/18/escape-from-your-shawshank-part3/" title="逃出你的肖申克（三）：遇见20万年前的自己">逃出你的肖申克（三）：遇见20万年前的自己</a> - 171,677 views</li></ul>
-</div><div id="text-4" class="widget widget_text"><h3><span class="dotbox"></span>我的微博</h3><div class="dotlinebox"><span class="dot"></span></div>			<div class="textwidget"><iframe width="100%" height="550" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?width=0&amp;height=550&amp;fansRow=1&amp;ptype=0&amp;speed=300&amp;skin=-1&amp;isTitle=0&amp;noborder=0&amp;isWeibo=1&amp;isFans=1&amp;uid=1882579600&amp;verifier=1448dc03&amp;colors=d6f3f7,ffffff,666666,0082cb"></iframe></div>
-		</div></aside></div></div></div>
-</section>
+		</li><li id="views-3" class="widgetcontainer clearfix"><h5 class="widgettitle">被阅读得最多的</h5><ul>
+<li><a href="../assets/2008/09/21/the-magical-bayesian-method/" title="数学之美番外篇：平凡而又神奇的贝叶斯方法">数学之美番外篇：平凡而又神奇的贝叶斯方法</a> - 405,592 views</li><li><a href="../assets/2011/11/04/how-to-interview-a-person-for-two-years/" title="怎样花两年时间去面试一个人">怎样花两年时间去面试一个人</a> - 360,619 views</li><li><a href="../assets/2009/02/15/why-you-should-start-blogging-now/" title="[BetterExplained]为什么你应该（从现在开始就）写博客">[BetterExplained]为什么你应该（从现在开始就）写博客</a> - 271,118 views</li><li><a href="../assets/2009/12/20/dark-time/" title="暗时间">暗时间</a> - 253,595 views</li><li><a href="../assets/2009/05/17/seven-years-in-nju/" title="我在南大的七年">我在南大的七年</a> - 231,026 views</li><li><a href="../assets/2009/03/28/effective-learning-and-memorization/" title="[BetterExplained]如何有效地记忆与学习">[BetterExplained]如何有效地记忆与学习</a> - 228,456 views</li><li><a href="../assets/2009/03/15/preconception-explained/" title="逃出你的肖申克（二）：仁者见仁智者见智？从视觉错觉到偏见">逃出你的肖申克（二）：仁者见仁智者见智？从视觉错觉到偏见</a> - 224,312 views</li><li><a href="../assets/2009/01/18/escape-from-your-shawshank-part1/" title="逃出你的肖申克（一）：为什么一定要亲身经历了之后才能明白？">逃出你的肖申克（一）：为什么一定要亲身经历了之后才能明白？</a> - 202,157 views</li><li><a href="../assets/2010/03/18/escape-from-your-shawshank-part3/" title="逃出你的肖申克（三）：遇见20万年前的自己">逃出你的肖申克（三）：遇见20万年前的自己</a> - 158,530 views</li><li><a href="../assets/2009/02/09/writing-is-better-thinking/" title="[BetterExplained]书写是为了更好的思考">[BetterExplained]书写是为了更好的思考</a> - 153,991 views</li></ul>
+</li><li id="text-4" class="widgetcontainer clearfix"><h5 class="widgettitle">我的微博</h5>			<div class="textwidget"><iframe width="100%" height="550" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?width=0&amp;height=550&amp;fansRow=1&amp;ptype=0&amp;speed=300&amp;skin=-1&amp;isTitle=0&amp;noborder=0&amp;isWeibo=1&amp;isFans=1&amp;uid=1882579600&amp;verifier=1448dc03&amp;colors=d6f3f7,ffffff,666666,0082cb"></iframe></div>
+		</li><li id="related-posts" class="widgetcontainer clearfix"><h5 class="widgettitle">你可能也会喜欢以下文章</h5><ul class="related_post"><li><a href="../assets/2015/01/27/escape-from-your-shawshank-part5-2-platos-cave/" title="逃出你的肖申克（六）：看不见的牢笼（下）：柏拉图的洞穴">逃出你的肖申克（六）：看不见的牢笼（下）：柏拉图的洞穴</a> (123)</li><li><a href="../assets/2012/06/04/escape-from-your-shawshank-part5-the-invisible-cage/" title="逃出你的肖申克（五）：看不见的牢笼（上）">逃出你的肖申克（五）：看不见的牢笼（上）</a> (143)</li><li><a href="../assets/2011/07/10/the-importance-of-knowing-why-part3/" title="知其所以然（三）：为什么算法这么难？">知其所以然（三）：为什么算法这么难？</a> (101)</li><li><a href="../assets/2011/01/23/escape-from-your-shawshank-4/" title="逃出你的肖申克（四）：理智与情感">逃出你的肖申克（四）：理智与情感</a> (154)</li><li><a href="../assets/2010/11/14/the-importance-of-knowing-why-part2/" title="知其所以然（续）">知其所以然（续）</a> (74)</li><li><a href="../assets/2010/03/18/escape-from-your-shawshank-part3/" title="逃出你的肖申克（三）：遇见20万年前的自己">逃出你的肖申克（三）：遇见20万年前的自己</a> (150)</li><li><a href="../assets/2009/03/28/effective-learning-and-memorization/" title="[BetterExplained]如何有效地记忆与学习">[BetterExplained]如何有效地记忆与学习</a> (171)</li><li><a href="../assets/2009/03/15/preconception-explained/" title="逃出你的肖申克（二）：仁者见仁智者见智？从视觉错觉到偏见">逃出你的肖申克（二）：仁者见仁智者见智？从视觉错觉到偏见</a> (194)</li><li><a href="../assets/2009/02/15/why-you-should-start-blogging-now/" title="[BetterExplained]为什么你应该（从现在开始就）写博客">[BetterExplained]为什么你应该（从现在开始就）写博客</a> (350)</li><li><a href="../assets/2009/02/09/writing-is-better-thinking/" title="[BetterExplained]书写是为了更好的思考">[BetterExplained]书写是为了更好的思考</a> (145)</li></ul></li>	</ul>		
+</div><!-- #primary -->
+<div id="secondary" class="aside main-aside sidebar">
+    <ul class="xoxo">
+        <!-- Widgetized sidebar, if you have the plugin installed.  -->
+        		<li></li>		
+            </ul>
+	  
+</div><!-- #secondary -->
+	</div><!-- #main -->
+	
+	    
+    <div id="footer">
+		<div class="footer-sidebar-container clearfix">
+							<ul id="footer-sidebar-1" class="footer-sidebar clearfix xoxo">
+										<li></li>
+									</ul>
+					</div>
+		
+		<div class="footer-message">
+		<p class="floatright"><a class="arras" href="http://www.arrastheme.com/"><strong>About Arras WordPress Theme</strong></a></p>
+		<p>Copyright 刘未鹏 | Mind Hacks. All Rights Reserved. <a href="http://www.miibeian.gov.cn/">苏ICP备09004067号</a>. Powered by <a href="http://wordpress.org/">Wordpress</a>. Using <a href="http://www.arrastheme.com/">Arras Theme</a>. </p>		
+		</div><!-- .footer-message -->
+    </div>
+</div><!-- #wrapper -->
 
 
+<script type="text/javascript">
+/* <![CDATA[ */
+var viewsCacheL10n = {
+	admin_ajax_url: "https://web.archive.org/web/20160819001850/http://mindhacks.cn/wp-admin/admin-ajax.php",
+	post_id: "93"
+};
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+	
+});
+</script>
 
 
-
-<div class="lavish_footer ">
-	<div class="container">
-        <div style="border-bottom:1px solid #3C3C3C"></div>
-		<div class="row">
-            <div class="col-md-12">
-                        </div>
-            <div class="col-md-12">
-                <ul id="menu-pages" class="footer"><li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="../assets/about/">关于</a></li>
-<li id="menu-item-283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-283"><a href="../assets/former-life-of-mindhacks/">前世档案 | C++的罗浮宫</a></li>
-<li id="menu-item-279" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-279"><a href="../assets/archives/">所有文章</a></li>
-<li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="../assets/about-toplanguage/">TopLanguage 讨论组</a></li>
-</ul>            </div>
-            <div class="col-md-12">
-                <div class="copyright">
-                <p>
-                    Copyright © 
-                    2018 <strong>刘未鹏</strong>. All rights reserved.                </p>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div></div></div></div></body></html><!--
-     FILE ARCHIVED ON 11:36:43 Jan 02, 2018 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 00:26:25 Jan 09, 2026.
+   
+</body></html><!--
+     FILE ARCHIVED ON 00:18:50 Aug 19, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 16:08:55 Jan 09, 2026.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
      SECTION 108(a)(3)).
 --><!--
 playback timings (ms):
-  captures_list: 1.433
-  exclusion.robots: 0.119
-  exclusion.robots.policy: 0.1
-  esindex: 0.014
-  cdx.remote: 6.412
-  LoadShardBlock: 70.931 (3)
-  PetaboxLoader3.datanode: 151.165 (4)
-  load_resource: 176.026
-  PetaboxLoader3.resolve: 50.949
-  nav: 0.22 (6)
+  captures_list: 0.564
+  exclusion.robots: 0.038
+  exclusion.robots.policy: 0.027
+  esindex: 0.012
+  cdx.remote: 280.086
+  LoadShardBlock: 222.518 (3)
+  PetaboxLoader3.resolve: 385.596 (4)
+  PetaboxLoader3.datanode: 334.942 (5)
+  load_resource: 522.44 (2)
+  nav: 0.181 (6)
 -->

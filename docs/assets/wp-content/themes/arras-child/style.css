@@ -8,7 +8,7 @@ Template:       arras
 Version:        0.1.0
 */
 
-@import url("/web/20160729053010cs_/http://mindhacks.cn/wp-content/themes/arras/style.css");
+@import url("../arras/style.css");
 
 .entry-thumbnails {
     display: none;

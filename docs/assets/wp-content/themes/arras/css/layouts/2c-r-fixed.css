@@ -1,0 +1,69 @@
+/*
+LAYOUT: One-Column (Right) Fixed
+DESCRIPTION: Two-column fixed layout with one sidebar right of content
+*/
+
+#main {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+#container {
+  width: 660px;
+  float: left;
+}
+#content {
+  margin: 0;
+  width: 660px;
+  overflow: hidden;
+}
+.main-aside {
+  width: 300px;
+  float: right;
+  position: relative;
+}
+#secondary {
+  clear: right;
+}
+#subsidiary {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#subsidiary .aside {
+  width: 300px;
+  float: left;
+  margin: 0 20px 0 0;
+}
+#subsidiary #third {
+  margin: 0;
+}
+#main .module,
+#main .single-post {
+  margin-right: 10px;
+}
+.fixed {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/*
+     FILE ARCHIVED ON 05:25:10 Jul 29, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 16:27:51 Jan 09, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.861
+  exclusion.robots: 0.09
+  exclusion.robots.policy: 0.075
+  esindex: 0.015
+  cdx.remote: 19.133
+  LoadShardBlock: 339.418 (3)
+  PetaboxLoader3.resolve: 383.691 (3)
+  PetaboxLoader3.datanode: 97.29 (4)
+  load_resource: 161.595
+*/

@@ -1,0 +1,104 @@
+/*   
+Theme Name: Arras
+Theme URI: http://www.arrastheme.com/
+Description: A sophisticated, yet simple and clean WordPress theme for magazine/news blogs. Homepage comes with a featured slideshow and 3 featured post areas with 4 different customisable layouts. Comes with in one, two and three column layouts and 7 different alternate styles. WordPress 3.0-ready with two menu locations, custom post types and custom taxonomies support. Child theme ready with numerous action and filter hooks available for use. Community support available at <a href="http://www.arrastheme.com/forums/">theme forums</a>. 
+Author: Melvin Lee
+Author URI: http://www.zy.sg/
+Version: 1.5.0.1
+Tags: blue,brown,green,orange,purple,red,white,light,two-columns,three-columns,left-sidebar,right-sidebar,fixed-width,theme-options,threaded-comments,sticky-post,microformats,translation-ready,custom-menu,rtl-language-support
+
+License: GNU General Public License, v2
+License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+.
+Arras, like WordPress, is released under the GNU General Public License, version 2 (GPL).
+
+For more information about the GPL, please visit:
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
+If you require any support, please visit the theme website at 
+http://www.arrastheme.com/.
+.
+*/
+
+/* Default Stylesheet */
+@import url("./css/default.css");
+/* User Override Stylesheet */
+@import url("./user.css");
+
+/* Trick the WordPress Theme Bot *Evil* */
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+.alignright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+.alignleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+.floatleft {
+  float: left;
+}
+.floatright {
+  float: right;
+}
+img.aligncenter,
+img.alignright,
+img.alignleft {
+  border: 1px solid #ddd;
+  text-align: center;
+  background: #f3f3f3;
+  padding: 4px;
+}
+
+.textcenter {
+  text-align: center;
+}
+.textright {
+  text-align: right;
+}
+.textleft {
+  text-align: left;
+}
+
+.wp-caption {
+  border: 1px solid #ddd;
+  text-align: center;
+  background: #f3f3f3;
+  padding-top: 4px;
+  margin: 10px;
+}
+.wp-caption img {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.wp-caption .wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  padding: 0 4px 5px;
+  margin: 0;
+}
+
+/*
+     FILE ARCHIVED ON 02:00:02 Apr 24, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 16:29:30 Jan 09, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.672
+  exclusion.robots: 0.074
+  exclusion.robots.policy: 0.06
+  esindex: 0.01
+  cdx.remote: 10.056
+  LoadShardBlock: 180.674 (3)
+  PetaboxLoader3.datanode: 264.918 (5)
+  PetaboxLoader3.resolve: 284.976 (3)
+  load_resource: 423.988 (2)
+*/

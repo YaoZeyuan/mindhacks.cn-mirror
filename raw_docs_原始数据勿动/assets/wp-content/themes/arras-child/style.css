@@ -8,38 +8,38 @@ Template:       arras
 Version:        0.1.0
 */
 
-@import url("/web/20160729053010cs_/http://mindhacks.cn/wp-content/themes/arras/style.css");
+@import url("../arras/style.css");
 
 .entry-thumbnails {
-    display: none;
+  display: none;
 }
 
 .about-author {
-    display: none !important;
+  display: none !important;
 }
 
 .entry-content {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 #top-menu .sf-menu a {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .posts-quick .entry-summary {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .blog-description {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .entry-content a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #me_as_info_source a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /*
