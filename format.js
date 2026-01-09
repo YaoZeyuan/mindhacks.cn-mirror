@@ -96,7 +96,7 @@ function processHtml(inputPath, outputPath) {
 
 function getPostLinks() {
   const postLink = [
-    "_2006_10_15_cantor-godel-turing-an-eternal-golden-diagonal_康托尔、哥德尔、图灵&mdash;&mdash;永恒的金色对角线(rev#2).html",
+    "_2006_10_15_cantor-godel-turing-an-eternal-golden-diagonal_康托尔、哥德尔、图灵——永恒的金色对角线(rev#2).html",
     "_2007_05_24_learn-to-focus_学习密度与专注力.html",
     "_2007_12_02_probability-theory-in-evolution_数学之美番外篇：进化论中的概率论.html",
     "_2008_03_03_failing-to-see-the-big-picture_Failing To See the Big Picture Mistakes we make when learning programming.html",
@@ -110,7 +110,7 @@ function getPostLinks() {
     "_2008_09_11_machine-learning-and-ai-resources_机器学习与人工智能学习资源导引.html",
     "_2008_09_17_learning-habits-part3_一直以来伴随我的一些学习习惯(三)：阅读方法.html",
     "_2008_09_21_the-magical-bayesian-method_数学之美番外篇：平凡而又神奇的贝叶斯方法.html",
-    "_2008_10_29_methodology-for-programmers_方法论、方法论&mdash;&mdash;程序员的阿喀琉斯之踵.html",
+    "_2008_10_29_methodology-for-programmers_方法论、方法论——程序员的阿喀琉斯之踵.html",
     "_2008_12_05_learning-habits-part4_一直以来伴随我的一些学习习惯(四)：知识结构.html",
     "_2008_12_18_how-to-think-straight_如何清晰地思考（近一年来业余阅读的关于思维方面的知识结构整理）.html",
     "_2009_01_14_make-yourself-irreplacable_什么才是你的不可替代性和核心竞争力.html",
