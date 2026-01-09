@@ -76,7 +76,7 @@ async function getPostLinks() {
   //   }
   // });
   const postLinks = [
-    
+
   {href:"https://web.archive.org/web/20180218114558/http://mindhacks.cn/2017/10/17/through-the-maze-11/",title:"心智探寻（十一）：为什么很努力，却似乎停在原地"},
   {href:"https://web.archive.org/web/20180218114558/http://mindhacks.cn/2017/04/29/through-the-maze-1/",title:"心智探寻（一）：父母，和我们自己"},
   {href:"https://web.archive.org/web/20180218114558/http://mindhacks.cn/2016/12/18/escape-from-your-shawshank-part7-science-of-change/",title:"逃出你的肖申克（七）：改变的科学和科学的改变"},
@@ -180,6 +180,56 @@ async function fetchPost(postConfig) {
 }
 
 /**
+ * 下载静态资源
+ */
+async function asyncDonwloadCss(){
+const resList = [
+ `<link rel="stylesheet" id="parent-theme-css-css" href="https://web.archive.org/web/20180201005218cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/style.css?ver=4.7.9" type="text/css" media="all">`,
+ `<link rel="stylesheet" id="lavish-bootstrap-css" href="https://web.archive.org/web/20180201005218cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/bootstrap.min.css?ver=2018-02-01%2008:52:22" type="text/css" media="all">`,
+ `<link rel="stylesheet" id="font-awesome-css" href="https://web.archive.org/web/20180201005218cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/font-awesome.min.css?ver=1.0.0" type="text/css" media="all">`,
+ `<link rel="stylesheet" id="lavish-woocommerce-css" href="https://web.archive.org/web/20180201005218cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/woocommerce.css?ver=1.0.0" type="text/css" media="all">`,
+ `<link rel="stylesheet" id="lavish_wow-css" href="https://web.archive.org/web/20180201005218cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/animate.css?ver=1.0.0" type="text/css" media="all">`,
+ `<link rel="stylesheet" id="lavish_style_portfolio-css" href="https://web.archive.org/web/20180201005218cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/style_portfolio.css?ver=1.0.0" type="text/css" media="all">`,
+ `<link rel="stylesheet" id="lavish-css" href="https://web.archive.org/web/20180201005218cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/navmenu.css?ver=1.0.0" type="text/css" media="all">`,
+ `<link rel="stylesheet" id="lavish-style-css" href="https://web.archive.org/web/20180201005218cs_/http://mindhacks.cn/wp-content/themes/lavish-pro-child/style.css?ver=1.0.0" type="text/css" media="all">`,
+ `<script type="text/javascript" src="https://web.archive.org/web/20180201005218js_/http://mindhacks.cn/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>`,
+ `<script type="text/javascript" src="https://web.archive.org/web/20180201005218js_/http://mindhacks.cn/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>`,
+]
+
+  const resources = []
+  console.log("开始下载静态资源")
+  for(const res of resList){
+    let key = ""
+    if(res.startsWith("<link")){
+      key = `href=`
+    }else{
+      key = `src=`
+    }
+    let url = res.split(key)[1].split('"')[1]
+    url = url.split("?")[0] // 去除query参数
+    const abs = url
+
+    const localPath = url.split("mindhacks.cn")[1]
+
+    const local = path.join("assets", localPath);
+
+    resources.push({ abs, local });
+  }
+
+  // 下载资源
+  for (const r of resources) {
+    console.log("开始下载", r.local)
+    await download(
+      r.abs,
+      path.join(OUTPUT, r.local)
+    );
+  }
+  console.log("下载完毕")
+  return
+
+}
+
+/**
  * 主流程
  */
 const asyncMain = async () => {
@@ -193,4 +243,5 @@ const asyncMain = async () => {
   console.log("✅ 完成");
 }
 
-asyncMain()
+// asyncMain()
+asyncDonwloadCss()

@@ -1,0 +1,189 @@
+/**
+*Navmenu Styling 1
+*/
+
+.lavish_menu {
+}
+.lavish_menu > ul {
+	margin:0px;
+	padding:0px;
+} 
+ul.navmenu,
+.navmenu > ul{
+	margin:0px;
+	padding:0px;
+	float:right;
+}
+ul.mobilemenu {
+	display:none;
+}
+ul.navmenu > li,
+.navmenu > ul  > li{
+	list-style:none;
+	text-decoration:none;
+	float:left;
+	padding:0px;
+	margin:0px;
+	position:relative;
+}
+ul.navmenu > li >  a,
+.navmenu ul > li >  a {
+	display:block;
+	padding:0rem 0.7rem;
+	list-style:none;
+	font-size: 0.75rem;
+	color: #fff;
+	line-height:80px;
+	text-transform: uppercase;
+}
+ul.navmenu ul.sub-menu > li > a{
+	line-height: 40px;
+}
+ul.navmenu > li:hover > a {
+	background-color:#2ab8bd!important;
+	color:#fff;
+}
+ul.navmenu > li > a:hover,
+ul.navmenu > li > a:focus,
+ul.navmenu > li > a:active {
+	outline:none;
+	color:#fff;
+	background-color:#2ab8bd;
+}
+ul.navmenu ul.sub-menu {
+	margin:0px;
+	text-align: center;
+	display: none;
+	position: absolute;
+	z-index: 99999;
+	width:220px;
+	margin-top:0px;
+	top:80px;
+	right: 6.25rem!important;
+	background-color:#2ab8bd;
+}
+
+ul.navmenu ul.sub-menu > li {
+	list-style:none;
+	text-decoration:none;
+	border-top: 1px solid #46CBD0;
+	display:block;
+	width:100%;
+	margin:0px;
+
+}
+ul.navmenu ul.sub-menu > li > a {
+	padding: 0.4rem 1.5rem;
+	display:block;
+	color:#fff;	
+	text-align:left;
+	list-style:none;
+	transition: all ease 0.5s;
+	-webkit-transition: all ease 0.5s;
+	-moz-transition: all ease 0.5s;
+	-o-transition: all ease 0.5s;
+	font-size:0.75rem;
+}
+ul.navmenu ul.sub-menu > li > a > span {
+	font-size:0.75rem;
+}
+ul.navmenu ul.sub-menu > li > ul.sub-menu {
+	right: 100%!important;
+	top:0.2rem;
+}
+ul.navmenu ul.sub-menu > li > ul.sub-menu:before {
+	display:none;
+}
+ul.navmenu ul.sub-menu > li > ul.sub-menu > li > a {
+	padding: 0.6rem 1rem;
+	font-size: 0.75rem;
+}
+.navmenu .sub-menu li,
+.navmenu .children li {
+	text-transform:none;	
+}
+.navmenu .sub-menu ul,
+.navmenu .children ul {
+	right: 0%;
+	top: 0;
+}
+ul.navmenu ul.sub-menu > li > a:hover,
+ul.navmenu ul.sub-menu > li > a:focus,
+ul.navmenu ul.sub-menu > li > a:active {
+	background-color: #24979B;
+	color: #FFF;
+}
+ul.navmenu ul a,
+.navmenu ul ul a {	
+	margin: 0;
+	width: 100%;
+	padding: 8px 15px;
+}
+
+ul.navmenu li:hover > ul,
+.navmenu ul li:hover > ul {
+	display: block;
+	margin-right:-100px;
+   	right: 50%;
+}
+ul.navmenu li:hover ul ul,
+.navmenu ul li:hover ul ul {
+	margin-right:auto;
+   	right: 90%;
+}
+.navmenu .current_page_item > a,
+.navmenu .current_page_ancestor > a,
+.navmenu .current-menu-item > a,
+.navmenu .current-menu-ancestor > a {	
+	outline:none;
+	background-color:none;
+	color:#fff;
+	background-color:#2ab8bd;
+	
+}
+.toggle_button_lavish_menu {
+	display:none;
+}
+ul.navmenu ul.sub-menu .current_page_item > a, 
+ul.navmenu ul.sub-menu .current_page_ancestor > a, 
+ul.navmenu ul.sub-menu .current-menu-item > a, 
+ul.navmenu ul.sub-menu .current-menu-ancestor > a{
+	background-color:#fff!important;
+	color:#888;
+}
+
+
+@media screen and (max-width: 1030px){
+        ul.mobilemenu {
+             max-height: 400px!important;
+            overflow: hidden;
+       }
+}
+@media screen and (max-width: 480px){
+        ul.mobilemenu {
+             max-height: 250px!important;
+             
+       }
+}
+
+/*
+     FILE ARCHIVED ON 11:19:30 Oct 19, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 00:58:08 Jan 09, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 1.032
+  exclusion.robots: 0.074
+  exclusion.robots.policy: 0.057
+  esindex: 0.017
+  cdx.remote: 8.086
+  LoadShardBlock: 71.68 (3)
+  PetaboxLoader3.datanode: 92.254 (5)
+  PetaboxLoader3.resolve: 53.847 (2)
+  load_resource: 104.903
+  loaddict: 24.682
+*/

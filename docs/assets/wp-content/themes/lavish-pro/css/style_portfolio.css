@@ -1,0 +1,143 @@
+/*
+=================================================
+Styles for CUstom Portfolios
+=================================================
+*/
+.effect-st-portfolio {
+	padding: 0px!important;
+	overflow: hidden;
+	background: #908D8D;
+	border: 2px solid #F4F4F4;
+
+	/* outline: 1px solid #CBCBCB; */
+}
+.effect-st-portfolio > a {
+	background-color:#000;
+}
+
+
+.effect-st-portfolio .la-style-portfolio-image {
+	transition: all ease-in-out 0.5s;
+	-webkit-transition: all ease-in-out 0.5s;
+	-moz-transition: all ease-in-out 0.5s;
+	-o-transition: all ease-in-out 0.5s;
+	ms-transition: all ease-in-out 0.5s;
+}
+.effect-st-portfolio:hover .la-style-portfolio-image {
+	opacity:0.4;
+	-moz-transform: scale(1.5) rotate(10deg) translate(50px);
+	-webkit-transform: scale(1.5) rotate(10deg) translate(50px);
+	-o-transform: scale(1.5) rotate(10deg) translate(50px);
+	transform: scale(1.5) rotate(10deg) translate(50px);
+}
+.effect-st-portfolio .la-style-portfolio-title {
+	z-index: 2;
+	margin-top:-140px;
+	margin-bottom:80px;
+	margin-left:2000%;
+	display:none;
+	transition: all 0.5s ease-in-out 5s;
+	-webkit-transition: all 0.5s  ease-in-out 5s;
+	-moz-transition: all 0.5s ease-in-out 5s;
+	-o-transition: all 0.5s ease-in-out 5s;
+	ms-transition: all 0.5s ease-in-out 5s;
+}
+.effect-st-portfolio:hover .la-style-portfolio-title {
+	display:block;
+	margin-left:35%;
+	/* opacity: 1; */
+	position: relative;
+	z-index: 2;
+}
+
+.effect-st-portfolio i.portfolio_icons {
+	width:50px;
+	height:50px;
+	border-radius:25px;
+	margin:5px;
+	background-color: aqua;
+	padding:18px 18px;
+	font-size:1rem;
+	color:#000;
+	transition: all ease-in-out 0.5s;
+	-webkit-transition: all ease-in-out 0.5s;
+	-moz-transition: all ease-in-out 0.5s;
+	-o-transition: all ease-in-out 0.5s;
+	ms-transition: all ease-in-out 0.5s;
+	opacity: 0.5;
+	z-index: 5;
+	cursor:pointer;
+}
+.effect-st-portfolio:hover i.portfolio_icons:hover {
+	background-color:#fff;
+	color:#000;
+	z-index: 3;
+	opacity:1;
+}
+
+/*
+=================================================
+Light Box Settings
+=================================================
+*/
+
+.effect-st-portfolio-light-box-close {
+	float:right;
+	font-size:1.5rem;
+	padding: 16px 20px;
+	border: 1px solid #EAEAEA;
+	margin-bottom:10px;
+	background:#fff;
+}
+.effect-st-portfolio-light-box-close:hover {
+	float:right;
+	font-size:1.5rem;
+	padding: 16px 20px;
+	background:#f00;
+	color:#fff;
+	border: 1px solid #f00;
+}
+.effect-st-portfolio-light-box {
+	display:inline-block;
+}
+.style-portfolio-categories,
+.style-portfolio-tags {
+	border-bottom: 1px solid #EAEAEA;
+	padding: 5px 0px;
+}
+
+@media screen and (max-width:1000px) {
+    .col-md-4.effect-st-portfolio {
+        width:50%;
+        float:left;
+    }
+}
+@media screen and (max-width:720px) {
+    .col-md-4.effect-st-portfolio {
+        width:100%;
+    }
+}
+.la-style-portfolio-image img {
+    width:100%;
+}
+/*
+     FILE ARCHIVED ON 11:18:46 Oct 19, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 00:58:03 Jan 09, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 2.192
+  exclusion.robots: 0.069
+  exclusion.robots.policy: 0.054
+  esindex: 0.015
+  cdx.remote: 53.941
+  LoadShardBlock: 125.448 (3)
+  PetaboxLoader3.resolve: 110.635 (3)
+  PetaboxLoader3.datanode: 138.066 (5)
+  load_resource: 143.352
+  loaddict: 61.409
+*/

@@ -1,0 +1,62 @@
+/*
+Theme Name: Lavish Pro Child
+Theme URI: http://demo.styledthemes.com/lavish/
+Author: Styled Themes
+Author URI: http://www.styledthemes.com
+Description: For anyone wanting a serious business website, Lavish Pro is the one for you because of what this theme includes. You get responsive design, multiple blog layout options, retina ready graphics, several page templates, post formats, gorgeous typography elements, tons of widget positions, a custom child theme, WooCommerce support, Jetpack support, video tutorials, and more!
+Version: 1.0.0
+Template: lavish-pro
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: lavish-pro-child
+Tags: custom-colors, white, light, two-columns, three-columns, fluid-layout, responsive-layout, fixed-layout, custom-background, custom-header, custom-menu, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, theme-options, translation-ready, microformats
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/* Add your custom  css below */
+
+p, td, .entry-content a, .entry-content li, .entry-content span {
+    font-size: 1rem;
+    line-height: 1.7rem;
+}
+
+blockquote {
+    font-style: normal;
+}
+
+blockquote p {
+    margin-bottom: 1em;
+}
+
+* {
+    font-family: -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",FontAwesome,sans-serif !important;
+}
+
+#la-banner {
+    background-size: cover;
+}
+
+/*
+     FILE ARCHIVED ON 11:20:04 Oct 19, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 00:58:10 Jan 09, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.601
+  exclusion.robots: 0.042
+  exclusion.robots.policy: 0.032
+  esindex: 0.012
+  cdx.remote: 28.478
+  LoadShardBlock: 201.388 (3)
+  PetaboxLoader3.resolve: 169.388 (4)
+  PetaboxLoader3.datanode: 153.831 (5)
+  load_resource: 216.08
+  loaddict: 68.436
+*/
