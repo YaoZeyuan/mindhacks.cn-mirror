@@ -151,14 +151,40 @@ const asyncMain = async () => {
   const posts = await getPostLinks();
   console.log(`发现文章 ${posts.length} 篇`);
 
+  const indexHtmlList = ['<ul class="car-list">'];
+  let index = 0;
   for (const postFile of posts) {
     console.log(`开始处理${postFile}`);
+    index++;
     const inputFile = path.resolve(Base_Input_Dir, postFile);
     const outputFile = path.resolve(Base_Output_Dir, postFile);
     processHtml(inputFile, outputFile);
     console.log(`✔ Processed: ${outputFile}`);
+    const title = postFile.split("_").slice(5).join("").split(".html")[0];
+    const url = `https://mindhacks-mirror.yaozeyuan.online/posts/` + postFile;
+    indexHtmlList.push(
+      ` <li>
+                      <span class="car-yearmonth"
+                        > <span title="Post Count"></span></span
+                      >
+                      <ul class="car-monthlisting">
+                        <li>
+                          ${index}:
+                          <a
+                            href="${url}"
+                            >${title}</a
+                          >
+                          <span title="Comment Count"></span>
+                        </li>
+                      </ul>
+                    </li>
+      `
+    );
   }
 
+  indexHtmlList.push("</ul>");
+  const indexHtmlContent = indexHtmlList.join("\n");
+  console.log(indexHtmlContent);
   console.log("✅ 完成");
 };
 
