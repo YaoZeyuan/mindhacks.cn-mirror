@@ -1,0 +1,64 @@
+/*
+Theme Name:     Arras
+Theme URI:      http://www.arrastheme.com/
+Description:    Child theme for the Arras theme 
+Author:         pongba
+Author URI:     http://mindhacks.cn
+Template:       arras
+Version:        0.1.0
+*/
+
+@import url("/web/20160729053010cs_/http://mindhacks.cn/wp-content/themes/arras/style.css");
+
+.entry-thumbnails {
+    display: none;
+}
+
+.about-author {
+    display: none !important;
+}
+
+.entry-content {
+    font-size: 14px;
+}
+
+#top-menu .sf-menu a {
+    font-size: 12px;
+}
+
+.posts-quick .entry-summary {
+    font-size: 14px;
+}
+
+.blog-description {
+    font-size: 12px;
+}
+
+.entry-content a {
+    text-decoration: underline;
+}
+
+#me_as_info_source a {
+    text-decoration: underline;
+}
+
+/*
+     FILE ARCHIVED ON 05:30:10 Jul 29, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:39:42 Jan 09, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 1.012
+  exclusion.robots: 0.039
+  exclusion.robots.policy: 0.031
+  esindex: 0.01
+  cdx.remote: 16.666
+  LoadShardBlock: 190.483 (3)
+  PetaboxLoader3.datanode: 218.039 (4)
+  PetaboxLoader3.resolve: 98.162 (2)
+  load_resource: 147.644
+*/

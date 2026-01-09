@@ -309,6 +309,17 @@ async function fetchPost(postConfig) {
  */
 async function asyncDonwloadCss() {
   const resList = [
+
+`<link rel="stylesheet" id="wp-pagenavi-css" href="https://web.archive.org/web/20160807020105cs_/http://mindhacks.cn/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70" type="text/css" media="all"/>`,
+`<script type="text/javascript" src="https://web.archive.org/web/20160807020105js_/http://mindhacks.cn/wp-includes/js/jquery/jquery.js?ver=1.4.2"></script>`,
+`<script type="text/javascript" src="https://web.archive.org/web/20160807020105js_/http://mindhacks.cn/wp-content/themes/arras/js/superfish/hoverIntent.js"></script>`,
+`<script type="text/javascript" src="https://web.archive.org/web/20160807020105js_/http://mindhacks.cn/wp-content/themes/arras/js/superfish/superfish.js"></script>`,
+`<script type="text/javascript" src="https://web.archive.org/web/20160807020105js_/http://mindhacks.cn/wp-content/themes/arras/js/jquery.validate.min.js"></script>`,
+`<link rel="stylesheet" type="text/css" href="https://web.archive.org/web/20160807020105cs_/http://mindhacks.cn/wp-content/plugins/wp-recaptcha/recaptcha.css"/><link rel="stylesheet" href="https://web.archive.org/web/20160807020105cs_/http://mindhacks.cn/wp-content/themes/arras/css/styles/default.css" type="text/css" media="screen,projection"/><link rel="stylesheet" href="https://web.archive.org/web/20160807020105cs_/http://mindhacks.cn/wp-content/themes/arras/css/layouts/2c-r-fixed.css" type="text/css"/>`,
+`<link rel="stylesheet" href="https://web.archive.org/web/20160807020105cs_/http://mindhacks.cn/wp-content/themes/arras-child/style.css" type="text/css" media="screen,projection"/>`,
+
+
+
     `<link rel="stylesheet" id="parent-theme-css-css" href="https://web.archive.org/web/20180201005218cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/style.css?ver=4.7.9" type="text/css" media="all">`,
     `<link rel="stylesheet" id="lavish-bootstrap-css" href="https://web.archive.org/web/20180201005218cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/bootstrap.min.css?ver=2018-02-01%2008:52:22" type="text/css" media="all">`,
     `<link rel="stylesheet" id="font-awesome-css" href="https://web.archive.org/web/20180201005218cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/font-awesome.min.css?ver=1.0.0" type="text/css" media="all">`,

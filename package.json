@@ -5,7 +5,7 @@
   "main": "fetch.js",
   "type": "module",
   "scripts": {
-    "fetch": "node fetch.js",
+    "download": "node download.js",
     "format": "node format.js"
   },
   "keywords": [],

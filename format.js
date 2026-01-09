@@ -14,7 +14,7 @@ const ASSETS_DIR = path.join(Base_Output_Dir, "..", "assets");
 await fs.ensureDir(Base_Output_Dir);
 await fs.ensureDir(ASSETS_DIR);
 
-const ASSET_PREFIX = "/assets";
+const ASSET_PREFIX = "../assets";
 const SITE_HOST = "mindhacks.cn";
 
 /**
@@ -151,13 +151,13 @@ const asyncMain = async () => {
   const posts = await getPostLinks();
   console.log(`发现文章 ${posts.length} 篇`);
 
-  const postFile = posts[0];
-  console.log(`开始处理${postFile}`);
-  const inputFile = path.resolve(Base_Input_Dir, postFile);
-  const outputFile = path.resolve(Base_Output_Dir, postFile);
-  processHtml(inputFile, outputFile);
-
-  console.log(`✔ Processed: ${outputFile}`);
+  for (const postFile of posts) {
+    console.log(`开始处理${postFile}`);
+    const inputFile = path.resolve(Base_Input_Dir, postFile);
+    const outputFile = path.resolve(Base_Output_Dir, postFile);
+    processHtml(inputFile, outputFile);
+    console.log(`✔ Processed: ${outputFile}`);
+  }
 
   console.log("✅ 完成");
 };

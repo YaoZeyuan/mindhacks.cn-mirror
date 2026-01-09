@@ -1,0 +1,92 @@
+/* RECAPTCHA STYLING */
+.recaptcha-error {
+   font-size: 1.8em;
+   padding-bottom: 8px;
+}
+/* END RECAPTCHA STYLING */
+
+/* MAILHIDE STYLING */
+
+/* This is for plain text emails i.e. haha@lol.com - TEXT*/
+.mh-plaintext {
+   background:transparent url(/web/20160729052232im_/http://mindhacks.cn/wp-content/plugins/wp-recaptcha/email.png) no-repeat scroll left center;
+   border:medium none;
+   color:#2277DD;
+   height:16px;
+   padding:2px 2px 4px 20px;
+}
+
+/* This is for plain text emails i.e. haha@lol.com - DOTS*/
+.mh-plaintext a, .mh-plaintext a:hover, .mh-plaintext a:visited, .mh-plaintext a:visited:hover {
+   color: #FF7700;
+   font-weight: bolder;
+   text-decoration: none;
+   border: 0;
+   background-color: transparent !important;
+}
+
+/* This is for hyperlinked emails i.e. <a href="mailto:ohnoes@pwnies.com">TEXT</a> - TEXT*/
+.mh-hyperlinked {
+   background:transparent url(/web/20160729052232im_/http://mindhacks.cn/wp-content/plugins/wp-recaptcha/email.png) no-repeat scroll left center;
+   border:medium none;
+   color:#2277DD;
+   height:16px;
+   padding:2px 2px 4px 20px;
+}
+
+/* This is for hyperlinked emails i.e. <a href="mailto:ohnoes@pwnies.com">TEXT</a> - DOTS*/
+.mh-hyperlinked a, .mh-hyperlinked a:hover, .mh-hyperlinked a:visited, .mh-hyperlinked a:visited:hover {
+   color: #FF7700;
+   font-weight: bolder;
+   text-decoration: none;
+   border: 0;
+}
+/* END MAILHIDE STYLING */
+
+/* ADMINISTRATION SETTINGS RECAPTCHA */
+.lang-select label, .theme-select label {
+   vertical-align: middle !important;
+}
+
+.lang-select select, .theme-select select {
+   vertical-align: middle !important;
+}
+
+.recaptcha-form {
+   margin: auto !important;
+   width: 25em !important;
+}
+
+.recaptcha-options td {
+   vertical-align: top !important;
+}
+
+.which-key label {
+   font-weight: bold;
+}
+
+.copyright {
+   text-align: center;
+   font-size: .85em;
+}
+/* END ADMINISTRATION SETTINGS RECAPTCHA */
+/*
+     FILE ARCHIVED ON 05:22:32 Jul 29, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:39:40 Jan 09, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.593
+  exclusion.robots: 0.048
+  exclusion.robots.policy: 0.036
+  esindex: 0.011
+  cdx.remote: 7.894
+  LoadShardBlock: 116.256 (3)
+  PetaboxLoader3.datanode: 141.055 (4)
+  load_resource: 70.174
+  PetaboxLoader3.resolve: 42.38
+*/

@@ -16,7 +16,7 @@
       "request": "launch",
       "name": "下载html",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/fetch.js"
+      "program": "${workspaceFolder}/download.js"
     }
   ]
 }

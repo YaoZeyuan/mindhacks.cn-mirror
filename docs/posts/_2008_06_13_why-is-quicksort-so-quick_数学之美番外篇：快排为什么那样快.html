@@ -1,30 +1,26 @@
-<!DOCTYPE html><html lang="en-US"><head><script src="//archive.org/includes/athena.js" type="text/javascript"></script>
+<!DOCTYPE html><html lang="en-US"><head>
 <script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app227.us.archive.org';v.server_ms=256;archive_analytics.send_pageview({});});</script>
-<script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=Hk4-lkW3" charset="utf-8"></script>
-<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=txqj7nKC" charset="utf-8"></script>
+
+
 <script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
-<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
-<script type="text/javascript">
-    __wm.init("https://web.archive.org/web");
-  __wm.wombat("http://mindhacks.cn:80/2008/06/13/why-is-quicksort-so-quick/","20180303070134","https://web.archive.org/","web","https://web-static.archive.org/_static/",
-	      "1520060494");
-</script>
-<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3">
-<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv">
+
+
+
+
 <!-- End Wayback Rewrite JS Include -->
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge" charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="http://mindhacks.cn/xmlrpc.php">
-<link rel="shortcut icon" href="https://web.archive.org/web/20180303070134im_/http://mindhacks.cn/wp-content/themes/lavish-pro-child/favicon.ico">
+
+<link rel="shortcut icon" href="../assets/wp-content/themes/lavish-pro-child/favicon.ico">
 
 <title>数学之美番外篇：快排为什么那样快 – 刘未鹏 | Mind Hacks</title>
-<link rel="dns-prefetch" href="//web.archive.org/web/20180303070134/http://fonts.googleapis.com/">
-<link rel="dns-prefetch" href="//web.archive.org/web/20180303070134/http://s.w.org/">
-<link rel="alternate" type="application/rss+xml" title="刘未鹏 | Mind Hacks » Feed" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/feed/">
-<link rel="alternate" type="application/rss+xml" title="刘未鹏 | Mind Hacks » Comments Feed" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/comments/feed/">
-<link rel="alternate" type="application/rss+xml" title="刘未鹏 | Mind Hacks » 数学之美番外篇：快排为什么那样快 Comments Feed" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/feed/">
+<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="刘未鹏 | Mind Hacks » Feed" href="../assets/feed/">
+<link rel="alternate" type="application/rss+xml" title="刘未鹏 | Mind Hacks » Comments Feed" href="../assets/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="刘未鹏 | Mind Hacks » 数学之美番外篇：快排为什么那样快 Comments Feed" href="../assets/2008/06/13/why-is-quicksort-so-quick/feed/">
 		<script type="text/javascript">
 			window._wpemojiSettings = {"baseUrl":"https:\/\/web.archive.org\/web\/20180303070134\/https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/web.archive.org\/web\/20180303070134\/https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/web.archive.org\/web\/20180303070134\/http:\/\/mindhacks.cn\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.9"}};
 			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -43,28 +39,28 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel="stylesheet" id="parent-theme-css-css" href="https://web.archive.org/web/20180303070134cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/style.css?ver=4.7.9" type="text/css" media="all">
-<link rel="stylesheet" id="lavish-bootstrap-css" href="https://web.archive.org/web/20180303070134cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/bootstrap.min.css?ver=2018-03-03%2015:01:34" type="text/css" media="all">
-<link rel="stylesheet" id="font-awesome-css" href="https://web.archive.org/web/20180303070134cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/font-awesome.min.css?ver=1.0.0" type="text/css" media="all">
-<link rel="stylesheet" id="lavish-woocommerce-css" href="https://web.archive.org/web/20180303070134cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/woocommerce.css?ver=1.0.0" type="text/css" media="all">
-<link rel="stylesheet" id="lavish_wow-css" href="https://web.archive.org/web/20180303070134cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/animate.css?ver=1.0.0" type="text/css" media="all">
-<link rel="stylesheet" id="lavish_style_portfolio-css" href="https://web.archive.org/web/20180303070134cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/style_portfolio.css?ver=1.0.0" type="text/css" media="all">
-<link rel="stylesheet" id="lavish-css" href="https://web.archive.org/web/20180303070134cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/navmenu.css?ver=1.0.0" type="text/css" media="all">
-<link rel="stylesheet" id="lavish-style-css" href="https://web.archive.org/web/20180303070134cs_/http://mindhacks.cn/wp-content/themes/lavish-pro-child/style.css?ver=1.0.0" type="text/css" media="all">
-<link rel="stylesheet" id="lavish-open-sans-css" href="//web.archive.org/web/20180303070134cs_/http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%2C600&amp;ver=4.7.9" type="text/css" media="all">
-<link rel="stylesheet" id="lavish-lato-css" href="//web.archive.org/web/20180303070134cs_/http://fonts.googleapis.com/css?family=Lato%3A400%2C700%2C900&amp;ver=4.7.9" type="text/css" media="all">
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
-<link rel="https://api.w.org/" href="http://mindhacks.cn/wp-json/">
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mindhacks.cn/xmlrpc.php?rsd">
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mindhacks.cn/wp-includes/wlwmanifest.xml"> 
-<link rel="prev" title="学习与记忆" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/05/how-memory-works/">
-<link rel="next" title="知其所以然（以算法学习为例）" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/07/07/the-importance-of-knowing-why/">
+<link rel="stylesheet" id="parent-theme-css-css" href="../assets/wp-content/themes/lavish-pro/style.css?ver=4.7.9" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-bootstrap-css" href="../assets/wp-content/themes/lavish-pro/css/bootstrap.min.css?ver=2018-03-03%2015:01:34" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="../assets/wp-content/themes/lavish-pro/css/font-awesome.min.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-woocommerce-css" href="../assets/wp-content/themes/lavish-pro/css/woocommerce.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish_wow-css" href="../assets/wp-content/themes/lavish-pro/css/animate.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish_style_portfolio-css" href="../assets/wp-content/themes/lavish-pro/css/style_portfolio.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-css" href="../assets/wp-content/themes/lavish-pro/css/navmenu.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-style-css" href="../assets/wp-content/themes/lavish-pro-child/style.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-open-sans-css" href="http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%2C600&amp;ver=4.7.9" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-lato-css" href="http://fonts.googleapis.com/css?family=Lato%3A400%2C700%2C900&amp;ver=4.7.9" type="text/css" media="all">
+
+
+
+
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../assets/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="学习与记忆" href="../assets/2008/06/05/how-memory-works/">
+<link rel="next" title="知其所以然（以算法学习为例）" href="../assets/2008/07/07/the-importance-of-knowing-why/">
 <meta name="generator" content="WordPress 4.7.9">
-<link rel="canonical" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/">
-<link rel="shortlink" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/?p=16">
-<link rel="alternate" type="application/json+oembed" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmindhacks.cn%2F2008%2F06%2F13%2Fwhy-is-quicksort-so-quick%2F">
-<link rel="alternate" type="text/xml+oembed" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmindhacks.cn%2F2008%2F06%2F13%2Fwhy-is-quicksort-so-quick%2F&amp;format=xml">
+<link rel="canonical" href="../assets/2008/06/13/why-is-quicksort-so-quick/">
+<link rel="shortlink" href="../assets/?p=16">
+
+
 <style type="text/css">
 body {
 	font-size: 100%; 
@@ -519,7 +515,7 @@ Footer Widget Title Color settig
 
 </head>
 <body class="post-template-default single single-post postid-16 single-format-standard"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
-<script>__wm.rw(0);</script>
+
 <div id="wm-ipp-base" lang="en" style="display:none;direction:ltr;" toolbar-mode="auto">
 <div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;">
 <div id="donato" style="position:relative;width:100%;height:0;">
@@ -590,7 +586,7 @@ Footer Widget Title Color settig
         <a id="wm-tb-close" href="#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
       </div>
       <div id="wm-share" class="xxs">
-        <a href="/web/20180303070134/http://web.archive.org/screenshot/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick" id="wm-screenshot" title="screenshot">
+        <a href="http://web.archive.org/screenshot/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick" id="wm-screenshot" title="screenshot">
           <span class="wm-icon-screen-shot"></span>
         </a>
         <a href="#" id="wm-video" title="video">
@@ -635,10 +631,7 @@ Footer Widget Title Color settig
     </div>
     </div>
   </div></div></div></div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20180303070134/http://mindhacks.cn:80/2008/06/13/why-is-quicksort-so-quick/</div>
-<script type="text/javascript">//<![CDATA[
-__wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick","20180303070134",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
-  __wm.rw(1);
-//]]></script>
+
 <!-- END WAYBACK TOOLBAR INSERT -->
  
     <div id="la-wrapper" style="border-color:#000000;">
@@ -649,7 +642,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
         
 			<div id="la-text-group">
                     <div id="la-site-title-group" style="margin: 10px 10px 10px 10px;">
-                        <h1 id="la-site-title"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/" title="刘未鹏 | Mind Hacks" rel="home" style="color: ;">刘未鹏 | Mind Hacks</a></h1>
+                        <h1 id="la-site-title"><a href="../assets/" title="刘未鹏 | Mind Hacks" rel="home" style="color: ;">刘未鹏 | Mind Hacks</a></h1>
                         <h2 id="la-site-tagline" style="color: #a3a3a3;">思维改变生活</h2>
                     </div>	
                         </div>
@@ -660,14 +653,14 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
                             
                                     <div class="lavish_menus">
                         <div class="lavish_menu"><!--Primary Navigation Starts Here -->
-                            <ul id="menu-categories" class="navmenu"><li id="menu-item-447" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-447"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/%e5%bf%83%e6%99%ba%e6%8e%a2%e5%af%bb/">心智探寻</a></li>
-<li id="menu-item-285" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-285"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/mind/">思维改变生活</a></li>
-<li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-284"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/learning-method/">学习方法</a></li>
-<li id="menu-item-288" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-288"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/algorithms/">算法</a></li>
-<li id="menu-item-290" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-290"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/computer-science/">计算机科学</a></li>
-<li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-286"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/math/">数学</a></li>
-<li id="menu-item-287" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-287"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/machine-learning/">机器学习与人工智能</a></li>
-<li id="menu-item-289" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-289"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/programming/">编程</a></li>
+                            <ul id="menu-categories" class="navmenu"><li id="menu-item-447" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-447"><a href="../assets/topics/%e5%bf%83%e6%99%ba%e6%8e%a2%e5%af%bb/">心智探寻</a></li>
+<li id="menu-item-285" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-285"><a href="../assets/topics/mind/">思维改变生活</a></li>
+<li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-284"><a href="../assets/topics/learning-method/">学习方法</a></li>
+<li id="menu-item-288" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-288"><a href="../assets/topics/algorithms/">算法</a></li>
+<li id="menu-item-290" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-290"><a href="../assets/topics/computer-science/">计算机科学</a></li>
+<li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-286"><a href="../assets/topics/math/">数学</a></li>
+<li id="menu-item-287" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-287"><a href="../assets/topics/machine-learning/">机器学习与人工智能</a></li>
+<li id="menu-item-289" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-289"><a href="../assets/topics/programming/">编程</a></li>
 </ul>                        </div>
                         
                         <div class="header_extras">
@@ -705,14 +698,14 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
         </div>
     </div>
                         <div style="background-color:#fff">
-        <ul id="menu-categories-1" class="mobilemenu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-447"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/%e5%bf%83%e6%99%ba%e6%8e%a2%e5%af%bb/">心智探寻</a></li>
-<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-285"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/mind/">思维改变生活</a></li>
-<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-284"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/learning-method/">学习方法</a></li>
-<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-288"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/algorithms/">算法</a></li>
-<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-290"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/computer-science/">计算机科学</a></li>
-<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-286"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/math/">数学</a></li>
-<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-287"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/machine-learning/">机器学习与人工智能</a></li>
-<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-289"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/topics/programming/">编程</a></li>
+        <ul id="menu-categories-1" class="mobilemenu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-447"><a href="../assets/topics/%e5%bf%83%e6%99%ba%e6%8e%a2%e5%af%bb/">心智探寻</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-285"><a href="../assets/topics/mind/">思维改变生活</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-284"><a href="../assets/topics/learning-method/">学习方法</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-288"><a href="../assets/topics/algorithms/">算法</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-290"><a href="../assets/topics/computer-science/">计算机科学</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-286"><a href="../assets/topics/math/">数学</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-287"><a href="../assets/topics/machine-learning/">机器学习与人工智能</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-289"><a href="../assets/topics/programming/">编程</a></li>
 </ul>    </div>
                     </div>
                     <aside id="la-banner" class="lr_responsive_banner " style="background-color: #EAEAEA; background-image: url(https://web.archive.org/web/20180303070134im_/http://mindhacks.cn/wp-content/uploads/2016/12/mountain_sz.jpg); color: #ffffff;">
@@ -754,16 +747,16 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
 <p>4. 信息论！信息论？</p>
 <p>5. 小结</p>
 <p><strong>0. </strong><strong>前言</strong></p>
-<p>知道这个理论是在<a href="https://web.archive.org/web/20180303070134/http://groups.google.com/group/pongba">TopLanguage</a>上的一次讨论，先是g9<a href="https://web.archive.org/web/20180303070134/http://groups.google.com/group/pongba/msg/f95aa12feb4dfd67">转了David MacKay的一篇文章</a>，然后引发了牛人们的<a href="https://web.archive.org/web/20180303070134/http://groups.google.com/group/pongba/browse_frm/thread/28ac39e0222becf2">一场关于信息论的讨论</a>。Anyway，正如g9很久以前在<a href="https://web.archive.org/web/20180303070134/http://blog.csdn.net/g9yuayon">Blog</a>里面所<a href="https://web.archive.org/web/20180303070134/http://blog.csdn.net/g9yuayon/archive/2007/04/22/1574518.aspx">说</a>的： </p>
+<p>知道这个理论是在<a href="http://groups.google.com/group/pongba">TopLanguage</a>上的一次讨论，先是g9<a href="http://groups.google.com/group/pongba/msg/f95aa12feb4dfd67">转了David MacKay的一篇文章</a>，然后引发了牛人们的<a href="http://groups.google.com/group/pongba/browse_frm/thread/28ac39e0222becf2">一场关于信息论的讨论</a>。Anyway，正如g9很久以前在<a href="http://blog.csdn.net/g9yuayon">Blog</a>里面所<a href="http://blog.csdn.net/g9yuayon/archive/2007/04/22/1574518.aspx">说</a>的： </p>
 <blockquote>
-<p>有时无知是福。俺看到一点新鲜的科普也能觉得造化神奇。刚才读Gerald Jay Sussman（<a href="https://web.archive.org/web/20180303070134/http://mitpress.mit.edu/sicp/">SICP</a>作者）的文章，<a href="https://web.archive.org/web/20180303070134/http://swiss.csail.mit.edu/classes/symbolic/spring07/readings/robust-systems.pdf">Building Robust Systems – an essay</a>，竟然心如小鹿乱撞，手心湿润，仿佛第一次握住初恋情人温柔的手。</p>
+<p>有时无知是福。俺看到一点新鲜的科普也能觉得造化神奇。刚才读Gerald Jay Sussman（<a href="http://mitpress.mit.edu/sicp/">SICP</a>作者）的文章，<a href="http://swiss.csail.mit.edu/classes/symbolic/spring07/readings/robust-systems.pdf">Building Robust Systems – an essay</a>，竟然心如小鹿乱撞，手心湿润，仿佛第一次握住初恋情人温柔的手。</p>
 </blockquote>
-<p>而看到<a href="https://web.archive.org/web/20180303070134/http://users.aims.ac.za/~mackay/">MacKay</a>的这篇文章我也有这种感觉——以前模糊的东西忽然有了深刻的解释，一切顿时变得明白无比。原来看问题的角度或层面能够带来这么大的变化。再一次印证了越是深刻的原理往往越是简单和强大。所以说，土鳖也有土鳖的幸福:P </p>
-<p>这篇文章相当于MacKay<a href="https://web.archive.org/web/20180303070134/http://users.aims.ac.za/~mackay/sorting/sorting.html">原文</a>的白话文版。MacKay在原文中用到了信息论的知识，后者在我看来并不是必须的，尽管计算的时候方便，但与本质无关。所以我用大白话解释了一通。 </p>
+<p>而看到<a href="http://users.aims.ac.za/~mackay/">MacKay</a>的这篇文章我也有这种感觉——以前模糊的东西忽然有了深刻的解释，一切顿时变得明白无比。原来看问题的角度或层面能够带来这么大的变化。再一次印证了越是深刻的原理往往越是简单和强大。所以说，土鳖也有土鳖的幸福:P </p>
+<p>这篇文章相当于MacKay<a href="http://users.aims.ac.za/~mackay/sorting/sorting.html">原文</a>的白话文版。MacKay在原文中用到了信息论的知识，后者在我看来并不是必须的，尽管计算的时候方便，但与本质无关。所以我用大白话解释了一通。 </p>
 <p><strong>1. </strong><strong>猜数字 </strong></p>
 <p>我们先来玩一个猜数字游戏：我心里默念一个1~64之间的数，你来猜（你只能问答案是“是”或“否”的问题）。为了保证不论在什么情况下都能以尽量少的次数猜中，你应该采取什么策略呢？很显然，二分。先是猜是不是位于1~32之间，排除掉一半可能性，然后对区间继续二分。这种策略能够保证无论数字怎么跟你捉迷藏，都能在log_2{n}次以内猜中。用算法的术语来说就是它的下界是最好的。 </p>
 <p>我们再来回顾一下这个游戏所蕴含的本质：为什么这种策略具有最优下界？答案也很简单，这个策略是平衡的。反之如果策略不是平衡的，比如问是不是在1~10之间，那么一旦发现不是在1~10之间的话就会剩下比N/2更多的可能性需要去考察了。 </p>
-<p><a href="https://web.archive.org/web/20180303070134/http://blog.youxu.info/">徐宥</a>在讨论中提到，这种策略的本质可以概括成“让未知世界无机可乘”。它是没有“弱点的”，<strong>答案的任何一个分支都是等概率的</strong>。反之，一旦某个分支蕴含的可能性更多，当情况落到那个分支上的时候你就郁闷了。比如猜数字游戏最糟糕的策略就是一个一个的猜：是1吗？是2吗？… 因为这种猜法最差的情况下需要64次才能猜对，下界非常糟糕。二分搜索为什么好，就是因为它每次都将可能性排除一半并且<strong>无论如何</strong>都能排除一半（它是最糟情况下表现最好的）。 </p>
+<p><a href="http://blog.youxu.info/">徐宥</a>在讨论中提到，这种策略的本质可以概括成“让未知世界无机可乘”。它是没有“弱点的”，<strong>答案的任何一个分支都是等概率的</strong>。反之，一旦某个分支蕴含的可能性更多，当情况落到那个分支上的时候你就郁闷了。比如猜数字游戏最糟糕的策略就是一个一个的猜：是1吗？是2吗？… 因为这种猜法最差的情况下需要64次才能猜对，下界非常糟糕。二分搜索为什么好，就是因为它每次都将可能性排除一半并且<strong>无论如何</strong>都能排除一半（它是最糟情况下表现最好的）。 </p>
 <p><strong>2. </strong><strong>称球 </strong></p>
 <p>12个小球，其中有一个是坏球。有一架天平。需要你用最少的称次数来确定哪个小球是坏的并且它到底是轻还是重。 </p>
 <p>这个问题是一道流传已久的智力题。网络上也有很多讲解，还有泛化到N个球的情况下的严格证明。也有零星的一些地方提到从信息论的角度来看待最优解法。本来我一直认为这道题目除了试错之外没有其它高妙的思路了，只能一个个方法试，并尽量从结果中寻找信息，然后看看哪种方案最少。 </p>
@@ -774,8 +767,8 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
 <p>在未称之前，一共有12种可能性：1轻、1重、2轻、2重、…、6轻、6重。现在将1、2、3号放在左边，4、5、6放在右边3、3称了之后，不失一般性假设天平左倾，那么小球的可能性就变成了原来的一半（6种）：1重、2重、3重、4轻、5轻、6轻。即这种称法能排除一半可能性。 </p>
 <p>现在再来看2、2称法，即1、2放左边，3、4放右边，剩下的5、6不称，放一边。假设结果是天平平衡，那么可能性剩下——4种：5重、5轻、6重、6轻。假设天平左倾，可能性也剩下4种：1重、2重、3轻、4轻。右倾和左倾的情况类似。总之，这种称法，不管天平结果如何，情况都被我们缩小到了原来的三分之一！我们充分利用了“天平的结果状态可能有三种”这个条件来三等分所有可能性，而不是二等分。 </p>
 <p>说到这里，剩下的事情就实在很简单了：第二步称法，只要记着这样一个指导思想——你选择的称法必须使得当天平平衡的时候答案剩下的可能性和天平左倾（右倾）的时候答案剩下的可能性一样多。实际上，这等同于你得选择一种称法，使得天平输出三种结果的概率是均等的，因为天平输出某个结果的概率就等同于所有支持这个结果（左倾、右倾、平衡）的答案可能性的和，并且答案的每个可能性都是等概率的。 </p>
-<p>MacKay在他的书《Information Theory: Inference and Learning Algorithms》（<a href="https://web.archive.org/web/20180303070134/http://users.aims.ac.za/~mackay/itila/book.html">作者开放免费电子书</a>）里面4.1节专门讲了这个称球问题，还画了一张不错的图，我就照抄了： </p>
-<p><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/wp-content/uploads/2009/02/23131201.jpg"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="2313120" border="0" alt="2313120" src="/assets/wp-content/uploads/2009/02/2313120-thumb1.jpg" width="476" height="480"></a> </p>
+<p>MacKay在他的书《Information Theory: Inference and Learning Algorithms》（<a href="http://users.aims.ac.za/~mackay/itila/book.html">作者开放免费电子书</a>）里面4.1节专门讲了这个称球问题，还画了一张不错的图，我就照抄了： </p>
+<p><a href="../assets/wp-content/uploads/2009/02/23131201.jpg"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="2313120" border="0" alt="2313120" src="/assets/wp-content/uploads/2009/02/2313120-thumb1.jpg" width="476" height="480"></a> </p>
 <p>图中“1+”是指“1号小球为重”这一可能性。一开始一共有24种可能性。4、4称了之后不管哪种情况（分支），剩下来的可能性总是4种。这是一个完美的三分。然后对每个分支构造第二次称法，这里你只要稍加演算就可以发现，分支1上的第二次称法，即“1、2、6对3、4、5”这种称法，天平输出三种结果的可能性是均等的（严格来说是几乎均等）。这就是为什么这个称法能够在最坏的情况下也能表现最好的原因，没有哪个分支是它的弱点，它必然能将情况缩小到原来的1/3。 </p>
 <p><strong>3. </strong><strong>排序 </strong></p>
 <p>用前面的看问题视角，排序的本质可以这样来表述：一组未排序的N个数字，它们一共有N!种重排，其中只有一种排列是满足题意的（譬如从大到小排列）。换句话说，排序问题的可能性一共有N!种。任何基于比较的排序的基本操作单元都是“比较a和b”，这就相当于猜数字游戏里面的一个问句，显然这个问句的答案只能是“是”或“否”，一个只有两种输出的问题最多只能将可能性空间切成两半，根据上面的思路，最佳切法就是切成1/2和1/2。也就是说，我们希望在比较了a和b的大小关系之后，如果发现a&lt;b的话剩下的排列可能性就变成N!/2，如果发现a&gt;b也是剩下N!/2种可能性。由于假设每种排列的概率是均等的，所以这也就意味着支持a&lt;b的排列一共有N!/2个，支持a&gt;b的也是N!/2个，换言之，a&lt;b的概率等于a&gt;b的概率。 </p>
@@ -789,14 +782,14 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
 <p>这里的关键问题就在于第2步，堆底的元素肯定很小，将它拿到堆顶和原本属于最大元素的两个子节点比较，它比它们大的可能性是微乎其微的。实际上它肯定小于其中的一个儿子。而大于另一个儿子的可能性非常小。于是，这一次比较的结果就是概率不均等的，根据前面的分析，概率不均等的比较是不明智的，因为它并不能保证在糟糕情况下也能将问题的可能性削减到原本的1/2。可以想像一种极端情况，如果a肯定小于b，那么比较a和b就会什么信息也得不到——原本剩下多少可能性还是剩下多少可能性。 </p>
 <p>在堆排里面有大量这种近乎无效的比较，因为被拿到堆顶的那个元素几乎肯定是很小的，而靠近堆顶的元素又几乎肯定是很大的，将一个很小的数和一个很大的数比较，结果几乎肯定是“小于”的，这就意味着问题的可能性只被排除掉了很小一部分。 </p>
 <p>这就是为什么堆排比较慢（堆排虽然和快排一样复杂度都是O(NlogN)但堆排复杂度的常系数更大）。 </p>
-<p>MacKay也提供了一个修改版的堆排：每次不是将堆底的元素拿到上面去，而是直接比较堆顶（最大）元素的两个儿子，即选出次大的元素。由于这两个儿子之间的大小关系是很不确定的，两者都很大，说不好哪个更大哪个更小，所以这次比较的两个结果就是概率均等的了。具体参考<a href="https://web.archive.org/web/20180303070134/http://users.aims.ac.za/~mackay/sorting/sorting.html">这里</a>。 </p>
+<p>MacKay也提供了一个修改版的堆排：每次不是将堆底的元素拿到上面去，而是直接比较堆顶（最大）元素的两个儿子，即选出次大的元素。由于这两个儿子之间的大小关系是很不确定的，两者都很大，说不好哪个更大哪个更小，所以这次比较的两个结果就是概率均等的了。具体参考<a href="http://users.aims.ac.za/~mackay/sorting/sorting.html">这里</a>。 </p>
 <p><strong>3.2 </strong><strong>为什么快排其实也不是那么快 </strong></p>
 <p>我们考虑快排的过程：随机选择一个元素做“轴元素”，将所有大于轴元素的移到左边，其余移到右边。根据这个过程，快排的第一次比较就是将一个元素和轴元素比较，这个时候显而易见的是，“大于”和“小于”的可能性各占一半。这是一次漂亮的比较。 </p>
 <p>然而，快排的第二次比较就不那么高明了：我们不妨令轴元素为pivot，第一次比较结果是a1&lt;pivot，那么可以证明第二次比较a2也小于pivot的可能性是2/3！这容易证明：如果a2&gt;pivot的话，那么a1，a2，pivot这三个元素之间的关系就完全确定了——a1&lt;pivot&lt;a2，剩下来的元素排列的可能性我们不妨记为P（不需要具体算出来）。而如果a2&lt;pivot呢？那么a1和a2的关系就仍然是不确定的，也就是说，这个分支里面含有两种情况：a1&lt;a2&lt;pivot，以及a2&lt;a1&lt;pivot。对于其中任一种情况，剩下的元素排列的可能性都是P，于是这个分支里面剩下的排列可能性就是2P。所以当a2&lt;pivot的时候，还剩下2/3的可能性需要排查。 </p>
 <p>再进一步，如果第二步比较果真发现a2&lt;pivot的话，第三步比较就更不妙了，模仿上面的推理，a3&lt;pivot的概率将会是3/4！ </p>
 <p>这就是快排也不那么快的原因，因为它也没有做到每次比较都能将剩下的可能性砍掉一半。 </p>
 <p><strong>3.3 </strong><strong>鸡排为什么又那么快呢？ </strong></p>
-<p>传统的解释是：<a href="https://web.archive.org/web/20180303070134/http://en.wikipedia.org/wiki/Radix_sort">基排</a>不是基于比较的，所以不具有后者的局限性。话是没错，但其实还可以将它和基于比较的排序做一个类比。 </p>
+<p>传统的解释是：<a href="http://en.wikipedia.org/wiki/Radix_sort">基排</a>不是基于比较的，所以不具有后者的局限性。话是没错，但其实还可以将它和基于比较的排序做一个类比。 </p>
 <p>基排的过程也许是源于我们理顺一副牌的过程：如果你有N（N&lt;=13）张牌，乱序，如何理顺呢？我们假象桌上有十三个位置，然后我们将手里的牌一张一张放出去，如果是3，就放在位置3上，如果是J，就放在位置11上，放完了之后从位置1到位置13收集所有的牌（没有牌的位置上不收集任何牌）。 </p>
 <p>我们可以这样来理解基排高效的本质原因：假设前i张牌都已经放到了它们对应的位置上，第i+1张牌放出去的时候，实际上就相当于“一下子”就确立了它和前i张牌的大小关系，用O(1)的操作就将这张牌正确地插入到了前i张牌中的正确位置上，这个效果就相当于插入排序的第i轮原本需要比较O(i)次的，现在只需要O(1)了。 </p>
 <p>但是，为什么基排能够达到这个效果呢？上面只是解释了过程，解释了过程不代表解释了本质。 </p>
@@ -808,7 +801,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
 <p>这的确是“小结”，因为两点： </p>
 <p>1. 这个问题可以有信息论的理论解释，而信息论则是一个相当大的领域了。</p>
 <p>2. 文中提到的这种看问题的视角除了用于排序、称球，还能够运用到哪些问题上（比如搜索）。</p>
-<p><strong>Update(06/13/2008)</strong> : <a href="https://web.archive.org/web/20180303070134/http://blog.youxu.info/">徐宥</a>在讨论中<a href="https://web.archive.org/web/20180303070134/http://groups.google.com/group/pongba/msg/07493e329ed920ff">继续提到</a>：</p>
+<p><strong>Update(06/13/2008)</strong> : <a href="http://blog.youxu.info/">徐宥</a>在讨论中<a href="http://groups.google.com/group/pongba/msg/07493e329ed920ff">继续提到</a>：</p>
 <blockquote>
 <p>另外，这几天我重新把TAOCP 第三卷(第二版)翻出来看了看 Knuth 怎么说这个问题的, 发现真是牛大了： </p>
 <p>先说性能： </p>
@@ -830,7 +823,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
    
     <nav class="navigation post-navigation" role="navigation">
         <div class="post-nav-links">
-            <div class="nav-previous">&nbsp;<a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/04/18/learning-from-polya/" rel="prev"><i class="fa fa-long-arrow-left"></i> 跟波利亚学解题(rev#3)</a> </div><div class="nav-next">&nbsp;<a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/07/07/the-importance-of-knowing-why/" rel="next"> 知其所以然（以算法学习为例） <i class="fa fa-long-arrow-right"></i></a></div>        </div><!-- .nav-links -->
+            <div class="nav-previous">&nbsp;<a href="../assets/2008/04/18/learning-from-polya/" rel="prev"><i class="fa fa-long-arrow-left"></i> 跟波利亚学解题(rev#3)</a> </div><div class="nav-next">&nbsp;<a href="../assets/2008/07/07/the-importance-of-knowing-why/" rel="next"> 知其所以然（以算法学习为例） <i class="fa fa-long-arrow-right"></i></a></div>        </div><!-- .nav-links -->
     </nav><!-- .navigation -->
     
 <div id="comments" class="comments-area clearfix">
@@ -846,7 +839,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
     <li id="comment-41030" class="comment even thread-even depth-1">
         <article id="div-comment-41030" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/8211757cdf432b32306dbce9fbd03e52?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/8211757cdf432b32306dbce9fbd03e52?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/8211757cdf432b32306dbce9fbd03e52?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/8211757cdf432b32306dbce9fbd03e52?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">colin</cite> |                    <!-- .comment-author -->
@@ -855,7 +848,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=41030#respond" onclick="return addComment.moveForm( &quot;div-comment-41030&quot;, &quot;41030&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to colin">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=41030" onclick="return addComment.moveForm( &quot;div-comment-41030&quot;, &quot;41030&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to colin">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -873,20 +866,20 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
 
     <li id="comment-40958" class="pingback odd alt thread-odd thread-alt depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://www.biehaipa.com/2017/07/30/%e7%9f%a5%e5%85%b6%e6%89%80%e4%bb%a5%e7%84%b6%ef%bc%88%e7%bb%ad%ef%bc%89/" rel="external nofollow" class="url">知其所以然（續） | BHP-技術共享社區</a>         </div>
+            Pingback: <a href="http://www.biehaipa.com/2017/07/30/%e7%9f%a5%e5%85%b6%e6%89%80%e4%bb%a5%e7%84%b6%ef%bc%88%e7%bb%ad%ef%bc%89/" rel="external nofollow" class="url">知其所以然（續） | BHP-技術共享社區</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-40609" class="pingback even thread-even depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://www.iszhou.com/2017/07/02/%e7%9f%a5%e5%85%b6%e6%89%80%e4%bb%a5%e7%84%b6%ef%bc%88%e4%b8%89%ef%bc%89%ef%bc%9a%e4%b8%ba%e4%bb%80%e4%b9%88%e7%ae%97%e6%b3%95%e8%bf%99%e4%b9%88%e9%9a%be%ef%bc%9f/" rel="external nofollow" class="url">知其所以然（三）：为什么算法这么难？-iszhou</a>         </div>
+            Pingback: <a href="http://www.iszhou.com/2017/07/02/%e7%9f%a5%e5%85%b6%e6%89%80%e4%bb%a5%e7%84%b6%ef%bc%88%e4%b8%89%ef%bc%89%ef%bc%9a%e4%b8%ba%e4%bb%80%e4%b9%88%e7%ae%97%e6%b3%95%e8%bf%99%e4%b9%88%e9%9a%be%ef%bc%9f/" rel="external nofollow" class="url">知其所以然（三）：为什么算法这么难？-iszhou</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-40419" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-40419" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/71b35fd4d1206f4ab45436b06976a320?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/71b35fd4d1206f4ab45436b06976a320?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/71b35fd4d1206f4ab45436b06976a320?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/71b35fd4d1206f4ab45436b06976a320?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">mark</cite> |                    <!-- .comment-author -->
@@ -895,7 +888,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=40419#respond" onclick="return addComment.moveForm( &quot;div-comment-40419&quot;, &quot;40419&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to mark">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=40419" onclick="return addComment.moveForm( &quot;div-comment-40419&quot;, &quot;40419&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to mark">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -912,23 +905,23 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
 
     <li id="comment-39710" class="pingback even thread-even depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://w2.xiupinzhe.com/92806.html" rel="external nofollow" class="url">快速排序的优化 和关于递归的问题，说说我的想法 | 秀品折</a>         </div>
+            Pingback: <a href="http://w2.xiupinzhe.com/92806.html" rel="external nofollow" class="url">快速排序的优化 和关于递归的问题，说说我的想法 | 秀品折</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-35003" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-35003" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://t.qq.com/ck13968314559" rel="external nofollow" class="url">陈可</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://t.qq.com/ck13968314559" rel="external nofollow" class="url">陈可</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2016-05-04T15:23:13+00:00">
                         May 4, 2016 at 3:23 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=35003#respond" onclick="return addComment.moveForm( &quot;div-comment-35003&quot;, &quot;35003&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 陈可">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=35003" onclick="return addComment.moveForm( &quot;div-comment-35003&quot;, &quot;35003&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 陈可">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -946,7 +939,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
     <li id="comment-34953" class="comment even thread-even depth-1">
         <article id="div-comment-34953" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">汤勇</cite> |                    <!-- .comment-author -->
@@ -955,7 +948,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=34953#respond" onclick="return addComment.moveForm( &quot;div-comment-34953&quot;, &quot;34953&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 汤勇">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=34953" onclick="return addComment.moveForm( &quot;div-comment-34953&quot;, &quot;34953&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 汤勇">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -972,16 +965,16 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
     <li id="comment-34743" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-34743" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://weibo.com/rabsunshine" rel="external nofollow" class="url">藍-乐调</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://weibo.com/rabsunshine" rel="external nofollow" class="url">藍-乐调</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2015-12-18T18:10:30+00:00">
                         December 18, 2015 at 6:10 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=34743#respond" onclick="return addComment.moveForm( &quot;div-comment-34743&quot;, &quot;34743&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 藍-乐调">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=34743" onclick="return addComment.moveForm( &quot;div-comment-34743&quot;, &quot;34743&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 藍-乐调">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -998,7 +991,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
     <li id="comment-34692" class="comment even thread-even depth-1">
         <article id="div-comment-34692" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">忘余尘</cite> |                    <!-- .comment-author -->
@@ -1007,7 +1000,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=34692#respond" onclick="return addComment.moveForm( &quot;div-comment-34692&quot;, &quot;34692&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 忘余尘">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=34692" onclick="return addComment.moveForm( &quot;div-comment-34692&quot;, &quot;34692&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 忘余尘">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1024,7 +1017,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
     <li id="comment-34188" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-34188" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/cf5264ab7b6cd87508331a57fef65e3c?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/cf5264ab7b6cd87508331a57fef65e3c?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/cf5264ab7b6cd87508331a57fef65e3c?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/cf5264ab7b6cd87508331a57fef65e3c?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">vwork</cite> |                    <!-- .comment-author -->
@@ -1033,7 +1026,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=34188#respond" onclick="return addComment.moveForm( &quot;div-comment-34188&quot;, &quot;34188&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to vwork">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=34188" onclick="return addComment.moveForm( &quot;div-comment-34188&quot;, &quot;34188&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to vwork">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1052,16 +1045,16 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
     <li id="comment-34134" class="comment even thread-even depth-1">
         <article id="div-comment-34134" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://t.qq.com/a4022456" rel="external nofollow" class="url">理科计划购房的撒</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://t.qq.com/a4022456" rel="external nofollow" class="url">理科计划购房的撒</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2015-03-16T14:44:33+00:00">
                         March 16, 2015 at 2:44 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=34134#respond" onclick="return addComment.moveForm( &quot;div-comment-34134&quot;, &quot;34134&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 理科计划购房的撒">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=34134" onclick="return addComment.moveForm( &quot;div-comment-34134&quot;, &quot;34134&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 理科计划购房的撒">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1078,16 +1071,16 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
     <li id="comment-34133" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-34133" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://t.qq.com/a4022456" rel="external nofollow" class="url">理科计划购房的撒</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://t.qq.com/a4022456" rel="external nofollow" class="url">理科计划购房的撒</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2015-03-16T14:36:39+00:00">
                         March 16, 2015 at 2:36 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=34133#respond" onclick="return addComment.moveForm( &quot;div-comment-34133&quot;, &quot;34133&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 理科计划购房的撒">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=34133" onclick="return addComment.moveForm( &quot;div-comment-34133&quot;, &quot;34133&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 理科计划购房的撒">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1107,16 +1100,16 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
     <li id="comment-33734" class="comment even thread-even depth-1">
         <article id="div-comment-33734" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://t.qq.com/shuli98" rel="external nofollow" class="url">中国人瘦</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://t.qq.com/shuli98" rel="external nofollow" class="url">中国人瘦</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2014-11-29T01:45:21+00:00">
                         November 29, 2014 at 1:45 am                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=33734#respond" onclick="return addComment.moveForm( &quot;div-comment-33734&quot;, &quot;33734&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 中国人瘦">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=33734" onclick="return addComment.moveForm( &quot;div-comment-33734&quot;, &quot;33734&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 中国人瘦">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1126,7 +1119,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
 第二次称：左盘放置1、5、9、11号球，右盘放置2、3、6、10号球<br>
 第三次称：左盘放置4、8、9、10号球，右盘放置1、2、5、12号球<br>
 详解可参考维基百科，称球问题<br>
-<a href="https://web.archive.org/web/20180303070134/http://zh.wikipedia.org/wiki/%E7%A8%B1%E7%90%83%E5%95%8F%E9%A1%8C" rel="nofollow">http://zh.wikipedia.org/wiki/%E7%A8%B1%E7%90%83%E5%95%8F%E9%A1%8C</a></p>
+<a href="http://zh.wikipedia.org/wiki/%E7%A8%B1%E7%90%83%E5%95%8F%E9%A1%8C" rel="nofollow">http://zh.wikipedia.org/wiki/%E7%A8%B1%E7%90%83%E5%95%8F%E9%A1%8C</a></p>
                 </div><!-- .comment-content -->
             </div>
 
@@ -1138,16 +1131,16 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
     <li id="comment-33669" class="comment odd alt thread-odd thread-alt depth-1 parent">
         <article id="div-comment-33669" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://t.qq.com/zuorentainanle" rel="external nofollow" class="url">猪一只</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://t.qq.com/zuorentainanle" rel="external nofollow" class="url">猪一只</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2014-10-31T18:33:00+00:00">
                         October 31, 2014 at 6:33 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=33669#respond" onclick="return addComment.moveForm( &quot;div-comment-33669&quot;, &quot;33669&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 猪一只">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=33669" onclick="return addComment.moveForm( &quot;div-comment-33669&quot;, &quot;33669&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 猪一只">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1164,7 +1157,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
     <li id="comment-33730" class="comment even depth-2">
         <article id="div-comment-33730" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/567c6acf3009feee0788b8f915825371?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/567c6acf3009feee0788b8f915825371?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/567c6acf3009feee0788b8f915825371?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/567c6acf3009feee0788b8f915825371?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">mihooke</cite> |                    <!-- .comment-author -->
@@ -1192,7 +1185,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
     <li id="comment-33565" class="comment odd alt thread-even depth-1">
         <article id="div-comment-33565" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">SFENP＇草帽</cite> |                    <!-- .comment-author -->
@@ -1201,7 +1194,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=33565#respond" onclick="return addComment.moveForm( &quot;div-comment-33565&quot;, &quot;33565&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to SFENP＇草帽">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=33565" onclick="return addComment.moveForm( &quot;div-comment-33565&quot;, &quot;33565&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to SFENP＇草帽">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1218,16 +1211,16 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
     <li id="comment-33315" class="comment even thread-odd thread-alt depth-1">
         <article id="div-comment-33315" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/6b78af308888cb4e65be42c368bdf020?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/6b78af308888cb4e65be42c368bdf020?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/6b78af308888cb4e65be42c368bdf020?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/6b78af308888cb4e65be42c368bdf020?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://zhouleyu.com/" rel="external nofollow" class="url">zhouleyu.com</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://zhouleyu.com/" rel="external nofollow" class="url">zhouleyu.com</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2014-05-07T22:04:39+00:00">
                         May 7, 2014 at 10:04 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=33315#respond" onclick="return addComment.moveForm( &quot;div-comment-33315&quot;, &quot;33315&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to zhouleyu.com">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=33315" onclick="return addComment.moveForm( &quot;div-comment-33315&quot;, &quot;33315&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to zhouleyu.com">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1244,7 +1237,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
     <li id="comment-33311" class="comment odd alt thread-even depth-1 parent">
         <article id="div-comment-33311" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/5a94f2b8c6c89aad5e4f2a177b45d8d9?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/5a94f2b8c6c89aad5e4f2a177b45d8d9?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/5a94f2b8c6c89aad5e4f2a177b45d8d9?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/5a94f2b8c6c89aad5e4f2a177b45d8d9?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">Keith</cite> |                    <!-- .comment-author -->
@@ -1253,7 +1246,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=33311#respond" onclick="return addComment.moveForm( &quot;div-comment-33311&quot;, &quot;33311&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to Keith">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=33311" onclick="return addComment.moveForm( &quot;div-comment-33311&quot;, &quot;33311&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to Keith">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1272,7 +1265,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
     <li id="comment-41027" class="comment even depth-2">
         <article id="div-comment-41027" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/50b0993616aa34648fcf41e893f0fc8b?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/50b0993616aa34648fcf41e893f0fc8b?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/50b0993616aa34648fcf41e893f0fc8b?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/50b0993616aa34648fcf41e893f0fc8b?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">xiefubao</cite> |                    <!-- .comment-author -->
@@ -1300,7 +1293,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
     <li id="comment-32958" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-32958" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/f72f7d363ce1be096aa22fae7676893d?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/f72f7d363ce1be096aa22fae7676893d?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/f72f7d363ce1be096aa22fae7676893d?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/f72f7d363ce1be096aa22fae7676893d?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">kmtv2013</cite> |                    <!-- .comment-author -->
@@ -1309,7 +1302,7 @@ __wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/06/13/why-is-quicksort-so-qu
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=32958#respond" onclick="return addComment.moveForm( &quot;div-comment-32958&quot;, &quot;32958&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to kmtv2013">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=32958" onclick="return addComment.moveForm( &quot;div-comment-32958&quot;, &quot;32958&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to kmtv2013">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1343,21 +1336,21 @@ end;;</p>
     <li id="comment-32953" class="comment even thread-even depth-1">
         <article id="div-comment-32953" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://www.douban.com/people/universe_will/" rel="external nofollow" class="url">UNIVERSE</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://www.douban.com/people/universe_will/" rel="external nofollow" class="url">UNIVERSE</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2013-12-06T15:17:26+00:00">
                         December 6, 2013 at 3:17 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=32953#respond" onclick="return addComment.moveForm( &quot;div-comment-32953&quot;, &quot;32953&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to UNIVERSE">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=32953" onclick="return addComment.moveForm( &quot;div-comment-32953&quot;, &quot;32953&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to UNIVERSE">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
                 <div class="comment-content">
-                    <p>基数排序的时间复杂度是大于等于nlogn的！<a href="https://web.archive.org/web/20180303070134/http://zh.wikipedia.org/wiki/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F" rel="nofollow">http://zh.wikipedia.org/wiki/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F</a></p>
+                    <p>基数排序的时间复杂度是大于等于nlogn的！<a href="http://zh.wikipedia.org/wiki/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F" rel="nofollow">http://zh.wikipedia.org/wiki/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F</a></p>
                 </div><!-- .comment-content -->
             </div>
 
@@ -1369,7 +1362,7 @@ end;;</p>
     <li id="comment-32933" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-32933" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/75278deefd74c361e2200154fd60b392?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/75278deefd74c361e2200154fd60b392?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/75278deefd74c361e2200154fd60b392?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/75278deefd74c361e2200154fd60b392?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">螃蟹009</cite> |                    <!-- .comment-author -->
@@ -1378,7 +1371,7 @@ end;;</p>
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=32933#respond" onclick="return addComment.moveForm( &quot;div-comment-32933&quot;, &quot;32933&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 螃蟹009">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=32933" onclick="return addComment.moveForm( &quot;div-comment-32933&quot;, &quot;32933&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 螃蟹009">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1403,7 +1396,7 @@ end;;</p>
     <li id="comment-32932" class="comment even thread-even depth-1">
         <article id="div-comment-32932" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/75278deefd74c361e2200154fd60b392?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/75278deefd74c361e2200154fd60b392?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/75278deefd74c361e2200154fd60b392?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/75278deefd74c361e2200154fd60b392?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">螃蟹009</cite> |                    <!-- .comment-author -->
@@ -1412,7 +1405,7 @@ end;;</p>
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=32932#respond" onclick="return addComment.moveForm( &quot;div-comment-32932&quot;, &quot;32932&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 螃蟹009">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=32932" onclick="return addComment.moveForm( &quot;div-comment-32932&quot;, &quot;32932&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 螃蟹009">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1430,23 +1423,23 @@ end;;</p>
 
     <li id="comment-32919" class="pingback odd alt thread-odd thread-alt depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://7shou.com/%e5%89%8d%e7%ab%af%e6%99%ba%e5%8b%87%e5%a4%a7%e9%97%af%e5%85%b3%e9%a2%98%e8%a7%a3/" rel="external nofollow" class="url">前端智勇大闯关题解 | 奇手设计</a>         </div>
+            Pingback: <a href="http://7shou.com/%e5%89%8d%e7%ab%af%e6%99%ba%e5%8b%87%e5%a4%a7%e9%97%af%e5%85%b3%e9%a2%98%e8%a7%a3/" rel="external nofollow" class="url">前端智勇大闯关题解 | 奇手设计</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-32877" class="comment even thread-even depth-1">
         <article id="div-comment-32877" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://www.douban.com/people/59015591/" rel="external nofollow" class="url">神魔铩羽</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://www.douban.com/people/59015591/" rel="external nofollow" class="url">神魔铩羽</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2013-11-05T11:27:46+00:00">
                         November 5, 2013 at 11:27 am                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=32877#respond" onclick="return addComment.moveForm( &quot;div-comment-32877&quot;, &quot;32877&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 神魔铩羽">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=32877" onclick="return addComment.moveForm( &quot;div-comment-32877&quot;, &quot;32877&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 神魔铩羽">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1463,16 +1456,16 @@ end;;</p>
     <li id="comment-32872" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-32872" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://t.qq.com/hongxin0803" rel="external nofollow" class="url">洪鑫</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://t.qq.com/hongxin0803" rel="external nofollow" class="url">洪鑫</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2013-11-01T10:51:39+00:00">
                         November 1, 2013 at 10:51 am                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=32872#respond" onclick="return addComment.moveForm( &quot;div-comment-32872&quot;, &quot;32872&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 洪鑫">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=32872" onclick="return addComment.moveForm( &quot;div-comment-32872&quot;, &quot;32872&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 洪鑫">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1489,16 +1482,16 @@ end;;</p>
     <li id="comment-32814" class="comment even thread-even depth-1">
         <article id="div-comment-32814" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://t.qq.com/weibowuef2206" rel="external nofollow" class="url">wuef</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://t.qq.com/weibowuef2206" rel="external nofollow" class="url">wuef</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2013-10-02T20:11:29+00:00">
                         October 2, 2013 at 8:11 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=32814#respond" onclick="return addComment.moveForm( &quot;div-comment-32814&quot;, &quot;32814&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to wuef">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=32814" onclick="return addComment.moveForm( &quot;div-comment-32814&quot;, &quot;32814&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to wuef">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1515,16 +1508,16 @@ end;;</p>
     <li id="comment-32804" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-32804" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://www.renren.com/profile.do?id=280210132" rel="external nofollow" class="url">王彦皓</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://www.renren.com/profile.do?id=280210132" rel="external nofollow" class="url">王彦皓</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2013-09-26T16:59:26+00:00">
                         September 26, 2013 at 4:59 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=32804#respond" onclick="return addComment.moveForm( &quot;div-comment-32804&quot;, &quot;32804&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 王彦皓">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=32804" onclick="return addComment.moveForm( &quot;div-comment-32804&quot;, &quot;32804&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 王彦皓">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1541,16 +1534,16 @@ end;;</p>
     <li id="comment-32707" class="comment even thread-even depth-1">
         <article id="div-comment-32707" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://t.qq.com/I1129935931" rel="external nofollow" class="url">2号领导</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://t.qq.com/I1129935931" rel="external nofollow" class="url">2号领导</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2013-08-15T20:57:57+00:00">
                         August 15, 2013 at 8:57 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=32707#respond" onclick="return addComment.moveForm( &quot;div-comment-32707&quot;, &quot;32707&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 2号领导">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=32707" onclick="return addComment.moveForm( &quot;div-comment-32707&quot;, &quot;32707&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 2号领导">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1567,7 +1560,7 @@ end;;</p>
     <li id="comment-32697" class="comment odd alt thread-odd thread-alt depth-1 parent">
         <article id="div-comment-32697" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/cdb1467d985eef9e6fa30808df960913?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/cdb1467d985eef9e6fa30808df960913?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/cdb1467d985eef9e6fa30808df960913?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/cdb1467d985eef9e6fa30808df960913?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">tenos</cite> |                    <!-- .comment-author -->
@@ -1576,7 +1569,7 @@ end;;</p>
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=32697#respond" onclick="return addComment.moveForm( &quot;div-comment-32697&quot;, &quot;32697&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to tenos">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=32697" onclick="return addComment.moveForm( &quot;div-comment-32697&quot;, &quot;32697&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to tenos">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1593,10 +1586,10 @@ end;;</p>
     <li id="comment-34132" class="comment even depth-2">
         <article id="div-comment-34132" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://t.qq.com/a4022456" rel="external nofollow" class="url">理科计划购房的撒</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://t.qq.com/a4022456" rel="external nofollow" class="url">理科计划购房的撒</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2015-03-16T14:24:14+00:00">
                         March 16, 2015 at 2:24 pm                    </time> 
                     
@@ -1622,16 +1615,16 @@ end;;</p>
     <li id="comment-32350" class="comment odd alt thread-even depth-1">
         <article id="div-comment-32350" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://weibo.com/xianqings" rel="external nofollow" class="url">ouqi</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://weibo.com/xianqings" rel="external nofollow" class="url">ouqi</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2013-04-10T21:46:20+00:00">
                         April 10, 2013 at 9:46 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=32350#respond" onclick="return addComment.moveForm( &quot;div-comment-32350&quot;, &quot;32350&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to ouqi">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=32350" onclick="return addComment.moveForm( &quot;div-comment-32350&quot;, &quot;32350&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to ouqi">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1651,16 +1644,16 @@ end;;</p>
     <li id="comment-32004" class="comment even thread-odd thread-alt depth-1">
         <article id="div-comment-32004" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://weibo.com/brightown" rel="external nofollow" class="url">鸡翅呀鸡翅</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://weibo.com/brightown" rel="external nofollow" class="url">鸡翅呀鸡翅</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2012-11-06T15:21:31+00:00">
                         November 6, 2012 at 3:21 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=32004#respond" onclick="return addComment.moveForm( &quot;div-comment-32004&quot;, &quot;32004&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 鸡翅呀鸡翅">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=32004" onclick="return addComment.moveForm( &quot;div-comment-32004&quot;, &quot;32004&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 鸡翅呀鸡翅">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1677,16 +1670,16 @@ end;;</p>
     <li id="comment-31942" class="comment odd alt thread-even depth-1 parent">
         <article id="div-comment-31942" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://weibo.com/1238983263" rel="external nofollow" class="url">_小毛童鞋_</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://weibo.com/1238983263" rel="external nofollow" class="url">_小毛童鞋_</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2012-10-16T18:25:51+00:00">
                         October 16, 2012 at 6:25 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=31942#respond" onclick="return addComment.moveForm( &quot;div-comment-31942&quot;, &quot;31942&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to _小毛童鞋_">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=31942" onclick="return addComment.moveForm( &quot;div-comment-31942&quot;, &quot;31942&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to _小毛童鞋_">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1703,10 +1696,10 @@ end;;</p>
     <li id="comment-33761" class="comment even depth-2">
         <article id="div-comment-33761" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://weibo.com/whukayguo" rel="external nofollow" class="url">KayGuoWhu</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://weibo.com/whukayguo" rel="external nofollow" class="url">KayGuoWhu</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2014-12-12T17:37:28+00:00">
                         December 12, 2014 at 5:37 pm                    </time> 
                     
@@ -1730,29 +1723,29 @@ end;;</p>
 
     <li id="comment-31936" class="pingback odd alt thread-odd thread-alt depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://pmnote.com/2012/10/14/%e5%89%8d%e7%ab%af%e6%99%ba%e5%8b%87%e5%a4%a7%e9%97%af%e5%85%b3%e9%a2%98%e8%a7%a3/" rel="external nofollow" class="url">前端智勇大闯关题解 | 产品经理笔记</a>         </div>
+            Pingback: <a href="http://pmnote.com/2012/10/14/%e5%89%8d%e7%ab%af%e6%99%ba%e5%8b%87%e5%a4%a7%e9%97%af%e5%85%b3%e9%a2%98%e8%a7%a3/" rel="external nofollow" class="url">前端智勇大闯关题解 | 产品经理笔记</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-31924" class="pingback even thread-even depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://utsz.datapanda.net/?p=2106" rel="external nofollow" class="url">前端智勇大闯关题解 | 行走在互联网路上</a>         </div>
+            Pingback: <a href="http://utsz.datapanda.net/?p=2106" rel="external nofollow" class="url">前端智勇大闯关题解 | 行走在互联网路上</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-31922" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-31922" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://weibo.com/2177249280" rel="external nofollow" class="url">icrt_</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://weibo.com/2177249280" rel="external nofollow" class="url">icrt_</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2012-10-10T21:03:51+00:00">
                         October 10, 2012 at 9:03 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=31922#respond" onclick="return addComment.moveForm( &quot;div-comment-31922&quot;, &quot;31922&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to icrt_">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=31922" onclick="return addComment.moveForm( &quot;div-comment-31922&quot;, &quot;31922&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to icrt_">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1769,7 +1762,7 @@ end;;</p>
     <li id="comment-31903" class="comment even thread-even depth-1">
         <article id="div-comment-31903" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/57c51ef8e1e55adb55ed9cdfc2612071?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/57c51ef8e1e55adb55ed9cdfc2612071?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/57c51ef8e1e55adb55ed9cdfc2612071?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/57c51ef8e1e55adb55ed9cdfc2612071?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">imgen</cite> |                    <!-- .comment-author -->
@@ -1778,7 +1771,7 @@ end;;</p>
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=31903#respond" onclick="return addComment.moveForm( &quot;div-comment-31903&quot;, &quot;31903&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to imgen">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=31903" onclick="return addComment.moveForm( &quot;div-comment-31903&quot;, &quot;31903&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to imgen">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1795,7 +1788,7 @@ end;;</p>
     <li id="comment-31876" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-31876" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/f97f0afa6159793b5380cadd2d9a3c80?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/f97f0afa6159793b5380cadd2d9a3c80?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/f97f0afa6159793b5380cadd2d9a3c80?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/f97f0afa6159793b5380cadd2d9a3c80?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">simple</cite> |                    <!-- .comment-author -->
@@ -1804,7 +1797,7 @@ end;;</p>
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=31876#respond" onclick="return addComment.moveForm( &quot;div-comment-31876&quot;, &quot;31876&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to simple">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=31876" onclick="return addComment.moveForm( &quot;div-comment-31876&quot;, &quot;31876&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to simple">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1821,7 +1814,7 @@ end;;</p>
     <li id="comment-31875" class="comment even thread-even depth-1">
         <article id="div-comment-31875" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/f97f0afa6159793b5380cadd2d9a3c80?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/f97f0afa6159793b5380cadd2d9a3c80?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/f97f0afa6159793b5380cadd2d9a3c80?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/f97f0afa6159793b5380cadd2d9a3c80?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">simple</cite> |                    <!-- .comment-author -->
@@ -1830,7 +1823,7 @@ end;;</p>
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=31875#respond" onclick="return addComment.moveForm( &quot;div-comment-31875&quot;, &quot;31875&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to simple">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=31875" onclick="return addComment.moveForm( &quot;div-comment-31875&quot;, &quot;31875&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to simple">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1847,16 +1840,16 @@ end;;</p>
     <li id="comment-31827" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-31827" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://weibo.com/1742521405" rel="external nofollow" class="url">滔要考研</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://weibo.com/1742521405" rel="external nofollow" class="url">滔要考研</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2012-09-07T01:06:02+00:00">
                         September 7, 2012 at 1:06 am                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=31827#respond" onclick="return addComment.moveForm( &quot;div-comment-31827&quot;, &quot;31827&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 滔要考研">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=31827" onclick="return addComment.moveForm( &quot;div-comment-31827&quot;, &quot;31827&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 滔要考研">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1873,16 +1866,16 @@ end;;</p>
     <li id="comment-31819" class="comment even thread-even depth-1">
         <article id="div-comment-31819" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://www.douban.com/people/49902334/" rel="external nofollow" class="url">透明的沙子</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://www.douban.com/people/49902334/" rel="external nofollow" class="url">透明的沙子</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2012-09-03T20:53:25+00:00">
                         September 3, 2012 at 8:53 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=31819#respond" onclick="return addComment.moveForm( &quot;div-comment-31819&quot;, &quot;31819&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 透明的沙子">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=31819" onclick="return addComment.moveForm( &quot;div-comment-31819&quot;, &quot;31819&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 透明的沙子">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1899,16 +1892,16 @@ end;;</p>
     <li id="comment-31818" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-31818" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://www.douban.com/people/49902334/" rel="external nofollow" class="url">透明的沙子</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://www.douban.com/people/49902334/" rel="external nofollow" class="url">透明的沙子</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2012-09-03T20:51:52+00:00">
                         September 3, 2012 at 8:51 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=31818#respond" onclick="return addComment.moveForm( &quot;div-comment-31818&quot;, &quot;31818&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 透明的沙子">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=31818" onclick="return addComment.moveForm( &quot;div-comment-31818&quot;, &quot;31818&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 透明的沙子">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1924,26 +1917,26 @@ end;;</p>
 
     <li id="comment-30729" class="pingback even thread-even depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://patdelphi.com/wordpress/?p=508" rel="external nofollow" class="url">孙吾饭的游乐场 | 暗时间</a>         </div>
+            Pingback: <a href="http://patdelphi.com/wordpress/?p=508" rel="external nofollow" class="url">孙吾饭的游乐场 | 暗时间</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-28694" class="pingback odd alt thread-odd thread-alt depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://code.zc4u.com/articles/5362.html" rel="external nofollow" class="url">所有排序总结（内排序）（续）——基于比较排序下界 | 编程·早晨</a>         </div>
+            Pingback: <a href="http://code.zc4u.com/articles/5362.html" rel="external nofollow" class="url">所有排序总结（内排序）（续）——基于比较排序下界 | 编程·早晨</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-28571" class="pingback even thread-even depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://blog.chiapp.com/html/2012-08-09/4159.html" rel="external nofollow" class="url">知其所以然（三）：为什么算法这么难？ | 吃杂烩</a>         </div>
+            Pingback: <a href="http://blog.chiapp.com/html/2012-08-09/4159.html" rel="external nofollow" class="url">知其所以然（三）：为什么算法这么难？ | 吃杂烩</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-20448" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-20448" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/a687ff7a82104366f17cb33e4a2ea240?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/a687ff7a82104366f17cb33e4a2ea240?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/a687ff7a82104366f17cb33e4a2ea240?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/a687ff7a82104366f17cb33e4a2ea240?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">LittleJ</cite> |                    <!-- .comment-author -->
@@ -1952,7 +1945,7 @@ end;;</p>
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=20448#respond" onclick="return addComment.moveForm( &quot;div-comment-20448&quot;, &quot;20448&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to LittleJ">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=20448" onclick="return addComment.moveForm( &quot;div-comment-20448&quot;, &quot;20448&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to LittleJ">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -1968,35 +1961,35 @@ end;;</p>
 
     <li id="comment-20124" class="pingback even thread-even depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://cblog.lylzone.info/2012/03/6/quicksort.html" rel="external nofollow" class="url">快排_quicksort() - C++</a>         </div>
+            Pingback: <a href="http://cblog.lylzone.info/2012/03/6/quicksort.html" rel="external nofollow" class="url">快排_quicksort() - C++</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-19987" class="pingback odd alt thread-odd thread-alt depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://aikilis.tk/1398" rel="external nofollow" class="url">趣题：天平找假币 - Aikilis' Blog</a>         </div>
+            Pingback: <a href="http://aikilis.tk/1398" rel="external nofollow" class="url">趣题：天平找假币 - Aikilis' Blog</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-18987" class="pingback even thread-even depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://tsingroo.sinaapp.com/?p=302" rel="external nofollow" class="url">罗青-技术博客 | [re]趣谈二分法</a>         </div>
+            Pingback: <a href="http://tsingroo.sinaapp.com/?p=302" rel="external nofollow" class="url">罗青-技术博客 | [re]趣谈二分法</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-18653" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-18653" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/c56e45ef75374ddf3b861809de59a4f3?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/c56e45ef75374ddf3b861809de59a4f3?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/c56e45ef75374ddf3b861809de59a4f3?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/c56e45ef75374ddf3b861809de59a4f3?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://yeasy.blogspot.com/" rel="external nofollow" class="url">yeasy</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://yeasy.blogspot.com/" rel="external nofollow" class="url">yeasy</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2011-12-15T16:23:55+00:00">
                         December 15, 2011 at 4:23 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=18653#respond" onclick="return addComment.moveForm( &quot;div-comment-18653&quot;, &quot;18653&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to yeasy">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=18653" onclick="return addComment.moveForm( &quot;div-comment-18653&quot;, &quot;18653&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to yeasy">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -2014,7 +2007,7 @@ end;;</p>
     <li id="comment-18259" class="comment even thread-even depth-1">
         <article id="div-comment-18259" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/88b876fbe6ae567f1d97239450d59504?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/88b876fbe6ae567f1d97239450d59504?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/88b876fbe6ae567f1d97239450d59504?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/88b876fbe6ae567f1d97239450d59504?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">wosunziwuwan</cite> |                    <!-- .comment-author -->
@@ -2023,7 +2016,7 @@ end;;</p>
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=18259#respond" onclick="return addComment.moveForm( &quot;div-comment-18259&quot;, &quot;18259&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to wosunziwuwan">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=18259" onclick="return addComment.moveForm( &quot;div-comment-18259&quot;, &quot;18259&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to wosunziwuwan">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -2039,59 +2032,59 @@ end;;</p>
 
     <li id="comment-17453" class="pingback odd alt thread-odd thread-alt depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://blog69.tk/?p=114" rel="external nofollow" class="url">知其所以然（三）：为什么算法这么难？ | 风的天地</a>         </div>
+            Pingback: <a href="http://blog69.tk/?p=114" rel="external nofollow" class="url">知其所以然（三）：为什么算法这么难？ | 风的天地</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-17365" class="pingback even thread-even depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://blog69.tk/?p=540" rel="external nofollow" class="url">知其所以然（续） | 风的天地</a>         </div>
+            Pingback: <a href="http://blog69.tk/?p=540" rel="external nofollow" class="url">知其所以然（续） | 风的天地</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-15441" class="pingback odd alt thread-odd thread-alt depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://southmagic.sinaapp.com/?p=18" rel="external nofollow" class="url">转：为什么算法这么难？ | South♂楠个人博客</a>         </div>
+            Pingback: <a href="http://southmagic.sinaapp.com/?p=18" rel="external nofollow" class="url">转：为什么算法这么难？ | South♂楠个人博客</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-15409" class="pingback even thread-even depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://www.whoisnerd.com/2011/07/31/%e6%8e%a8%e8%8d%90%e8%af%bb%e4%b9%a6%e3%80%8a%e6%9a%97%e6%97%b6%e9%97%b4%e3%80%8b/" rel="external nofollow" class="url">推荐读书《暗时间》</a>         </div>
+            Pingback: <a href="http://www.whoisnerd.com/2011/07/31/%e6%8e%a8%e8%8d%90%e8%af%bb%e4%b9%a6%e3%80%8a%e6%9a%97%e6%97%b6%e9%97%b4%e3%80%8b/" rel="external nofollow" class="url">推荐读书《暗时间》</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-15116" class="pingback odd alt thread-odd thread-alt depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2011/07/10/the-importance-of-knowing-why-part3/" rel="external nofollow" class="url">知其所以然（三）——为什么算法这么难？</a>         </div>
+            Pingback: <a href="../assets/2011/07/10/the-importance-of-knowing-why-part3/" rel="external nofollow" class="url">知其所以然（三）——为什么算法这么难？</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-14206" class="pingback even thread-even depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://w3er.com/%e6%9c%aa%e5%88%86%e7%b1%bb/%e7%9f%a5%e5%85%b6%e6%89%80%e4%bb%a5%e7%84%b6%ef%bc%88%e7%bb%ad%ef%bc%89/" rel="external nofollow" class="url">知其所以然（续） | w3er</a>         </div>
+            Pingback: <a href="http://w3er.com/%e6%9c%aa%e5%88%86%e7%b1%bb/%e7%9f%a5%e5%85%b6%e6%89%80%e4%bb%a5%e7%84%b6%ef%bc%88%e7%bb%ad%ef%bc%89/" rel="external nofollow" class="url">知其所以然（续） | w3er</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-12748" class="pingback odd alt thread-odd thread-alt depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://www.lawyer888.com/?p=122" rel="external nofollow" class="url">知其所以然（续） - 东莞律师网</a>         </div>
+            Pingback: <a href="http://www.lawyer888.com/?p=122" rel="external nofollow" class="url">知其所以然（续） - 东莞律师网</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-12358" class="comment even thread-even depth-1">
         <article id="div-comment-12358" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/98fa3b3398abb996fb353b6f9458d0a6?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/98fa3b3398abb996fb353b6f9458d0a6?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/98fa3b3398abb996fb353b6f9458d0a6?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/98fa3b3398abb996fb353b6f9458d0a6?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://www.lisher.tk/" rel="external nofollow" class="url">Miller</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://www.lisher.tk/" rel="external nofollow" class="url">Miller</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2011-02-14T22:23:11+00:00">
                         February 14, 2011 at 10:23 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=12358#respond" onclick="return addComment.moveForm( &quot;div-comment-12358&quot;, &quot;12358&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to Miller">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=12358" onclick="return addComment.moveForm( &quot;div-comment-12358&quot;, &quot;12358&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to Miller">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -2108,7 +2101,7 @@ end;;</p>
     <li id="comment-11319" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-11319" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/2812d8fb75063e683cb08d17a61a24c7?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/2812d8fb75063e683cb08d17a61a24c7?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/2812d8fb75063e683cb08d17a61a24c7?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/2812d8fb75063e683cb08d17a61a24c7?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">hit_alex</cite> |                    <!-- .comment-author -->
@@ -2117,7 +2110,7 @@ end;;</p>
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=11319#respond" onclick="return addComment.moveForm( &quot;div-comment-11319&quot;, &quot;11319&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to hit_alex">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=11319" onclick="return addComment.moveForm( &quot;div-comment-11319&quot;, &quot;11319&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to hit_alex">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -2134,7 +2127,7 @@ end;;</p>
     <li id="comment-11214" class="comment even thread-even depth-1">
         <article id="div-comment-11214" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/e2469fdec06f020d3d7cdeac98488eeb?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/e2469fdec06f020d3d7cdeac98488eeb?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/e2469fdec06f020d3d7cdeac98488eeb?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/e2469fdec06f020d3d7cdeac98488eeb?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">kmplayer</cite> |                    <!-- .comment-author -->
@@ -2143,7 +2136,7 @@ end;;</p>
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=11214#respond" onclick="return addComment.moveForm( &quot;div-comment-11214&quot;, &quot;11214&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to kmplayer">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=11214" onclick="return addComment.moveForm( &quot;div-comment-11214&quot;, &quot;11214&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to kmplayer">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -2161,23 +2154,23 @@ end;;</p>
 
     <li id="comment-10944" class="pingback odd alt thread-odd thread-alt depth-1">
         <div class="comment-body">
-            Pingback: <a href="https://web.archive.org/web/20180303070134/http://www.iskycloud.com/blog/algorithm/52.html" rel="external nofollow" class="url">数学之美番外篇：快排为什么那样快 | 天道酬勤</a>         </div>
+            Pingback: <a href="http://www.iskycloud.com/blog/algorithm/52.html" rel="external nofollow" class="url">数学之美番外篇：快排为什么那样快 | 天道酬勤</a>         </div>
     </li>
     <!-- #comment-## -->
 
     <li id="comment-934" class="comment even thread-even depth-1">
         <article id="div-comment-934" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/6b257dec435cdd3fbef4b46e1320037d?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/6b257dec435cdd3fbef4b46e1320037d?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/6b257dec435cdd3fbef4b46e1320037d?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/6b257dec435cdd3fbef4b46e1320037d?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://www.usbphoneworld.com/lbded6620.html" rel="external nofollow" class="url">dell latitude d620 laptop battery</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://www.usbphoneworld.com/lbded6620.html" rel="external nofollow" class="url">dell latitude d620 laptop battery</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2010-06-13T10:56:26+00:00">
                         June 13, 2010 at 10:56 am                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=934#respond" onclick="return addComment.moveForm( &quot;div-comment-934&quot;, &quot;934&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to dell latitude d620 laptop battery">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=934" onclick="return addComment.moveForm( &quot;div-comment-934&quot;, &quot;934&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to dell latitude d620 laptop battery">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -2194,7 +2187,7 @@ end;;</p>
     <li id="comment-904" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-904" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/ce224cb729596168d4ad487ccbee275c?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/ce224cb729596168d4ad487ccbee275c?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/ce224cb729596168d4ad487ccbee275c?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/ce224cb729596168d4ad487ccbee275c?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">rrison</cite> |                    <!-- .comment-author -->
@@ -2203,7 +2196,7 @@ end;;</p>
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=904#respond" onclick="return addComment.moveForm( &quot;div-comment-904&quot;, &quot;904&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to rrison">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=904" onclick="return addComment.moveForm( &quot;div-comment-904&quot;, &quot;904&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to rrison">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -2220,7 +2213,7 @@ end;;</p>
     <li id="comment-888" class="comment even thread-even depth-1 parent">
         <article id="div-comment-888" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/4d6a56b99bafd198ac10e68c2b8ee0e6?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/4d6a56b99bafd198ac10e68c2b8ee0e6?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/4d6a56b99bafd198ac10e68c2b8ee0e6?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/4d6a56b99bafd198ac10e68c2b8ee0e6?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">bigining</cite> |                    <!-- .comment-author -->
@@ -2229,7 +2222,7 @@ end;;</p>
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=888#respond" onclick="return addComment.moveForm( &quot;div-comment-888&quot;, &quot;888&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to bigining">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=888" onclick="return addComment.moveForm( &quot;div-comment-888&quot;, &quot;888&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to bigining">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -2246,7 +2239,7 @@ end;;</p>
     <li id="comment-18264" class="comment odd alt depth-2">
         <article id="div-comment-18264" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/79ae868a7fdd2a10d88c3eef7d57e402?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/79ae868a7fdd2a10d88c3eef7d57e402?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/79ae868a7fdd2a10d88c3eef7d57e402?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/79ae868a7fdd2a10d88c3eef7d57e402?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">Ted</cite> |                    <!-- .comment-author -->
@@ -2272,7 +2265,7 @@ end;;</p>
     <li id="comment-38836" class="comment even depth-2">
         <article id="div-comment-38836" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/6ad713444ad41b591aabb6c48d6170f3?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/6ad713444ad41b591aabb6c48d6170f3?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/6ad713444ad41b591aabb6c48d6170f3?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/6ad713444ad41b591aabb6c48d6170f3?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">haha</cite> |                    <!-- .comment-author -->
@@ -2287,7 +2280,7 @@ end;;</p>
     
                 <div class="comment-content">
                     <p>这里的称法存在问题，“1、2、6对3、4、5”这种称法，如果不平衡的话无法判断出来小球是轻还是重，所以是无法走到下一步小球存在于1 2 5中的，因为1 2 5 只是假定小球重的情况下；如果小球是轻的话，小球应该存在于 3 4 6中<br>
-<a href="https://web.archive.org/web/20180303070134/https://zh.wikipedia.org/wiki/%E7%A8%B1%E7%90%83%E5%95%8F%E9%A1%8C" rel="nofollow">https://zh.wikipedia.org/wiki/%E7%A8%B1%E7%90%83%E5%95%8F%E9%A1%8C</a><br>
+<a href="https://zh.wikipedia.org/wiki/%E7%A8%B1%E7%90%83%E5%95%8F%E9%A1%8C" rel="nofollow">https://zh.wikipedia.org/wiki/%E7%A8%B1%E7%90%83%E5%95%8F%E9%A1%8C</a><br>
 维基里面的称法是正确的 第二次称量1 5 9对2 3 6，这里面引入一个平衡球9，若1 5 9重的话，则得知1 6中存在坏球，比较1 4；若1 5 9对2 3 6平衡，则知4 7 8中存在坏球，比较4 8和1 2；若2 3 6重的话，则知2 3 5中存在坏球，比较4 8 和 2 5</p>
                 </div><!-- .comment-content -->
             </div>
@@ -2302,7 +2295,7 @@ end;;</p>
     <li id="comment-709" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-709" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/c6aaf03dc8c7141847a2e389521b47b9?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/c6aaf03dc8c7141847a2e389521b47b9?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/c6aaf03dc8c7141847a2e389521b47b9?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/c6aaf03dc8c7141847a2e389521b47b9?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">raymond</cite> |                    <!-- .comment-author -->
@@ -2311,7 +2304,7 @@ end;;</p>
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=709#respond" onclick="return addComment.moveForm( &quot;div-comment-709&quot;, &quot;709&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to raymond">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=709" onclick="return addComment.moveForm( &quot;div-comment-709&quot;, &quot;709&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to raymond">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -2328,16 +2321,16 @@ end;;</p>
     <li id="comment-407" class="comment even thread-even depth-1">
         <article id="div-comment-407" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/3fadb49905b5144bcee5dc0e63382e43?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/3fadb49905b5144bcee5dc0e63382e43?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/3fadb49905b5144bcee5dc0e63382e43?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/3fadb49905b5144bcee5dc0e63382e43?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://www.cloved.cn/" rel="external nofollow" class="url">conan</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://www.cloved.cn/" rel="external nofollow" class="url">conan</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2009-05-11T09:43:08+00:00">
                         May 11, 2009 at 9:43 am                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=407#respond" onclick="return addComment.moveForm( &quot;div-comment-407&quot;, &quot;407&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to conan">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=407" onclick="return addComment.moveForm( &quot;div-comment-407&quot;, &quot;407&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to conan">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -2354,16 +2347,16 @@ end;;</p>
     <li id="comment-292" class="comment odd alt thread-odd thread-alt depth-1">
         <article id="div-comment-292" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/1ee2d54d04168c9c93f67149e7ce6003?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/1ee2d54d04168c9c93f67149e7ce6003?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/1ee2d54d04168c9c93f67149e7ce6003?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/1ee2d54d04168c9c93f67149e7ce6003?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
-                    <cite class="fn"><a href="https://web.archive.org/web/20180303070134/http://stupidpig.cublog.cn/" rel="external nofollow" class="url">帅得不敢出门</a></cite> |                    <!-- .comment-author -->
+                    <cite class="fn"><a href="http://stupidpig.cublog.cn/" rel="external nofollow" class="url">帅得不敢出门</a></cite> |                    <!-- .comment-author -->
                     <time datetime="2009-03-23T20:46:24+00:00">
                         March 23, 2009 at 8:46 pm                    </time> 
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=292#respond" onclick="return addComment.moveForm( &quot;div-comment-292&quot;, &quot;292&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 帅得不敢出门">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=292" onclick="return addComment.moveForm( &quot;div-comment-292&quot;, &quot;292&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to 帅得不敢出门">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -2381,7 +2374,7 @@ end;;</p>
     <li id="comment-93" class="comment even thread-even depth-1">
         <article id="div-comment-93" class="comment-wrapper">
             <div class="comment-avatar">
-                <img alt="" src="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/b1ca687f45c1424dc41da6f57d0d45eb?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/b1ca687f45c1424dc41da6f57d0d45eb?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+                <img alt="" src="https://www.gravatar.com/avatar/b1ca687f45c1424dc41da6f57d0d45eb?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180303070134im_/https://www.gravatar.com/avatar/b1ca687f45c1424dc41da6f57d0d45eb?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
             <div class="comment-body">
                 <div class="comment-author vcard">          
                     <cite class="fn">chaonin</cite> |                    <!-- .comment-author -->
@@ -2390,7 +2383,7 @@ end;;</p>
                     
                      |
                     
-                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/?replytocom=93#respond" onclick="return addComment.moveForm( &quot;div-comment-93&quot;, &quot;93&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to chaonin">Reply</a></span> 
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/?replytocom=93" onclick="return addComment.moveForm( &quot;div-comment-93&quot;, &quot;93&quot;, &quot;respond&quot;, &quot;16&quot; )" aria-label="Reply to chaonin">Reply</a></span> 
             
                                     </div><!-- .comment author -->
     
@@ -2412,7 +2405,7 @@ Mackay的那本书重点是介绍编码的，具体的说是纠错码的。编�
 	
 	
 		<div id="respond" class="comment-respond">
-		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/web/20180303070134/http://mindhacks.cn/2008/06/13/why-is-quicksort-so-quick/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://web.archive.org/web/20180303070134/http://mindhacks.cn/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="../assets/2008/06/13/why-is-quicksort-so-quick/" style="display:none;">Cancel reply</a></small></h3>			<form action="https://web.archive.org/web/20180303070134/http://mindhacks.cn/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
 				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><div class="form-group comment-form-comment">
              
             <textarea class="form-control" id="comment" name="comment-62e498b497df79d8abed1db558908d" cols="45" rows="8" aria-required="true"></textarea><textarea name="comment" rows="1" cols="1" style="display:none"></textarea>
@@ -2428,17 +2421,17 @@ Mackay的那本书重点是介绍编码的，具体的说是纠错码的。编�
 </div><div class="col-md-4 right_sidebar"><aside id="la-right" role="complementary"><div id="text-3" class="widget widget_text"><h3><span class="dotbox"></span>关于</h3><div class="dotlinebox"><span class="dot"></span></div>			<div class="textwidget"><div id="me_as_info_source">
     如果你对我的文章感兴趣，那么<strong>很可能你也对我平时的阅读感兴趣</strong>，以下是一些你可以参考或订阅的资源：
     <ol>
-    <li><a href="https://web.archive.org/web/20180303070134/http://www.douban.com/people/pongba/">我在豆瓣</a>上的豆列列举了一些看过的好书：<a href="https://web.archive.org/web/20180303070134/http://www.douban.com/doulist/46003/">[只读经典]思维改变生活</a> | <a href="https://web.archive.org/web/20180303070134/http://www.douban.com/doulist/127649/">[只读经典]思考的技术与艺术</a> | <a href="https://web.archive.org/web/20180303070134/http://www.douban.com/doulist/197706/">决策与判断</a> | <a href="https://web.archive.org/web/20180303070134/http://www.douban.com/doulist/176513/">机器学习与人工智能书籍资源导引</a> </li>
+    <li><a href="http://www.douban.com/people/pongba/">我在豆瓣</a>上的豆列列举了一些看过的好书：<a href="http://www.douban.com/doulist/46003/">[只读经典]思维改变生活</a> | <a href="http://www.douban.com/doulist/127649/">[只读经典]思考的技术与艺术</a> | <a href="http://www.douban.com/doulist/197706/">决策与判断</a> | <a href="http://www.douban.com/doulist/176513/">机器学习与人工智能书籍资源导引</a> </li>
     </ol>
     我翻译的书：
     <ol>
-    <li><a href="https://web.archive.org/web/20180303070134/http://book.douban.com/subject/1470838/">《Imperfect C++ 中文版》</a></li>
-    <li><a href="https://web.archive.org/web/20180303070134/http://book.douban.com/subject/1470842/">《Exceptional C++ Style 中文版》</a></li>
-    <li><a href="https://web.archive.org/web/20180303070134/http://book.douban.com/subject/2248759/">《修改代码的艺术》</a></li>
+    <li><a href="http://book.douban.com/subject/1470838/">《Imperfect C++ 中文版》</a></li>
+    <li><a href="http://book.douban.com/subject/1470842/">《Exceptional C++ Style 中文版》</a></li>
+    <li><a href="http://book.douban.com/subject/2248759/">《修改代码的艺术》</a></li>
     </ol>
     我写的书：
     <ol>
-    <li><a href="https://web.archive.org/web/20180303070134/http://book.douban.com/subject/6709809/"><img src="https://web.archive.org/web/20180303070134im_/https://img3.doubanio.com/mpic/s6586365.jpg"></a></li>
+    <li><a href="http://book.douban.com/subject/6709809/"><img src="https://img3.doubanio.com/mpic/s6586365.jpg"></a></li>
     </ol>
 	我的公号：
     <ol>
@@ -2446,8 +2439,8 @@ Mackay的那本书重点是介绍编码的，具体的说是纠错码的。编�
     </ol>
 </div></div>
 		</div><div id="views-3" class="widget widget_views"><h3><span class="dotbox"></span>被阅读得最多的</h3><div class="dotlinebox"><span class="dot"></span></div><ul>
-<li><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/" title="数学之美番外篇：平凡而又神奇的贝叶斯方法">数学之美番外篇：平凡而又神奇的贝叶斯方法</a> - 664,199 views</li><li><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2011/11/04/how-to-interview-a-person-for-two-years/" title="怎样花两年时间去面试一个人">怎样花两年时间去面试一个人</a> - 460,845 views</li><li><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/" title="[BetterExplained]为什么你应该（从现在开始就）写博客">[BetterExplained]为什么你应该（从现在开始就）写博客</a> - 317,543 views</li><li><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2009/12/20/dark-time/" title="暗时间">暗时间</a> - 293,620 views</li><li><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2009/05/17/seven-years-in-nju/" title="我在南大的七年">我在南大的七年</a> - 263,500 views</li><li><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2009/03/28/effective-learning-and-memorization/" title="[BetterExplained]如何有效地记忆与学习">[BetterExplained]如何有效地记忆与学习</a> - 256,427 views</li><li><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2009/03/15/preconception-explained/" title="逃出你的肖申克（二）：仁者见仁智者见智？从视觉错觉到偏见">逃出你的肖申克（二）：仁者见仁智者见智？从视觉错觉到偏见</a> - 246,486 views</li><li><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2009/01/18/escape-from-your-shawshank-part1/" title="逃出你的肖申克（一）：为什么一定要亲身经历了之后才能明白？">逃出你的肖申克（一）：为什么一定要亲身经历了之后才能明白？</a> - 232,080 views</li><li><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2009/02/09/writing-is-better-thinking/" title="[BetterExplained]书写是为了更好的思考">[BetterExplained]书写是为了更好的思考</a> - 179,295 views</li><li><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/2010/03/18/escape-from-your-shawshank-part3/" title="逃出你的肖申克（三）：遇见20万年前的自己">逃出你的肖申克（三）：遇见20万年前的自己</a> - 173,532 views</li></ul>
-</div><div id="text-4" class="widget widget_text"><h3><span class="dotbox"></span>我的微博</h3><div class="dotlinebox"><span class="dot"></span></div>			<div class="textwidget"><iframe width="100%" height="550" class="share_self" frameborder="0" scrolling="no" src="https://web.archive.org/web/20180303070134if_/http://widget.weibo.com/weiboshow/index.php?width=0&amp;height=550&amp;fansRow=1&amp;ptype=0&amp;speed=300&amp;skin=-1&amp;isTitle=0&amp;noborder=0&amp;isWeibo=1&amp;isFans=1&amp;uid=1882579600&amp;verifier=1448dc03&amp;colors=d6f3f7,ffffff,666666,0082cb"></iframe></div>
+<li><a href="../assets/2008/09/21/the-magical-bayesian-method/" title="数学之美番外篇：平凡而又神奇的贝叶斯方法">数学之美番外篇：平凡而又神奇的贝叶斯方法</a> - 664,199 views</li><li><a href="../assets/2011/11/04/how-to-interview-a-person-for-two-years/" title="怎样花两年时间去面试一个人">怎样花两年时间去面试一个人</a> - 460,845 views</li><li><a href="../assets/2009/02/15/why-you-should-start-blogging-now/" title="[BetterExplained]为什么你应该（从现在开始就）写博客">[BetterExplained]为什么你应该（从现在开始就）写博客</a> - 317,543 views</li><li><a href="../assets/2009/12/20/dark-time/" title="暗时间">暗时间</a> - 293,620 views</li><li><a href="../assets/2009/05/17/seven-years-in-nju/" title="我在南大的七年">我在南大的七年</a> - 263,500 views</li><li><a href="../assets/2009/03/28/effective-learning-and-memorization/" title="[BetterExplained]如何有效地记忆与学习">[BetterExplained]如何有效地记忆与学习</a> - 256,427 views</li><li><a href="../assets/2009/03/15/preconception-explained/" title="逃出你的肖申克（二）：仁者见仁智者见智？从视觉错觉到偏见">逃出你的肖申克（二）：仁者见仁智者见智？从视觉错觉到偏见</a> - 246,486 views</li><li><a href="../assets/2009/01/18/escape-from-your-shawshank-part1/" title="逃出你的肖申克（一）：为什么一定要亲身经历了之后才能明白？">逃出你的肖申克（一）：为什么一定要亲身经历了之后才能明白？</a> - 232,080 views</li><li><a href="../assets/2009/02/09/writing-is-better-thinking/" title="[BetterExplained]书写是为了更好的思考">[BetterExplained]书写是为了更好的思考</a> - 179,295 views</li><li><a href="../assets/2010/03/18/escape-from-your-shawshank-part3/" title="逃出你的肖申克（三）：遇见20万年前的自己">逃出你的肖申克（三）：遇见20万年前的自己</a> - 173,532 views</li></ul>
+</div><div id="text-4" class="widget widget_text"><h3><span class="dotbox"></span>我的微博</h3><div class="dotlinebox"><span class="dot"></span></div>			<div class="textwidget"><iframe width="100%" height="550" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?width=0&amp;height=550&amp;fansRow=1&amp;ptype=0&amp;speed=300&amp;skin=-1&amp;isTitle=0&amp;noborder=0&amp;isWeibo=1&amp;isFans=1&amp;uid=1882579600&amp;verifier=1448dc03&amp;colors=d6f3f7,ffffff,666666,0082cb"></iframe></div>
 		</div></aside></div></div></div>
 </section>
 
@@ -2462,10 +2455,10 @@ Mackay的那本书重点是介绍编码的，具体的说是纠错码的。编�
             <div class="col-md-12">
                         </div>
             <div class="col-md-12">
-                <ul id="menu-pages" class="footer"><li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/about/">关于</a></li>
-<li id="menu-item-283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-283"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/former-life-of-mindhacks/">前世档案 | C++的罗浮宫</a></li>
-<li id="menu-item-279" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-279"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/archives/">所有文章</a></li>
-<li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="https://web.archive.org/web/20180303070134/http://mindhacks.cn/about-toplanguage/">TopLanguage 讨论组</a></li>
+                <ul id="menu-pages" class="footer"><li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="../assets/about/">关于</a></li>
+<li id="menu-item-283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-283"><a href="../assets/former-life-of-mindhacks/">前世档案 | C++的罗浮宫</a></li>
+<li id="menu-item-279" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-279"><a href="../assets/archives/">所有文章</a></li>
+<li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="../assets/about-toplanguage/">TopLanguage 讨论组</a></li>
 </ul>            </div>
             <div class="col-md-12">
                 <div class="copyright">
@@ -2475,24 +2468,24 @@ Mackay的那本书重点是介绍编码的，具体的说是纠错码的。编�
                 </div>
             </div>
 
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-includes/js/jquery/ui/accordion.min.js?ver=1.11.4"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-includes/js/jquery/ui/progressbar.min.js?ver=1.11.4"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-includes/js/jquery/ui/tabs.min.js?ver=1.11.4"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-includes/js/imagesloaded.min.js?ver=3.2.0"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-includes/js/masonry.min.js?ver=3.3.2"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2b"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/woocommerce-zoom.js?ver=1.0.0"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/wow.js?ver=1.0.0"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/lavish-bootstrap.min.js?ver=1.0.0"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/mytheme-carausel.js?ver=1.0.0"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/style_portfolio.js?ver=1.0.0"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/woo_zoom.js?ver=1.0.0"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/shk_countslider.js?ver=1.0.0"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/lavish_extras.js?ver=1.0.0"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-includes/js/comment-reply.min.js?ver=4.7.9"></script>
-<script type="text/javascript" src="https://web.archive.org/web/20180303070134js_/http://mindhacks.cn/wp-includes/js/wp-embed.min.js?ver=4.7.9"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </div></div></div></div></body></html><!--
