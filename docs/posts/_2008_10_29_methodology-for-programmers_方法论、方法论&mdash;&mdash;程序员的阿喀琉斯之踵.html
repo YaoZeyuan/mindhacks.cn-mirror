@@ -1,0 +1,1450 @@
+<!DOCTYPE html><html lang="en-US"><head><script src="//archive.org/includes/athena.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app227.us.archive.org';v.server_ms=315;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=Hk4-lkW3" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=txqj7nKC" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://mindhacks.cn:80/2008/10/29/methodology-for-programmers/","20180305102931","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1520245771");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3">
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv">
+<!-- End Wayback Rewrite JS Include -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://mindhacks.cn/xmlrpc.php">
+<link rel="shortcut icon" href="https://web.archive.org/web/20180305102931im_/http://mindhacks.cn/wp-content/themes/lavish-pro-child/favicon.ico">
+
+<title>方法论、方法论——程序员的阿喀琉斯之踵 – 刘未鹏 | Mind Hacks</title>
+<link rel="dns-prefetch" href="//web.archive.org/web/20180305102931/http://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="//web.archive.org/web/20180305102931/http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="刘未鹏 | Mind Hacks � Feed" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/feed/">
+<link rel="alternate" type="application/rss+xml" title="刘未鹏 | Mind Hacks � Comments Feed" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="刘未鹏 | Mind Hacks � 方法论、方法论??程序员的阿喀琉斯之踵 Comments Feed" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/web.archive.org\/web\/20180305102931\/https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/web.archive.org\/web\/20180305102931\/https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/web.archive.org\/web\/20180305102931\/http:\/\/mindhacks.cn\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.9"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="parent-theme-css-css" href="https://web.archive.org/web/20180305102931cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/style.css?ver=4.7.9" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-bootstrap-css" href="https://web.archive.org/web/20180305102931cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/bootstrap.min.css?ver=2018-03-05%2018:29:32" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="https://web.archive.org/web/20180305102931cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/font-awesome.min.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-woocommerce-css" href="https://web.archive.org/web/20180305102931cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/woocommerce.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish_wow-css" href="https://web.archive.org/web/20180305102931cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/animate.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish_style_portfolio-css" href="https://web.archive.org/web/20180305102931cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/style_portfolio.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-css" href="https://web.archive.org/web/20180305102931cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/navmenu.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-style-css" href="https://web.archive.org/web/20180305102931cs_/http://mindhacks.cn/wp-content/themes/lavish-pro-child/style.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-open-sans-css" href="//web.archive.org/web/20180305102931cs_/http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%2C600&amp;ver=4.7.9" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-lato-css" href="//web.archive.org/web/20180305102931cs_/http://fonts.googleapis.com/css?family=Lato%3A400%2C700%2C900&amp;ver=4.7.9" type="text/css" media="all">
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<link rel="https://api.w.org/" href="http://mindhacks.cn/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mindhacks.cn/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mindhacks.cn/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="数学之美番外篇：平凡而又神奇的贝叶斯方法" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/">
+<link rel="next" title="一直以来伴随我的一些学习习惯(四)：知识结构" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/12/05/learning-habits-part4/">
+<meta name="generator" content="WordPress 4.7.9">
+<link rel="canonical" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/">
+<link rel="shortlink" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/?p=60">
+<link rel="alternate" type="application/json+oembed" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmindhacks.cn%2F2008%2F10%2F29%2Fmethodology-for-programmers%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmindhacks.cn%2F2008%2F10%2F29%2Fmethodology-for-programmers%2F&amp;format=xml">
+<style type="text/css">
+body {
+	font-size: 100%; 
+	background-color:; 
+}
+h1, 
+h1 a {
+	color: ;
+	font-size: ;
+}
+h2,
+h2 a {
+	color: ; 
+	font-size: ;
+}
+h3,
+h3 a {
+	color: ; 
+	font-size: ;
+}
+h4,
+h4 a {
+	color: ; 
+	font-size: ;
+}
+h5,
+h5 a {
+	color: ; 
+	font-size: ;
+}
+h6,
+h6 a {
+	color: ; 
+	font-size: ;
+}
+p, 
+p a {
+	color: ; 
+	font-size: ;
+}
+a {
+	color: ; 
+	font-size: ;
+}
+#la-banner {
+	min-height: 150px !important;
+	background-repeat: no-repeat;
+}
+a:hover, 
+a:focus,
+a:visited {
+	color: ;
+}
+li {
+	color: ; 
+	font-size: ;
+}
+.btn,
+.btn1,
+.btn1, 
+.btn a {
+	color: !important; 
+	background-color: ;
+}
+.btn:hover, 
+.btn:focus, 
+.btn a:hover, 
+.btn a:focus, 
+.btn a:visited {
+	color:  !important; 
+	background-color: ;
+}
+.btn1:hover, 
+.btn1:focus, 
+.btn1 a:hover, 
+.btn1 a:focus, 
+.btn1 a:visited {
+	color:  !important; 
+	background-color: ;
+}
+/*
+=================================================
+Header Top Customizer Color
+=================================================
+*/
+.lavish_top .two,
+.lavish_top {
+	background-color:; 
+	color:;
+}
+.lavish_head {
+	background-color: !important;
+}
+.lavish_head {
+	background-color:rgba(0, 0, 0, 0.4) !important;
+}
+
+ul.header_extra li {color:}
+#social-icons ul li a,
+#social-icons ul li a,
+#social-icons ul li a,
+#social-icons ul li a {
+	background-color:!important; 
+	color:!important; 
+}
+#social-icons ul li a:hover,
+#social-icons ul li a:hover,
+#social-icons ul li a:hover,
+#social-icons ul li a:hover {
+	background-color:!important; 
+	color:!important; 
+}
+.secondary_menu,
+.secondary_menu_middle {
+	background-color:; 
+}
+/*
+=================================================
+Menu Coloring
+=================================================
+*/
+ul.navmenu  > li >  a,
+ul.navmenu1  > li >  a, 
+ul.navmenu2 > li >  a,
+ul.mobilemenu > li > a {
+	background-color:; 
+	color:; 
+}
+ul.navmenu > li > a:hover, 
+ul.navmenu > li > a:focus, 
+ul.navmenu > li > a:active, 
+ul.navmenu1 > li > a:hover, 
+ul.navmenu1 > li > a:focus, 
+ul.navmenu1 > li > a:active, 
+ul.navmenu2 > li > a:hover, 
+ul.navmenu2 > li > a:focus, 
+ul.navmenu2 > li > a:active, 
+ul.mobilemenu > li > a:hover,	
+ul.mobilemenu > li > a:focus, 
+ul.mobilemenu > li > a:active {
+	background-color:; 
+	color:; 
+}
+.navmenu .current_page_item > a, 
+.navmenu .current_page_ancestor > a, 
+.navmenu .current-menu-item > a, 
+.navmenu .current-menu-ancestor > a,
+.navmenu1 .current_page_item > a, 
+.navmenu1 .current_page_ancestor > a, 
+.navmenu1 .current-menu-item > a, 
+.navmenu1 .current-menu-ancestor > a,
+.navmenu2 .current_page_item > a, 
+.navmenu2 .current_page_ancestor > a, 
+.navmenu2 .current-menu-item > a, 
+.navmenu2 .current-menu-ancestor > a,
+.mobilemenu .current_page_item > a, 
+.mobilemenu .current_page_ancestor > a, 
+.mobilemenu .current-menu-item > a, 
+.mobilemenu .current-menu-ancestor > a {
+	background-color: ; 
+	color: ;
+}
+ul.navmenu ul.sub-menu,
+ul.navmenu1 ul.sub-menu,
+ul.navmenu2 ul.sub-menu, 
+ul.mobilemenu ul.sub-menu {
+	background-color: ; 
+	border-bottom-color:;
+	border-right-color:;
+	border-left-color:;
+}
+ul.navmenu ul.sub-menu:before,
+ul.navmenu1 ul.sub-menu:before,
+ul.navmenu2 ul.sub-menu:before {
+	border-bottom-color: ; 
+	border-top-color: }
+ul.navmenu ul.sub-menu > li,
+ul.navmenu1 ul.sub-menu > li,
+ul.navmenu2 ul.sub-menu > li {
+	border-bottom-color: ; 
+}
+ul.navmenu > li:hover > a,
+ul.navmenu1 > li:hover > a,
+ul.navmenu2 > li:hover > a {
+	background-color:!important; 
+	color: !important; 
+}
+ul.navmenu ul.sub-menu > li > a,
+ul.navmenu1 ul.sub-menu > li > a,
+ul.navmenu2 ul.sub-menu > li > a, 
+ul.mobilemenu ul.sub-menu > li > a {
+	color:;
+}
+ul.navmenu ul.sub-menu .current_page_item > a, 
+ul.navmenu ul.sub-menu .current_page_ancestor > a, 
+ul.navmenu ul.sub-menu .current-menu-item > a, 
+ul.navmenu ul.sub-menu .current-menu-ancestor > a, 
+ul.navmenu1 ul.sub-menu .current_page_item > a, 
+ul.navmenu1 ul.sub-menu .current_page_ancestor > a, 
+ul.navmenu1 ul.sub-menu .current-menu-item > a, 
+ul.navmenu1 ul.sub-menu .current-menu-ancestor > a, 
+ul.navmenu2 ul.sub-menu .current_page_item > a, 
+ul.navmenu2 ul.sub-menu .current_page_ancestor > a, 
+ul.navmenu2 ul.sub-menu .current-menu-item > a, 
+ul.navmenu2 ul.sub-menu .current-menu-ancestor > a,  
+ul.mobilemenu ul.sub-menu .current_page_item > a, 
+ul.mobilemenu ul.sub-menu .current_page_ancestor > a, 
+ul.mobilemenu ul.sub-menu .current-menu-item > a, 
+ul.mobilemenu ul.sub-menu .current-menu-ancestor > a {
+	background-color:!important; 
+	color:;
+}
+ul.navmenu ul.sub-menu > li > a:hover,
+ul.navmenu ul.sub-menu > li > a:focus, 
+ul.navmenu ul.sub-menu > li > a:active, 
+ul.navmenu1 ul.sub-menu > li > a:hover, 
+ul.navmenu1 ul.sub-menu > li > a:focus, 
+ul.navmenu1 ul.sub-menu > li > a:active, 
+ul.navmenu2 ul.sub-menu > li > a:hover, 
+ul.navmenu2 ul.sub-menu > li > a:focus, 
+ul.navmenu2 ul.sub-menu > li > a:active, 
+ul.navmenu3 ul.sub-menu > li > a:hover, 
+ul.navmenu3 ul.sub-menu > li > a:focus, 
+ul.navmenu3 ul.sub-menu > li > a:active, 
+ul.navmenu4 ul.sub-menu > li > a:hover, 
+ul.navmenu4 ul.sub-menu > li > a:focus, 
+ul.navmenu4 ul.sub-menu > li > a:active, 
+ul.mobilemenu ul.sub-menu > li > a:hover, 
+ul.mobilemenu ul.sub-menu > li > a:focus,
+ul.mobilemenu ul.sub-menu > li > a:active {
+	background-color:!important; 
+	color:;
+}
+ul.navmenu ul.sub-menu > li  {
+	border-top-color:;
+}
+/*
+=================================================
+Menu Sizes Customizer
+=================================================
+*/
+ul.navmenu > li > a {font-size: ; }
+ul.navmenu ul.sub-menu > li > a,
+ul.navmenu ul.sub-menu > li > a > span
+{
+	font-size:; 
+}
+
+ul.navmenu ul.sub-menu > li > ul.sub-menu > li > a {font-size:; }
+
+.lavish_footer {background-color:; color: ;}
+.lavish_footer p {color: ;}
+.lr_widgets_bottom_widget {background-color:; color:;  border-top-color:;}
+.lr_widget_content_bottom {background-color:;}
+.lr_widget_inset_bottom {background-color:;}
+.widget_inset_bottom1 {background-color:;}
+.left_sidebar {background-color:;}
+.right_sidebar {background-color:;}
+.lr_widgets_insettop1 {background-color:;}
+.la-contents {background-color:;}
+.manosarywide, .boxedwide, .manosaryleft, .boxedleft, .manosaryright, .boxedright {
+	border-top-color:; border-left-color:;
+}
+.manosarywide, .boxedwide, .manosaryleft, .boxedleft, .manosaryright, .boxedright {
+	background-color:; 
+}
+.manosarywide h2.entry-title a,
+.post.type-post h2.entry-title a,
+.boxedwide h2.entry-title a,
+.manosaryleft h2.entry-title a,
+.boxedleft h2.entry-title a,
+.manosaryright h2.entry-title a,
+.boxedright h2.entry-title a {
+	color: }
+
+.post.type-post .entry-meta,
+.post.type-post .entry-meta span,
+.post.type-post .entry-meta a,
+.manosarywide .entry-meta,
+.manosarywide .entry-meta span,
+.manosarywide .entry-meta a,
+.boxedwide .entry-meta,
+.boxedwide .entry-meta span,
+.boxedwide .entry-meta a,
+.manosaryleft .entry-meta,
+.manosaryleft .entry-meta span,
+.manosaryleft .entry-meta a,
+.boxedleft .entry-meta,
+.boxedleft .entry-meta span,
+.boxedleft .entry-meta a,
+.manosaryright .entry-meta,
+.manosaryright .entry-meta span,
+.manosaryright .entry-meta a,
+.boxedright .entry-meta,
+.boxedright .entry-meta span
+.boxedright .entry-meta a {
+	color: }
+.link_post_type {
+	background-color: ;
+}
+.link_post_type:hover {
+	background-color: ;
+}
+/*
+=================================================
+Pagination Links Color
+=================================================
+*/
+.page_pagination span  {
+	background-color: ;
+	color: ;
+}
+.page_pagination a {
+	background-color: ;
+	color: ;
+}
+.page_pagination a:hover {
+	background-color: ;
+	color: ;
+}
+
+.testomonials_background {border-left-color:; border-bottom-color:;}
+.lr_faqs {border-right-color:; border-bottom-color:;}
+.effect-st-portfolio {border-color:;}
+.lr_widgets_insettop {background-color:;}
+.lr_top_widgets {background-color:;}
+.lr_widgets_cta {background-color:;}
+.style_breadcrumbs {background-color:;}
+.style_breadcrumbs h1 {color:;}
+.style_breadcrumbs span {color:;}
+.style_breadcrumbs span  a {color:;}
+.style_breadcrumbs span  a:hover {color:;}
+.breadcrumb_items {color:;}
+/*.lavish_header {background-color:; }*/
+
+/*site title */
+#la-site-title a {color:#fff;}
+#la-logo-group, #la-text-group {padding: 5px 0px 5px 0px}
+            
+/*Navmenu Customizer */
+
+
+
+	#secondary-nav .nav-menu li a, #secondary-nav .nav-menu li.home a {color:#ffffff;}
+	#secondary-nav .nav-menu li a:hover {color:#6c603c;}
+	#secondary-nav ul.nav-menu ul a,#secondary-nav .nav-menu ul ul a {color: #ffffff;}
+	#secondary-nav ul.nav-menu ul a:hover,#secondary-nav .nav-menu ul ul a:hover,#secondary-nav .nav-menu .current_page_item > a,#secondary-nav .nav-menu .current_page_ancestor > a,#secondary-nav .nav-menu .current-menu-item > a,#secondary-nav .nav-menu .current-menu-ancestor > a {color:#6c603c;}			
+	#secondary-nav ul.sub-menu .current_page_item > a,#secondary-nav ul.sub-menu .current_page_ancestor > a,#secondary-nav ul.sub-menu .current-menu-item > a,#secondary-nav ul.sub-menu .current-menu-ancestor > a {background-color: #d7c58c;}						
+	#secondary-nav ul.nav-menu li:hover > ul,#secondary-nav .nav-menu ul li:hover > ul {background-color: #c6b274;border-color:#707070;}			
+	#secondary-nav ul.nav-menu li:hover > ul li:hover {background-color: #d7c58c;}			
+	.la-breadcrumbs-wrapper span {color:;}
+	.la-breadcrumbs-wrapper span  a {color:;}
+	.la-breadcrumbs-wrapper span  a:hover {color:;}
+	.wsb_primary {background-color: !important;}
+	
+	.wsb_primary:hover, .wsb_primary:focus {background-color: !important;}
+	.added_to_cart:hover, .added_to_cart:focus {background-color: !important;}
+	.wsb_secondary {background-color: !important;}
+	.wsb_secondary:hover, .wsb_secondary:focus {background-color: !important;}
+	
+	.woocommerce_product_title {color: !important;}
+
+/*
+=================================================
+Content Color Customizer
+=================================================
+*/
+.la-contents .entry-content,
+.la-contents .entry-content p {
+	color:}
+.la-contents .entry-content a {
+	color:}
+
+/*
+==========================================================================
+Footer Widget Title Color settig
+==========================================================================
+*/
+.lr_widgets_bottom_widget h3{
+	color:}
+</style>
+<script type="text/javascript">
+	(function ( $ ) {
+		$(document).ready(function(){
+			var active = "";
+			var scroll_number = "180";
+			var top_activated = "1";
+			if (top_activated == 1) {
+				$('#la-banner').css({"min-height" : "110px"});
+			}
+            
+            	
+
+            //if navigation menu is First One
+            
+            	if (active == 1) {
+            			$(window).scroll(function() {
+
+								if ($(window).scrollTop() > scroll_number) {
+									 $(".lavish_top").hide();
+									 $(".lavish_header.header_two").css({"position":"fixed", "right":"0px", "left":"0px", "top": "0px","z-index":"400"});
+									 $(".lavish_header.header_one").css({"position":"fixed", "right":"0px", "left":"0px", "top": "0px","z-index":"400"});
+									 $(".lavish_header.header_two").css({'marginTop': '0px'});
+								}
+								else {
+				                    $(".lavish_top").show();
+				                    $(".lavish_header.header_two").css({"position":"absolute", 'box-shadow':'none', "width": "100%", "z-index":"400"});
+				                    $(".lavish_header.header_one").css({"position":"relative", 'box-shadow':'none', "width": "100%", "z-index":"400"});
+				                    $(".lavish_header.header_two").css({'marginTop': '15px'});
+				            }
+			   				});
+            			}
+
+            			
+     	 
+			
+		});
+})(jQuery);
+
+</script>
+
+            <style type="text/css">
+                   .blog .style_breadcrumbs,
+                   .archive .style_breadcrumbs,
+                   .category .style_breadcrumbs{display:none;}
+            </style>
+  
+	<!-- Clean Archives Reloaded v3.2.0 | http://www.viper007bond.com/wordpress-plugins/clean-archives-reloaded/ -->
+	<style type="text/css">.car-collapse .car-yearmonth { cursor: s-resize; } </style>
+	<script type="text/javascript">
+		/* <![CDATA[ */
+			jQuery(document).ready(function() {
+				jQuery('.car-collapse').find('.car-monthlisting').hide();
+				jQuery('.car-collapse').find('.car-monthlisting:first').show();
+				jQuery('.car-collapse').find('.car-yearmonth').click(function() {
+					jQuery(this).next('ul').slideToggle('fast');
+				});
+				jQuery('.car-collapse').find('.car-toggler').click(function() {
+					if ( 'Expand All' == jQuery(this).text() ) {
+						jQuery(this).parent('.car-container').find('.car-monthlisting').show();
+						jQuery(this).text('Collapse All');
+					}
+					else {
+						jQuery(this).parent('.car-container').find('.car-monthlisting').hide();
+						jQuery(this).text('Expand All');
+					}
+					return false;
+				});
+			});
+		/* ]]> */
+	</script>
+
+</head>
+<body class="post-template-default single single-post postid-60 single-format-standard"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display:none;direction:ltr;" toolbar-mode="auto">
+<div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;">
+<div id="donato" style="position:relative;width:100%;height:0;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20180305102931/http%3A//mindhacks.cn/2008/10/29/methodology-for-programmers" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><div id="wm-ipp-inside">
+  <div id="wm-toolbar" style="position:relative;display:flex;flex-flow:row nowrap;justify-content:space-between;" nav="async">
+    <div id="wm-logo" style="/*width:110px;*/padding-top:12px;">
+      <a href="/web/" title="Wayback Machine home page"><img src="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-100.png, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0"></a>
+    </div>
+    <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://mindhacks.cn/2008/10/29/methodology-for-programmers" onfocus="this.focus();this.select();" style="flex:1;"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20180305102931"><input type="submit" value="Go">
+      </form>
+      <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
+                <div class="s" id="wm-nav-captures" style="flex:1;">
+                    <a class="t" href="/web/20180305102931*/http://mindhacks.cn/2008/10/29/methodology-for-programmers" title="See a list of every capture for this URL">276 captures</a>
+          <div class="r" title="Timespan for captures of this URL">10 Feb 2009 - 25 Feb 2024</div>
+          </div>
+        <div class="k">
+          <a href="" id="wm-graph-anchor">
+            <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+              <canvas id="wm-sparkline-canvas" width="775" height="27" border="0"></canvas>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="n">
+      <table>
+        <tbody>
+          <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+          <tr class="m">
+            <td class="b" nowrap="nowrap">Feb</td>
+            <td class="c" id="displayMonthEl" title="You are here: 10:29:31 Mar 05, 2018">MAR</td>
+            <td class="f" nowrap="nowrap">Apr</td>
+          </tr>
+          <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+          <tr class="d">
+            <td class="b" nowrap="nowrap"><span class="ta"></span></td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 10:29:31 Mar 05, 2018">05</td>
+            <td class="f" nowrap="nowrap"><span class="ta"></span></td>
+          </tr>
+          <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+          <tr class="y">
+            <td class="b" nowrap="nowrap">2017</td>
+            <td class="c" id="displayYearEl" title="You are here: 10:29:31 Mar 05, 2018">2018</td>
+            <td class="f" nowrap="nowrap">2019</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="r" style="display:flex;flex-flow:column nowrap;align-items:flex-end;justify-content:space-between;">
+      <div id="wm-btns" style="text-align:right;height:23px;">
+                <span class="xxs">
+          <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a id="wm-save-snapshot-open" href="#" title="Share via My Web Archive">
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web"></span>
+        </span>
+                <a class="xxs" href="https://help.archive.org/help/category/the-wayback-machine/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+        <a id="wm-tb-close" href="#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" class="xxs">
+        <a href="/web/20180305102931/http://web.archive.org/screenshot/http://mindhacks.cn/2008/10/29/methodology-for-programmers" id="wm-screenshot" title="screenshot">
+          <span class="wm-icon-screen-shot"></span>
+        </a>
+        <a href="#" id="wm-video" title="video">
+          <span class="iconochive-movies"></span>
+        </a>
+        <a id="wm-share-facebook" href="#" data-url="https://web.archive.org/web/20180305102931/http://mindhacks.cn:80/2008/10/29/methodology-for-programmers/" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="#" data-url="https://web.archive.org/web/20180305102931/http://mindhacks.cn:80/2008/10/29/methodology-for-programmers/" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+      <div style="padding-right:2px;text-align:right;white-space:nowrap;">
+        <a id="wm-expand" class="wm-btn wm-closed" href="#expand"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
+      </div>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+        <div id="wm-capinfo-notice" source="api"></div>
+                <div id="wm-capinfo-collected-by">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+            <div style="display:inline-block;vertical-align:top;width:50%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls);"></span>
+		Organization: <a style="color:#33f;" href="https://archive.org/details/alexacrawls" target="_new"><span class="wm-title">Alexa Crawls</span></a>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
+	</div>
+	      </div>
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/alexacrawls" target="_new"><span class="wm-title">Alexa Crawls</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
+	</div>
+	      </div>
+    </div>
+    </div>
+    <div id="wm-capinfo-timestamps">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading"></div>
+    </div>
+    </div>
+  </div></div></div></div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20180305102931/http://mindhacks.cn:80/2008/10/29/methodology-for-programmers/</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(775,27,25,2,"web","http://mindhacks.cn/2008/10/29/methodology-for-programmers","20180305102931",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+    <div id="la-wrapper" style="border-color:#000000;">
+                <div class="lavish_header header_two "><!--Header Starts Here-->
+                                        <div class="lavish_head">
+                    <div class="container">
+                        <div class="lavish_logo"><!--Logo Starts Here -->
+        
+			<div id="la-text-group">
+                    <div id="la-site-title-group" style="margin: 10px 10px 10px 10px;">
+                        <h1 id="la-site-title"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/" title="刘未鹏 | Mind Hacks" rel="home" style="color: ;">刘未鹏 | Mind Hacks</a></h1>
+                        <h2 id="la-site-tagline" style="color: #a3a3a3;">思维改变生活</h2>
+                    </div>	
+                        </div>
+            		
+		
+
+    </div><!--End of Logo Here -->
+                            
+                                    <div class="lavish_menus">
+                        <div class="lavish_menu"><!--Primary Navigation Starts Here -->
+                            <ul id="menu-categories" class="navmenu"><li id="menu-item-447" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-447"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/%e5%bf%83%e6%99%ba%e6%8e%a2%e5%af%bb/">心智探寻</a></li>
+<li id="menu-item-285" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-285"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/mind/">思维改变生活</a></li>
+<li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-284"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/learning-method/">学习方法</a></li>
+<li id="menu-item-288" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-288"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/algorithms/">算法</a></li>
+<li id="menu-item-290" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-290"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/computer-science/">计算机科学</a></li>
+<li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-286"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/math/">数学</a></li>
+<li id="menu-item-287" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-287"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/machine-learning/">机器学习与人工智能</a></li>
+<li id="menu-item-289" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-289"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/programming/">编程</a></li>
+</ul>                        </div>
+                        
+                        <div class="header_extras">
+                            
+                            <ul class="header_extra">
+                                
+                                <li class="search_triger"><i class="fa fa-search"></i></li>
+
+                            </ul>
+                                                    <a class="toggle_button_lavish_menu"></a>
+                        </div><!--End of Primary Navigation -->
+                        
+                    </div>
+   
+                             
+                    </div>
+                     
+                    </div>
+                        <div class="dropdown_search">
+        <div class="container">
+            <div class="col-md-12">
+                <p style="float:left" class="search_triggered_close">X</p>
+                
+<form role="search" method="get" class="search-form" action="https://web.archive.org/web/20180305102931/http://mindhacks.cn/">
+
+<div class="input-group">
+<input type="text" class="form-control" placeholder="Search …" value="" name="s">
+<div class="input-group-addon">
+<button class="btn btn-primary" type="submit" value="Search"><i class="fa fa-search"></i> </button>
+</div>
+</div>
+
+</form>    
+            </div>
+        </div>
+    </div>
+                        <div style="background-color:#fff">
+        <ul id="menu-categories-1" class="mobilemenu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-447"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/%e5%bf%83%e6%99%ba%e6%8e%a2%e5%af%bb/">心智探寻</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-285"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/mind/">思维改变生活</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-284"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/learning-method/">学习方法</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-288"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/algorithms/">算法</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-290"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/computer-science/">计算机科学</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-286"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/math/">数学</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-287"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/machine-learning/">机器学习与人工智能</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-289"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/topics/programming/">编程</a></li>
+</ul>    </div>
+                    </div>
+                    <aside id="la-banner" class="lr_responsive_banner " style="background-color: #EAEAEA; background-image: url(https://web.archive.org/web/20180305102931im_/http://mindhacks.cn/wp-content/uploads/2016/12/mountain_sz.jpg); color: #ffffff;">
+        
+
+
+
+    </aside>
+    	<div class="style_breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					  
+
+						<h1> 方法论、方法论——程序员的阿喀琉斯之踵 </h1>
+									</div>
+				<div class="col-md-6 breadcrumb_items">
+					                    
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+<section id="la-content-area" class="la-contents" role="main">
+
+<div class="container"><div class="row"><div class="col-md-8" role="main">
+
+<article id="post-60" class="post-60 post type-post status-publish format-standard hentry category-learning-method category-mind tag-25 tag-24 tag-32">
+            <div class="entry-content clearfix">
+        <p>以前，我认为一个事物对我没有直接用途的时候就不会去理会它，心理学上说我们都戴着自己的<a href="https://web.archive.org/web/20180305102931/http://en.wikipedia.org/wiki/Cognitive_bias">认知偏见</a>的有色眼镜去<a href="https://web.archive.org/web/20180305102931/http://en.wikipedia.org/wiki/Selective_attention">有选择性地看待</a>这个世界，纷繁的信息经过我们的<a href="https://web.archive.org/web/20180305102931/http://en.wikipedia.org/wiki/Schema_(psychology)">认知图式</a>过滤之后便成为少量有序的事件，所以我们都在有强烈选择性地关注一些事物和忽视另一些事物，然而，这样可能会导致丧失一些很有价值的信息，而总是将知识面停留在自己的小世界中——当然这倒也不是说看到什么都要凑上去学一学。如何在这两者中间取得折中，我觉得一个好的办法是先简略地想一下这是个什么东东，他的本质是什么，出现是为了满足什么需求，等等比较“高层”的问题（即“What”和“Why”而不是“How”），这些问题应该是可以通过简单的调研和思考得出结论的，至于背后的技术细节，如果你打算入行，就可以去学，如果不打算的话则可以免了，至少前面的思考和简单的调研能够一定程度上保证当有价值的信息或机会摆在你面前的时候你不会把眼睛蒙上走开，并且多做做这类思考对于思维的广度也很有价值。最近我开始认为，最佳的学习方法就是先广度优先遍历（先弄清What和Why），然后择最合适的分支深入（How）（算法牛人<a href="https://web.archive.org/web/20180305102931/http://cuitianyi.com/blog/">DD同学</a>在TopLang上的一个帖子里面也提到<a href="https://web.archive.org/web/20180305102931/https://groups.google.com/group/pongba/browse_frm/thread/19feb2efbeef7d5a/">类似的想法</a>，刚进大学就能够如此清晰地看清前方道路的走法，我对DD很佩服）。 </p>
+<p>方法论看似是个很抽象的东西，并且的确有一些方法论是抽象到 over-generalized （泛化过度）的地步，然而说实话<strong>在实践当中我总是发现（正确的）方法论是再现实不过的东西</strong>，比如一个大家都明白的道理是：如果方向走错了，那么做的功就基本全白费了（还有比如“如果方法对头，就能事半功倍，反之可能多走很多弯路”）——然而现实中有多少人能够真正实践这个方法呢？绝大多数人都是只顾解决眼前问题，抓了这头丢了那头，更多人是不知道问题是什么，只管把头脑中能联想到的一个以前类似情况下的类似方案套用上来。以前我总是觉得一个公司里面，CEO/CTO 这样的角色是基本摆设，但我现在不这样想了。在 How 层面把事情做好，做成一个精钻的程序员，那顶多就是能把钳子使好，这样的事情很多人都能做到，熟能生巧嘛。换句话说<strong>程序员基本上是去解决一个定义好的问题，去实施一个定义好的方案</strong>。然而决策问题就不一样了，决策问题是需要去定义问题是什么，以及权衡最佳方案是什么，不管是决策技术架构还是决策商业策略，都是非常复杂的思维过程，需要<strong>综合和权衡大量的信息</strong>，这种能力<strong>就不是简单楞着头搞下去能练出来的了，很多时候需要抬起头来看，免得只见树木不见森林</strong>。（以上也是为什么我在讨论组里面一篇帖子（<a href="https://web.archive.org/web/20180305102931/https://groups.google.com/group/pongba/browse_frm/thread/f70e1e9cbbd0ff74">什么是算法？为什么学习算法？以及学到什么程度？</a>）中提到我觉得<a href="https://web.archive.org/web/20180305102931/https://groups.google.com/group/pongba/msg/2638bc0a319bce32">学数学学到精通未必就会思考日常决策问题的原因</a>——数学几乎总是去解决一个定义好的问题，用的也都是定义好的严密的逻辑推导。然而现实中的问题是一个复杂系统，诸多变量互相影响，如何权衡最佳方案实际上是一个复杂的统筹规划。更重要的是，你往往甚至都不知道问题是什么，能够从纷繁的信息中抽象出问题，是一种极大的能力。这里推荐<a href="https://web.archive.org/web/20180305102931/http://www.douban.com/subject/1135754/"><strong>《你的灯亮着吗？》</strong></a><strong>和</strong><a href="https://web.archive.org/web/20180305102931/http://www.douban.com/subject/1001737/"><strong>《失败的逻辑》</strong></a>） </p>
+<p>当然，我自己还没能到这个层面，尚需要不断实践和总结，所以只能稍微的谈一点感受，再往下扯只怕就会流于空泛了。这一点上我还是举一个程序员们喜闻乐见的例子吧，在程序员眼睛里面，做一个项目，也许首先想到的是用什么语言，什么框架，什么库，在这个方向上那就是什么看上去牛B用什么，恨不能都用 haskell、lisp 来写才爽，用 Java？那多没意思啊，Java 那坨弱智语法我小学的弟弟都能掌握，也没啥牛B的语言特性，忒没成就感（只可惜<strong>真正判别弱智与否的并非用什么语言技术，而是做出什么产品满足什么需求</strong>）。这就是属于只考虑单个孤立因素的简单（或者说 Naive 的）决策，这个因素就是——只要让我自己感觉爽——只可惜<strong>并不是让自己感觉爽的做法就是真正解决问题的做法</strong>，始终要弄清问题是什么，在后者意义上，一些对于技术型程序员往往没有吸引力的话题其实有着极其重大的价值——比如什么时候设计，什么时候重构，什么时候集成，再往上一层其实这些又都是次级问题，首要的问题还是这个产品满足什么需求，有什么市场（即这件事情值不值得做），有一句话想必很多人常听说，<strong>如果不知道要做什么，套上十二层架构也无济于事</strong>，方法永远不是因，而是果（我在以前的另一篇文章“<a href="https://web.archive.org/web/20180305102931/http://blog.csdn.net/pongba/archive/2008/03/03/2143245.aspx">Failing to see the Big Picture – Mistakes we make when learning programming</a>”中也阐述了类似的观点）。</p>
+<p>再举个例子，如果我想给我的网站做一个 feature ，我认为这个 feature 技术上很牛很强大，而且刚好有机会使用一下我最近修炼的某某 framework 和某某语言，而且这玩意很有挑战性，还不是一般人能够做得了的，综合以上三点，我立时觉得心痒难耐摩拳擦掌。然而实际上这个问题应该怎样分析呢？首先，考虑到以上三点，这将会是一个投入相当大的项目，那么其收益就必须要对得起这个投入，技术上很牛不代表商业上就牛，再牛再难做的 feature 如果不能带来商业价值那就是负收益。总而言之，</p>
+<p><strong>1. </strong><strong>一件事情</strong><em><b>仅仅</b></em><strong>让你感觉挺牛不代表这件事情就是值得做的； </strong><b>     <br><strong>2. </strong><strong>一件事情</strong><em>仅仅</em><strong>让你感到很有兴趣并不代表这件事情就是值得做的。</strong></b></p>
+<p>这两句话和我们日常的认识并不冲突，其实<strong>我们几乎总可以找到既有价值、又有趣、又有足够挑战性的工作</strong>。举个例子，本科数学学得精纯无比的同学有没有偶尔也会觉得盲目呢？做这些题目到底有什么实际用途呢？这就像是你总是在磨一把刀，磨得闪闪发光锋利无比，你可以向别人炫耀自己的刀很牛B，但是刀是为了冲锋陷阵血溅五步的，你也不想让它折戟沉沙吧，不管是将数学用在数学物理上还是用在人工智能、机器学习、密码学、通信上，都是既让人有成就感，同时又有意义和价值的事情。对我们程序员来说，你把一门语言玩得很精通，不仅知晓它所有的语法细节，陷阱和缺陷，还了解它的底层实现模型是如何。你觉得很牛很有成就感——的确，我们都会为一件自己做到了别人做不到的事情而感到自豪，然而反问一句，除了情绪价值之外，这样的事情在本身的价值上有没有你感觉到的那么牛呢？<strong>如果你只是在削铅笔，那么何必磨一把倚天屠龙剑来？反之，如果你做的是一个本身功能很牛很创新很有价值的软件，那么语言技术其实完全是次要的</strong>，并不是看上去越眩越好，关键是选择各个方面综合考虑起来最合适的工具即可，瑞士军刀也许很丑，但对于丛林冒险很实用就行。<strong>拿着一把屠龙宝刀去野外生存，同样也不靠谱。</strong></p>
+<p>编程语言是为了实现软件的，软件是为了服务于人的。诚然，了解一门语言的方方面面能够使你更有效地使用它，然而另一方面，如果结果发现这门语言并不何时来解决你手头的问题呢？受到投入的<a href="https://web.archive.org/web/20180305102931/http://en.wikipedia.org/wiki/Sunk_cost">沉没成本</a>的影响你一定觉得很不甘心吧？同理，由于你对一门工具投入了很多的精力，<strong>这门工具已经和你的情感挂上了钩，于是如果让你来决策用什么工具来完成一个任务的时候，你几乎会毫无疑问地想到使用你最熟悉而喜爱的那个</strong>，这就是“当你手头拿的是一个锤子，任何东西看上去都像钉子”这句话的一个解释。<strong>原先的问题是使用一门技术使得能够性价比最高地实现要完成地产品，然而到你那里问题就悄悄地变成了“使用一门技术让我感觉最爽”，问题的所有其他需要综合考虑的因素都被选择性忽略掉了</strong>，所以<strong>如果你是一个语言技术 fans ，那么几乎毫无疑问你会成为一个糟糕的决策者</strong>。最近，在学习和研究的方法论上我已经听到不止一个人（参见《失败的逻辑》和<a href="https://web.archive.org/web/20180305102931/http://www.bullog.cn/blogs/siyi/archives/194207.aspx">这里</a>——一位诺贝尔奖得主的忠告（引言如下））忠告我们，不要为了工具而工具，忘记了工具的目的是什么。</p>
+<blockquote>
+<p>…我们前面提过的显微摄影专家，擅长于拍矽藻的照片，动物学家着迷于昆虫贝壳跟有美丽羽毛的鸟类。我们的爱书狂最高兴的事情，就是读最新书和专论，他认为这些东西很重要，而且很能够刺激头脑，可是别人没办法，找到另外一本同样的书。我们博学的模范，经过这种策略，让他的朋友惊奇，让他的朋友佩服…</p>
+</blockquote>
+<p>…没有效率的科学家中，有一小类就是所谓的崇拜研究仪器的狂人，他们对金属的闪烁非常着迷，就像是夜鹰对它在镜里的反影着迷一样。他们非常仔细照顾所崇拜的东西，把仪器拭擦得雪亮，可以当镜子使用，而且把它摆饰在最崇高的地方，就好像在教堂里面的圣坛…</p>
+<p><a href="https://web.archive.org/web/20180305102931/http://www.codinghorror.com/blog/">CodingHorror</a> 的作者最近在博客里面跟着 <a href="https://web.archive.org/web/20180305102931/http://steve-yegge.blogspot.com/">Steve Yegge</a> 同学宣称，如果有一件事情是他想教给程序员同学们的，那就是 Marketing 。无独有偶，有一次吃饭的时候<a href="https://web.archive.org/web/20180305102931/http://wesleybao.spaces.live.com/">鲍志云</a>同学也提到： Marketing Sense 是很重要的。其实也就是不要总想着写牛代码，用牛语言技术，不要落入为技术而技术的怪圈，而是首先想明白做的事情有什么价值，先弄清做什么，为什么做，再去想怎么做，这样后面的功夫才花的有价值。</p>
+<blockquote>
+<p>You won’t– you <i>cannot</i>— become a better programmer through sheer force of programming alone. You can only complement and enhance your existing programming skills by branching out. Learn about your users. Learn about the industry. Learn about your business. </p>
+</blockquote>
+<p>当然，最后必须声明的是，不要矫枉过正，误会以上的观点，以上观点<strong>并不是说学生时代做的基本功是不需要的</strong>，一些非常基本的功夫（如计算机体系结构、数据结构和算法、两个主要流派（命令式和声明式）的编程语言都使用了哪些主要的编程范式、对主流语言的优缺点和适用场合的了解等等）是有必要掌握牢靠的，因为一方面我们并不是都能去做判断与决策，码农总是一个可靠的职业。另一方面对技术大方向的把握也是决策的基础知识，只是不要掉进无尽的技术漩涡，成为技术追星族。此外也许还有一个小小的好处就是如果被老板逼着用一门不熟悉的语言时不会很不痛快，因为<strong>真正重要的事情是你完成的产品，而不是用的语言</strong>。</p>
+<p><strong>一个有趣的附录</strong></p>
+<p>我们的思维有很多很多的弱点，前文讲的其实就是这样的弱点，更多更系统一点总结可以看下<a href="https://web.archive.org/web/20180305102931/https://groups.google.com/group/pongba/browse_frm/thread/3a88afe2d0fcbcdc/">这里</a>，和<a href="https://web.archive.org/web/20180305102931/http://www.douban.com/doulist/127649/">这里</a>。我一向认为，正确的思维方式，是一切高效学习的基础。比如参见如下2个例子，错误的思维方式得到的结论有大得多的可能性是谬误。</p>
+<p>[1] 人总喜欢沿袭以往习得的经验，并通过类比来进行外推。我第一次在一个地铁终点站坐地铁的时候，看着从远方开来的地铁，我心生疑惑——“这车每节车厢都这么长，待会怎么调头呢（我心说没看到铁轨终点有一个大大的供调头的U形弯啊）？”，当车开始开的时候我终于意识到原来车是可以往两头方向开的。 </p>
+<p>[2] 人喜欢从关联当中寻找因果，有一次我我老婆去银行取款，到了 ATM 室的自动门口，我开玩笑地拿着手头的饭卡去刷了一下，然后——门居然开了。我顿时来了劲，立即得出一个结论：这个刷卡装置不安全，至少不是能够专门识别银联的卡的。我甚至飞快地泛化出了一个更具一般性的理论来解释这个现象：即可能所有带有磁性的卡都可以用来开门。老婆看我得意洋洋，就泼过来一盘冷水：不一定是你的卡刷开的啊，你不刷卡试试看。我不信，说怎么可能呢，心想我刷卡，门就开了，还有比这更明显的因果关系嘛。但出乎我意料的是，我走出门，这次没刷卡，门也开了——原来是感应门——原先这个 ATM 室的确是刷卡门，但后来改成了感应门，刷卡的那个装置只不过没拆掉残留在那里而已。</p>
+<p>[3] 《失败的逻辑》里面从认知心理学的角度系统介绍了我们在复杂情况下的判断与决策是如何出错的，非常值得一读。</p>
+        <!-- <div style="border-bottom:1px solid #EAEAEA;"></div> -->
+        <!-- <h5><i class="fa fa-quote-left"></i> &nbsp;方法论、方法论&mdash;&mdash;程序员的阿喀琉斯之踵</h5> -->
+    </div>
+    
+    <div class="blog_seperator"></div></article><!-- #post-## -->
+   
+    <nav class="navigation post-navigation" role="navigation">
+        <div class="post-nav-links">
+            <div class="nav-previous">&nbsp;<a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/09/17/learning-habits-part3/" rel="prev"><i class="fa fa-long-arrow-left"></i> 一直以来伴随我的一些学习习惯(三)：阅读方法</a> </div><div class="nav-next">&nbsp;<a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/12/05/learning-habits-part4/" rel="next"> 一直以来伴随我的一些学习习惯(四)：知识结构 <i class="fa fa-long-arrow-right"></i></a></div>        </div><!-- .nav-links -->
+    </nav><!-- .navigation -->
+    
+<div id="comments" class="comments-area clearfix">
+
+	
+			<h2 class="comments-title">
+            29 Comments         
+		</h2>
+
+		
+		<ol class="comment-list">
+			
+    <li id="comment-35038" class="comment even thread-even depth-1">
+        <article id="div-comment-35038" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn"><a href="https://web.archive.org/web/20180305102931/http://t.qq.com/keyeechen" rel="external nofollow" class="url">keyeechen</a></cite> |                    <!-- .comment-author -->
+                    <time datetime="2016-05-20T12:57:42+00:00">
+                        May 20, 2016 at 12:57 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/?replytocom=35038#respond" onclick="return addComment.moveForm( &quot;div-comment-35038&quot;, &quot;35038&quot;, &quot;respond&quot;, &quot;60&quot; )" aria-label="Reply to keyeechen">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>其实我还停留在程序实现都感到痛苦不堪的阶段。写代码对我并不是一件快乐的事情，而是一件痛苦的事情。</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-34732" class="comment odd alt thread-odd thread-alt depth-1">
+        <article id="div-comment-34732" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn"><a href="https://web.archive.org/web/20180305102931/http://weibo.com/zhirui1992" rel="external nofollow" class="url">黯淡蓝点_</a></cite> |                    <!-- .comment-author -->
+                    <time datetime="2015-12-09T09:23:43+00:00">
+                        December 9, 2015 at 9:23 am                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/?replytocom=34732#respond" onclick="return addComment.moveForm( &quot;div-comment-34732&quot;, &quot;34732&quot;, &quot;respond&quot;, &quot;60&quot; )" aria-label="Reply to 黯淡蓝点_">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>“如果结果发现这门语言并不何时来解决你手头的问题呢？”作者这句话的“何时”应为“合适”</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-33842" class="comment even thread-even depth-1">
+        <article id="div-comment-33842" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/667a391aa2b707cf2e642cb712a304b8?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/667a391aa2b707cf2e642cb712a304b8?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">liu3617</cite> |                    <!-- .comment-author -->
+                    <time datetime="2015-01-12T16:30:57+00:00">
+                        January 12, 2015 at 4:30 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/?replytocom=33842#respond" onclick="return addComment.moveForm( &quot;div-comment-33842&quot;, &quot;33842&quot;, &quot;respond&quot;, &quot;60&quot; )" aria-label="Reply to liu3617">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>本来不想评价的，但是看到LZ如此贬低其它语言，我只能说，你根本就没认真看过其它语言，既然存在，肯定会有它存在的价值，不然早就淘汰了，还有就是这几年明显java要排在C++前面，LZ可以查一下编程语言排行榜，如果JAVA是渣的话，C++那不是连渣都不如？？？</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-33738" class="comment odd alt thread-odd thread-alt depth-1">
+        <article id="div-comment-33738" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn"><a href="https://web.archive.org/web/20180305102931/http://weibo.com/fdeg" rel="external nofollow" class="url">iezio</a></cite> |                    <!-- .comment-author -->
+                    <time datetime="2014-11-30T12:21:14+00:00">
+                        November 30, 2014 at 12:21 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/?replytocom=33738#respond" onclick="return addComment.moveForm( &quot;div-comment-33738&quot;, &quot;33738&quot;, &quot;respond&quot;, &quot;60&quot; )" aria-label="Reply to iezio">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>论思维时有老婆的重要性</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-33173" class="comment even thread-even depth-1">
+        <article id="div-comment-33173" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn"><a href="https://web.archive.org/web/20180305102931/http://weibo.com/2056480870" rel="external nofollow" class="url">清之一名</a></cite> |                    <!-- .comment-author -->
+                    <time datetime="2014-02-28T16:37:19+00:00">
+                        February 28, 2014 at 4:37 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/?replytocom=33173#respond" onclick="return addComment.moveForm( &quot;div-comment-33173&quot;, &quot;33173&quot;, &quot;respond&quot;, &quot;60&quot; )" aria-label="Reply to 清之一名">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>我同时都赞同两种说法，也许WHY对于比较初级的人来说并非是做市场，而是能够明白自己的立场和位置，然后可以踏实得做好HOW的工作。WHY应该时刻存在脑中，只不过表现出来的形式依能力级别的不同而有所变化</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-32809" class="comment odd alt thread-odd thread-alt depth-1">
+        <article id="div-comment-32809" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/79eb7722e05cf9ae8c659d24dd864694?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/79eb7722e05cf9ae8c659d24dd864694?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">wero</cite> |                    <!-- .comment-author -->
+                    <time datetime="2013-09-29T17:19:08+00:00">
+                        September 29, 2013 at 5:19 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/?replytocom=32809#respond" onclick="return addComment.moveForm( &quot;div-comment-32809&quot;, &quot;32809&quot;, &quot;respond&quot;, &quot;60&quot; )" aria-label="Reply to wero">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>总之，就是以结果为导向。</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-32619" class="comment even thread-even depth-1">
+        <article id="div-comment-32619" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn"><a href="https://web.archive.org/web/20180305102931/http://weibo.com/2177401093" rel="external nofollow" class="url">蒙面超人23</a></cite> |                    <!-- .comment-author -->
+                    <time datetime="2013-07-21T13:17:36+00:00">
+                        July 21, 2013 at 1:17 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/?replytocom=32619#respond" onclick="return addComment.moveForm( &quot;div-comment-32619&quot;, &quot;32619&quot;, &quot;respond&quot;, &quot;60&quot; )" aria-label="Reply to 蒙面超人23">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>解院长说：“最好的学习方法是小组合作学习。”刘哥说：“最佳的学习方法就是先广度优先遍历，然后择最合适的分支深入”两种学习方法各有千秋，要是能把两种学习方法合二为一，相信必能打遍天下无敌手。做什么事情都要讲究方法，可方法有很多种。当你习惯性的套用某一种方法时，你会发现，这种方法不见得解决不了问题，也不见得能把问题解决好。选择一种方法时，要考虑其背后的价值取向，不要为了方法而方法。</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-32394" class="comment odd alt thread-odd thread-alt depth-1">
+        <article id="div-comment-32394" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/65951317a9ae2dd24ce78f31f9261283?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/65951317a9ae2dd24ce78f31f9261283?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">nil</cite> |                    <!-- .comment-author -->
+                    <time datetime="2013-05-09T10:22:37+00:00">
+                        May 9, 2013 at 10:22 am                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/?replytocom=32394#respond" onclick="return addComment.moveForm( &quot;div-comment-32394&quot;, &quot;32394&quot;, &quot;respond&quot;, &quot;60&quot; )" aria-label="Reply to nil">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>作者说的是对的，火车掉头的时候，只是把尾巴的那个火车头开起来而已，在终点有一个 Y 字型的的轨道，给火车掉头用</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-30165" class="pingback even thread-even depth-1">
+        <div class="comment-body">
+            Pingback: <a href="https://web.archive.org/web/20180305102931/http://blog.chiapp.com/html/2012-08-27/16598.html" rel="external nofollow" class="url">C++11（及现代C++风格）和快速迭代式开发 | 吃杂烩</a>         </div>
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-28546" class="pingback odd alt thread-odd thread-alt depth-1">
+        <div class="comment-body">
+            Pingback: <a href="https://web.archive.org/web/20180305102931/http://blog.chiapp.com/html/2012-08-09/4148.html" rel="external nofollow" class="url">[BetterExplained]遇到问题为什么应该自己动手 | 吃杂烩</a>         </div>
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-28542" class="pingback even thread-even depth-1">
+        <div class="comment-body">
+            Pingback: <a href="https://web.archive.org/web/20180305102931/http://blog.chiapp.com/html/2012-08-09/4147.html" rel="external nofollow" class="url">我在南大的七年 | 吃杂烩</a>         </div>
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-17452" class="pingback odd alt thread-odd thread-alt depth-1">
+        <div class="comment-body">
+            Pingback: <a href="https://web.archive.org/web/20180305102931/http://blog69.tk/?p=112" rel="external nofollow" class="url">逃出你的肖申克（三）：遇见20万年前的自己 | 风的天地</a>         </div>
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-17448" class="pingback even thread-even depth-1">
+        <div class="comment-body">
+            Pingback: <a href="https://web.archive.org/web/20180305102931/http://blog69.tk/?p=101" rel="external nofollow" class="url">逃出你的肖申克（四）：理智与情感 | 风的天地</a>         </div>
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-17433" class="pingback odd alt thread-odd thread-alt depth-1">
+        <div class="comment-body">
+            Pingback: <a href="https://web.archive.org/web/20180305102931/http://blog69.tk/?p=92" rel="external nofollow" class="url">[BetterExplained]遇到问题为什么应该自己动手 | 风的天地</a>         </div>
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-17419" class="pingback even thread-even depth-1">
+        <div class="comment-body">
+            Pingback: <a href="https://web.archive.org/web/20180305102931/http://blog69.tk/?p=81" rel="external nofollow" class="url">不是书评 ：《我是一只IT小小鸟》 | 风的天地</a>         </div>
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-17414" class="pingback odd alt thread-odd thread-alt depth-1">
+        <div class="comment-body">
+            Pingback: <a href="https://web.archive.org/web/20180305102931/http://blog69.tk/?p=78" rel="external nofollow" class="url">暗时间 | 风的天地</a>         </div>
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-17413" class="pingback even thread-even depth-1">
+        <div class="comment-body">
+            Pingback: <a href="https://web.archive.org/web/20180305102931/http://blog69.tk/?p=71" rel="external nofollow" class="url">逃出你的肖申克（二）：仁者见仁智者见智？从视觉错觉到偏见 | 风的天地</a>         </div>
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-17381" class="pingback odd alt thread-odd thread-alt depth-1">
+        <div class="comment-body">
+            Pingback: <a href="https://web.archive.org/web/20180305102931/http://blog69.tk/?p=64" rel="external nofollow" class="url">我在南大的七年 | 风的天地</a>         </div>
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-17367" class="pingback even thread-even depth-1">
+        <div class="comment-body">
+            Pingback: <a href="https://web.archive.org/web/20180305102931/http://blog69.tk/?p=382" rel="external nofollow" class="url">[BetterExplained]如何有效地记忆与学习 | 风的天地</a>         </div>
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-12164" class="comment odd alt thread-odd thread-alt depth-1">
+        <article id="div-comment-12164" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/a4c9d21fc2bed8f85da6e7ba32724fc7?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/a4c9d21fc2bed8f85da6e7ba32724fc7?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn"><a href="https://web.archive.org/web/20180305102931/http://hi.baidu.com/gevolution90/" rel="external nofollow" class="url">朱健强</a></cite> |                    <!-- .comment-author -->
+                    <time datetime="2011-02-08T15:51:11+00:00">
+                        February 8, 2011 at 3:51 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/?replytocom=12164#respond" onclick="return addComment.moveForm( &quot;div-comment-12164&quot;, &quot;12164&quot;, &quot;respond&quot;, &quot;60&quot; )" aria-label="Reply to 朱健强">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>我认为“最佳的学习方法就是先广度优先遍历”这个方法有一个盲点：能“广度优先”是否依赖于曾“深度优先”呢？<br>
+假设，你现在之所以能“广度”并且效果真的更好，会不会正因为你曾经“深度优先”过呢？正是之前“深度优先”那段经历令你能真正做到“广度优先”呢？</p>
+<p>这可能也是很多方法不得其法的原因，比如，这个比如也是假设的：</p>
+<p>面向对象，面向对象是由从面向过程中走过来的人搞出来的，正因为他们有面向过程的基础才能理解面向对象，但一开始就直奔OO的人就不怎么行了。</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-952" class="comment even thread-even depth-1">
+        <article id="div-comment-952" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/45836741bcc7c1a74ff0181defa9a883?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/45836741bcc7c1a74ff0181defa9a883?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">Lydia</cite> |                    <!-- .comment-author -->
+                    <time datetime="2010-06-21T13:06:23+00:00">
+                        June 21, 2010 at 1:06 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/?replytocom=952#respond" onclick="return addComment.moveForm( &quot;div-comment-952&quot;, &quot;952&quot;, &quot;respond&quot;, &quot;60&quot; )" aria-label="Reply to Lydia">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>Hi, 有幸看到你的文章，突然觉得：最怕的即时那些不应该问WHY，应该赶紧明白HOW的人，非要弄明白WHY才肯HOW。这在日常团队里面，被称作是不服管、眼高手低的人。这句话有点像在说我。那我的问题出在哪里呢？ 我就是很喜欢先考虑why的人，但是在工作中，我的领导经常批评我说：你考虑这个没有用…… 我应该怎么样纠正才好呢？ 请高人建议一下 谢谢</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-565" class="comment odd alt thread-odd thread-alt depth-1">
+        <article id="div-comment-565" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/ebd424c96f1944ab0c6bc35c27f20503?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/ebd424c96f1944ab0c6bc35c27f20503?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">freedom</cite> |                    <!-- .comment-author -->
+                    <time datetime="2009-08-18T13:44:21+00:00">
+                        August 18, 2009 at 1:44 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/?replytocom=565#respond" onclick="return addComment.moveForm( &quot;div-comment-565&quot;, &quot;565&quot;, &quot;respond&quot;, &quot;60&quot; )" aria-label="Reply to freedom">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>“以前我总是觉得一个公司里面，CEO/CTO 这样的角色是基本摆设，但我现在不这样想了。”</p>
+<p>其实很多时候不是下面的人看不见全局，而是上面的人不让下面的人看到全局。<br>
+再说了，下面的人看到了全局往往又不能做些什么，并不是人人都能经得起失业的风险的；<br>
+国人最擅长的是不是技术，而是内斗；<br>
+所以说，CEO/CTO 这样的角色是不是摆设，并不一定，取决于那个人想干什么，可能是摆设，也有可能是实干家。</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-483" class="comment even thread-even depth-1 parent">
+        <article id="div-comment-483" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/1aaa8bd874859ff1b8b7e46fe612ba5a?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/1aaa8bd874859ff1b8b7e46fe612ba5a?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">ifthenelse</cite> |                    <!-- .comment-author -->
+                    <time datetime="2009-05-29T19:33:01+00:00">
+                        May 29, 2009 at 7:33 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/?replytocom=483#respond" onclick="return addComment.moveForm( &quot;div-comment-483&quot;, &quot;483&quot;, &quot;respond&quot;, &quot;60&quot; )" aria-label="Reply to ifthenelse">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>“当车开始开的时候我终于意识到原来车是可以往两头方向开的。”<br>
+还是要掉头的吧？一条地铁是复线吧？</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <ul class="children">
+
+    <li id="comment-484" class="comment odd alt depth-2">
+        <article id="div-comment-484" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/1aaa8bd874859ff1b8b7e46fe612ba5a?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/1aaa8bd874859ff1b8b7e46fe612ba5a?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">ifthenelse</cite> |                    <!-- .comment-author -->
+                    <time datetime="2009-05-29T19:37:53+00:00">
+                        May 29, 2009 at 7:37 pm                    </time> 
+                    
+                     |
+                    
+                     
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>后来想了下，可能和道岔结合起来就不用掉头了。<br>
+搜索后也是这么说的。“地铁动车组两头都有驾驶室，不需要调头。地铁都是复线，有上行线和下行线两条轨道，下行到终点后，下完客会往前开通过道岔转换到折返线上停下，司机到原来下行时尾部的驾驶室，开动地铁动车组通过道岔转到上行线，这样地铁就算是调过头了。 ”</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+    <li id="comment-265" class="comment even thread-odd thread-alt depth-1 parent">
+        <article id="div-comment-265" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/a207f683646a225fef4d999e4e9c34b8?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/a207f683646a225fef4d999e4e9c34b8?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">涩小道</cite> |                    <!-- .comment-author -->
+                    <time datetime="2009-03-18T11:29:22+00:00">
+                        March 18, 2009 at 11:29 am                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/?replytocom=265#respond" onclick="return addComment.moveForm( &quot;div-comment-265&quot;, &quot;265&quot;, &quot;respond&quot;, &quot;60&quot; )" aria-label="Reply to 涩小道">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>兄台很多大作，都拜读了。唯独对这篇有点异议。<br>
+正好我也是搞技术的，其实一个团队里面的人是各种各样的。需要不同的技能和经验。对于一个公司来说，最需要的SA是埋头钻研技术的(如果他很会玩市场，按现在北京的风气，很快就自己开公司去了，或者跳槽)<br>
+对于很初级的程序员来说，你先不要知道WHY，先学会对基本的问题HOW。毕竟你觉得很困难的问题，其实是很基本的技能。</p>
+<p>按4像限区分，最怕的即时那些不应该问WHY，应该赶紧明白HOW的人，非要弄明白WHY才肯HOW。这在日常团队里面，被称作是不服管、眼高手低的人。因为WHY-市场要这么做，和HOW写这行代码之间，区别还是蛮大的。</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <ul class="children">
+
+    <li id="comment-266" class="comment byuser comment-author-pongba bypostauthor odd alt depth-2">
+        <article id="div-comment-266" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/109cedab8860874a295a8fc193940761?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/109cedab8860874a295a8fc193940761?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/" rel="external nofollow" class="url">刘未鹏</a></cite> |                    <!-- .comment-author -->
+                    <time datetime="2009-03-18T15:29:21+00:00">
+                        March 18, 2009 at 3:29 pm                    </time> 
+                    
+                     |
+                    
+                     
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>我同意你的看法。</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+    <li id="comment-116" class="comment even thread-even depth-1 parent">
+        <article id="div-comment-116" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/95f4a346b8ee98872adc006a48dc299b?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/95f4a346b8ee98872adc006a48dc299b?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn"><a href="https://web.archive.org/web/20180305102931/http://blog.csdn.net/keminlau" rel="external nofollow" class="url">nakeman</a></cite> |                    <!-- .comment-author -->
+                    <time datetime="2009-02-22T19:15:28+00:00">
+                        February 22, 2009 at 7:15 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/?replytocom=116#respond" onclick="return addComment.moveForm( &quot;div-comment-116&quot;, &quot;116&quot;, &quot;respond&quot;, &quot;60&quot; )" aria-label="Reply to nakeman">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>当车开始开的时候我终于意识到原来车是可以往两头方向开的。<br>
+—————-<br>
+不对不对，可以两头开，但实际操作不行吧。地铁几分钟一班，怎么可能双向的呢？不是吗？<br>
+还有，我觉得此文有点文不对题，你没有讲多少方法论的东西，顶多是程序学习陷阱之类的。</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <ul class="children">
+
+    <li id="comment-18123" class="comment odd alt depth-2">
+        <article id="div-comment-18123" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/9b4cbadbbf0da525f73b5e5dcefbec74?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/9b4cbadbbf0da525f73b5e5dcefbec74?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">long</cite> |                    <!-- .comment-author -->
+                    <time datetime="2011-11-18T17:34:49+00:00">
+                        November 18, 2011 at 5:34 pm                    </time> 
+                    
+                     |
+                    
+                     
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>这个很重要吗！</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+    <li id="comment-51" class="comment even thread-odd thread-alt depth-1">
+        <article id="div-comment-51" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/4a684d101b93b184c9320afe25560fce?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305102931im_/https://www.gravatar.com/avatar/4a684d101b93b184c9320afe25560fce?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">xdm</cite> |                    <!-- .comment-author -->
+                    <time datetime="2009-02-10T12:51:31+00:00">
+                        February 10, 2009 at 12:51 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/?replytocom=51#respond" onclick="return addComment.moveForm( &quot;div-comment-51&quot;, &quot;51&quot;, &quot;respond&quot;, &quot;60&quot; )" aria-label="Reply to xdm">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>很赞同你的观点！</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/web/20180305102931/http://mindhacks.cn/2008/10/29/methodology-for-programmers/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://web.archive.org/web/20180305102931/http://mindhacks.cn/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><div class="form-group comment-form-comment">
+             
+            <textarea class="form-control" id="comment" name="comment-62e498b497df79d8abed1db558908d" cols="45" rows="8" aria-required="true"></textarea><textarea name="comment" rows="1" cols="1" style="display:none"></textarea>
+        </div><input type="hidden" name="comment-replaced" value="true"><div class="form-group comment-form-author"><label for="author">Name <span class="required">*</span></label> <input class="form-control" id="author" name="author" type="text" value="" size="30" aria-required="true"></div>
+<div class="form-group comment-form-email"><label for="email">Email <span class="required">*</span></label> <input class="form-control" id="email" name="email" type="email" value="" size="30" aria-required="true"></div>
+<div class="form-group comment-form-url"><label for="url">Website</label> <input class="form-control" id="url" name="url" type="url" value="" size="30"></div>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="60" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display:none;"><input type="text" name="nxts" value="1520245772"><input type="text" name="nxts_signed" value="6cf06318d95646a8793902f589aaa280bfed61be"><input type="text" name="a4447981a813ff9e04fe" value="bd465eb08490f058ccbf2d"><input type="text" name="bd44e4ff7cb01d" value=""></p>			</form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments -->
+</div><div class="col-md-4 right_sidebar"><aside id="la-right" role="complementary"><div id="text-3" class="widget widget_text"><h3><span class="dotbox"></span>关于</h3><div class="dotlinebox"><span class="dot"></span></div>			<div class="textwidget"><div id="me_as_info_source">
+    如果你对我的文章感兴趣，那么<strong>很可能你也对我平时的阅读感兴趣</strong>，以下是一些你可以参考或订阅的资源：
+    <ol>
+    <li><a href="https://web.archive.org/web/20180305102931/http://www.douban.com/people/pongba/">我在豆瓣</a>上的豆列列举了一些看过的好书：<a href="https://web.archive.org/web/20180305102931/http://www.douban.com/doulist/46003/">[只读经典]思维改变生活</a> | <a href="https://web.archive.org/web/20180305102931/http://www.douban.com/doulist/127649/">[只读经典]思考的技术与艺术</a> | <a href="https://web.archive.org/web/20180305102931/http://www.douban.com/doulist/197706/">决策与判断</a> | <a href="https://web.archive.org/web/20180305102931/http://www.douban.com/doulist/176513/">机器学习与人工智能书籍资源导引</a> </li>
+    </ol>
+    我翻译的书：
+    <ol>
+    <li><a href="https://web.archive.org/web/20180305102931/http://book.douban.com/subject/1470838/">《Imperfect C++ 中文版》</a></li>
+    <li><a href="https://web.archive.org/web/20180305102931/http://book.douban.com/subject/1470842/">《Exceptional C++ Style 中文版》</a></li>
+    <li><a href="https://web.archive.org/web/20180305102931/http://book.douban.com/subject/2248759/">《修改代码的艺术》</a></li>
+    </ol>
+    我写的书：
+    <ol>
+    <li><a href="https://web.archive.org/web/20180305102931/http://book.douban.com/subject/6709809/"><img src="https://web.archive.org/web/20180305102931im_/https://img3.doubanio.com/mpic/s6586365.jpg"></a></li>
+    </ol>
+	我的公号：
+    <ol>
+    <li><img src="/assets/wp-content/uploads/2016/12/card1.png"></li>
+    </ol>
+</div></div>
+		</div><div id="views-3" class="widget widget_views"><h3><span class="dotbox"></span>被阅读得最多的</h3><div class="dotlinebox"><span class="dot"></span></div><ul>
+<li><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/" title="数学之美番外篇：平凡而又神奇的贝叶斯方法">数学之美番外篇：平凡而又神奇的贝叶斯方法</a> - 664,879 views</li><li><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2011/11/04/how-to-interview-a-person-for-two-years/" title="怎样花两年时间去面试一个人">怎样花两年时间去面试一个人</a> - 461,389 views</li><li><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/" title="[BetterExplained]为什么你应该（从现在开始就）写博客">[BetterExplained]为什么你应该（从现在开始就）写博客</a> - 317,649 views</li><li><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2009/12/20/dark-time/" title="暗时间">暗时间</a> - 293,773 views</li><li><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2009/05/17/seven-years-in-nju/" title="我在南大的七年">我在南大的七年</a> - 263,598 views</li><li><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2009/03/28/effective-learning-and-memorization/" title="[BetterExplained]如何有效地记忆与学习">[BetterExplained]如何有效地记忆与学习</a> - 256,531 views</li><li><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2009/03/15/preconception-explained/" title="逃出你的肖申克（二）：仁者见仁智者见智？从视觉错觉到偏见">逃出你的肖申克（二）：仁者见仁智者见智？从视觉错觉到偏见</a> - 246,564 views</li><li><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2009/01/18/escape-from-your-shawshank-part1/" title="逃出你的肖申克（一）：为什么一定要亲身经历了之后才能明白？">逃出你的肖申克（一）：为什么一定要亲身经历了之后才能明白？</a> - 232,173 views</li><li><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2009/02/09/writing-is-better-thinking/" title="[BetterExplained]书写是为了更好的思考">[BetterExplained]书写是为了更好的思考</a> - 179,388 views</li><li><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/2010/03/18/escape-from-your-shawshank-part3/" title="逃出你的肖申克（三）：遇见20万年前的自己">逃出你的肖申克（三）：遇见20万年前的自己</a> - 173,580 views</li></ul>
+</div><div id="text-4" class="widget widget_text"><h3><span class="dotbox"></span>我的微博</h3><div class="dotlinebox"><span class="dot"></span></div>			<div class="textwidget"><iframe width="100%" height="550" class="share_self" frameborder="0" scrolling="no" src="https://web.archive.org/web/20180305102931if_/http://widget.weibo.com/weiboshow/index.php?width=0&amp;height=550&amp;fansRow=1&amp;ptype=0&amp;speed=300&amp;skin=-1&amp;isTitle=0&amp;noborder=0&amp;isWeibo=1&amp;isFans=1&amp;uid=1882579600&amp;verifier=1448dc03&amp;colors=d6f3f7,ffffff,666666,0082cb"></iframe></div>
+		</div></aside></div></div></div>
+</section>
+
+
+
+
+
+<div class="lavish_footer ">
+	<div class="container">
+        <div style="border-bottom:1px solid #3C3C3C"></div>
+		<div class="row">
+            <div class="col-md-12">
+                        </div>
+            <div class="col-md-12">
+                <ul id="menu-pages" class="footer"><li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/about/">关于</a></li>
+<li id="menu-item-283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-283"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/former-life-of-mindhacks/">前世档案 | C++的罗浮宫</a></li>
+<li id="menu-item-279" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-279"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/archives/">所有文章</a></li>
+<li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="https://web.archive.org/web/20180305102931/http://mindhacks.cn/about-toplanguage/">TopLanguage 讨论组</a></li>
+</ul>            </div>
+            <div class="col-md-12">
+                <div class="copyright">
+                <p>
+                    Copyright © 
+                    2018 <strong>刘未鹏</strong>. All rights reserved.                </p>
+                </div>
+            </div>
+
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-includes/js/jquery/ui/accordion.min.js?ver=1.11.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-includes/js/jquery/ui/progressbar.min.js?ver=1.11.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-includes/js/jquery/ui/tabs.min.js?ver=1.11.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-includes/js/imagesloaded.min.js?ver=3.2.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-includes/js/masonry.min.js?ver=3.3.2"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2b"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/woocommerce-zoom.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/wow.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/lavish-bootstrap.min.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/mytheme-carausel.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/style_portfolio.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/woo_zoom.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/shk_countslider.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/lavish_extras.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-includes/js/comment-reply.min.js?ver=4.7.9"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305102931js_/http://mindhacks.cn/wp-includes/js/wp-embed.min.js?ver=4.7.9"></script>
+
+
+</div></div></div></div></body></html><!--
+     FILE ARCHIVED ON 10:29:31 Mar 05, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 00:28:54 Jan 09, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+--><!--
+playback timings (ms):
+  captures_list: 0.673
+  exclusion.robots: 0.055
+  exclusion.robots.policy: 0.041
+  esindex: 0.011
+  cdx.remote: 5.587
+  LoadShardBlock: 98.644 (3)
+  PetaboxLoader3.datanode: 150.646 (5)
+  PetaboxLoader3.resolve: 91.435 (2)
+  load_resource: 166.563 (2)
+  nav: 0.162 (6)
+-->
