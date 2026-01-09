@@ -36,7 +36,7 @@ const ARCHIVE_ROOT =
 const ENTRY =
   ARCHIVE_ROOT + "http://mindhacks.cn/archives/";
 
-const OUTPUT = path.join(__dirname, "..", "docs");
+const OUTPUT = path.join(__dirname, "docs");
 const POSTS_DIR = path.join(OUTPUT, "posts");
 const ASSETS_DIR = path.join(OUTPUT, "assets");
 
@@ -148,14 +148,13 @@ async function fetchPost(postConfig) {
     const val = $(el).attr(attr);
     if (!val) return;
 
-    if (val.startsWith("http")) return;
+    if (val.includes("mindhacks.cn")===false) return;
 
-    const abs =
-      ARCHIVE_ROOT +
-      "http://mindhacks.cn" +
-      val.replace(/^\/+/, "");
+    const abs = val
 
-    const local = path.join("assets", val);
+    const localPath = val.split("mindhacks.cn")[1]
+
+    const local = path.join("assets", localPath);
     $(el).attr(attr, "/" + local);
 
     resources.push({ abs, local });
