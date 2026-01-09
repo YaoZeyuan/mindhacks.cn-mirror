@@ -169,7 +169,10 @@ async function fetchPost(postConfig) {
   }
 
   // 写 HTML
-  const outFile = path.join(POSTS_DIR, path.basename(postConfig));
+  const rawTimeStr = postConfig.href.split("mindhacks.cn")[1]
+  const htmlTimeStr = rawTimeStr.replaceAll("/", "_")
+  const htmlTitle = postConfig.title.replaceAll("/", "_")
+  const outFile = path.join(POSTS_DIR, htmlTimeStr + htmlTitle+".html");
   await fs.writeFile(outFile, $.html());
 }
 

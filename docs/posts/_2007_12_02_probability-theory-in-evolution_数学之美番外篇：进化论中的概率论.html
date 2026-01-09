@@ -1,0 +1,1311 @@
+<!DOCTYPE html><html lang="en-US"><head><script src="//archive.org/includes/athena.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app227.us.archive.org';v.server_ms=685;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=Hk4-lkW3" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=txqj7nKC" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://mindhacks.cn:80/2007/12/02/probability-theory-in-evolution/","20180305091142","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1520241102");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3">
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv">
+<!-- End Wayback Rewrite JS Include -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://mindhacks.cn/xmlrpc.php">
+<link rel="shortcut icon" href="https://web.archive.org/web/20180305091142im_/http://mindhacks.cn/wp-content/themes/lavish-pro-child/favicon.ico">
+
+<title>数学之美番外篇：进化论中的概率论 – 刘未鹏 | Mind Hacks</title>
+<link rel="dns-prefetch" href="//web.archive.org/web/20180305091142/http://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="//web.archive.org/web/20180305091142/http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="刘未鹏 | Mind Hacks » Feed" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/feed/">
+<link rel="alternate" type="application/rss+xml" title="刘未鹏 | Mind Hacks » Comments Feed" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="刘未鹏 | Mind Hacks » 数学之美番外篇：进化论中的概率论 Comments Feed" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/web.archive.org\/web\/20180305091142\/https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/web.archive.org\/web\/20180305091142\/https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/web.archive.org\/web\/20180305091142\/http:\/\/mindhacks.cn\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.9"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="parent-theme-css-css" href="https://web.archive.org/web/20180305091142cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/style.css?ver=4.7.9" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-bootstrap-css" href="https://web.archive.org/web/20180305091142cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/bootstrap.min.css?ver=2018-03-05%2017:11:42" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="https://web.archive.org/web/20180305091142cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/font-awesome.min.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-woocommerce-css" href="https://web.archive.org/web/20180305091142cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/woocommerce.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish_wow-css" href="https://web.archive.org/web/20180305091142cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/animate.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish_style_portfolio-css" href="https://web.archive.org/web/20180305091142cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/style_portfolio.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-css" href="https://web.archive.org/web/20180305091142cs_/http://mindhacks.cn/wp-content/themes/lavish-pro/css/navmenu.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-style-css" href="https://web.archive.org/web/20180305091142cs_/http://mindhacks.cn/wp-content/themes/lavish-pro-child/style.css?ver=1.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-open-sans-css" href="//web.archive.org/web/20180305091142cs_/http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%2C600&amp;ver=4.7.9" type="text/css" media="all">
+<link rel="stylesheet" id="lavish-lato-css" href="//web.archive.org/web/20180305091142cs_/http://fonts.googleapis.com/css?family=Lato%3A400%2C700%2C900&amp;ver=4.7.9" type="text/css" media="all">
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<link rel="https://api.w.org/" href="http://mindhacks.cn/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mindhacks.cn/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mindhacks.cn/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="学习密度与专注力" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2007/05/24/learn-to-focus/">
+<link rel="next" title="Failing To See the Big Picture – Mistakes we make when learning programming" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2008/03/03/failing-to-see-the-big-picture/">
+<meta name="generator" content="WordPress 4.7.9">
+<link rel="canonical" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/">
+<link rel="shortlink" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/?p=12">
+<link rel="alternate" type="application/json+oembed" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmindhacks.cn%2F2007%2F12%2F02%2Fprobability-theory-in-evolution%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmindhacks.cn%2F2007%2F12%2F02%2Fprobability-theory-in-evolution%2F&amp;format=xml">
+<style type="text/css">
+body {
+	font-size: 100%; 
+	background-color:; 
+}
+h1, 
+h1 a {
+	color: ;
+	font-size: ;
+}
+h2,
+h2 a {
+	color: ; 
+	font-size: ;
+}
+h3,
+h3 a {
+	color: ; 
+	font-size: ;
+}
+h4,
+h4 a {
+	color: ; 
+	font-size: ;
+}
+h5,
+h5 a {
+	color: ; 
+	font-size: ;
+}
+h6,
+h6 a {
+	color: ; 
+	font-size: ;
+}
+p, 
+p a {
+	color: ; 
+	font-size: ;
+}
+a {
+	color: ; 
+	font-size: ;
+}
+#la-banner {
+	min-height: 150px !important;
+	background-repeat: no-repeat;
+}
+a:hover, 
+a:focus,
+a:visited {
+	color: ;
+}
+li {
+	color: ; 
+	font-size: ;
+}
+.btn,
+.btn1,
+.btn1, 
+.btn a {
+	color: !important; 
+	background-color: ;
+}
+.btn:hover, 
+.btn:focus, 
+.btn a:hover, 
+.btn a:focus, 
+.btn a:visited {
+	color:  !important; 
+	background-color: ;
+}
+.btn1:hover, 
+.btn1:focus, 
+.btn1 a:hover, 
+.btn1 a:focus, 
+.btn1 a:visited {
+	color:  !important; 
+	background-color: ;
+}
+/*
+=================================================
+Header Top Customizer Color
+=================================================
+*/
+.lavish_top .two,
+.lavish_top {
+	background-color:; 
+	color:;
+}
+.lavish_head {
+	background-color: !important;
+}
+.lavish_head {
+	background-color:rgba(0, 0, 0, 0.4) !important;
+}
+
+ul.header_extra li {color:}
+#social-icons ul li a,
+#social-icons ul li a,
+#social-icons ul li a,
+#social-icons ul li a {
+	background-color:!important; 
+	color:!important; 
+}
+#social-icons ul li a:hover,
+#social-icons ul li a:hover,
+#social-icons ul li a:hover,
+#social-icons ul li a:hover {
+	background-color:!important; 
+	color:!important; 
+}
+.secondary_menu,
+.secondary_menu_middle {
+	background-color:; 
+}
+/*
+=================================================
+Menu Coloring
+=================================================
+*/
+ul.navmenu  > li >  a,
+ul.navmenu1  > li >  a, 
+ul.navmenu2 > li >  a,
+ul.mobilemenu > li > a {
+	background-color:; 
+	color:; 
+}
+ul.navmenu > li > a:hover, 
+ul.navmenu > li > a:focus, 
+ul.navmenu > li > a:active, 
+ul.navmenu1 > li > a:hover, 
+ul.navmenu1 > li > a:focus, 
+ul.navmenu1 > li > a:active, 
+ul.navmenu2 > li > a:hover, 
+ul.navmenu2 > li > a:focus, 
+ul.navmenu2 > li > a:active, 
+ul.mobilemenu > li > a:hover,	
+ul.mobilemenu > li > a:focus, 
+ul.mobilemenu > li > a:active {
+	background-color:; 
+	color:; 
+}
+.navmenu .current_page_item > a, 
+.navmenu .current_page_ancestor > a, 
+.navmenu .current-menu-item > a, 
+.navmenu .current-menu-ancestor > a,
+.navmenu1 .current_page_item > a, 
+.navmenu1 .current_page_ancestor > a, 
+.navmenu1 .current-menu-item > a, 
+.navmenu1 .current-menu-ancestor > a,
+.navmenu2 .current_page_item > a, 
+.navmenu2 .current_page_ancestor > a, 
+.navmenu2 .current-menu-item > a, 
+.navmenu2 .current-menu-ancestor > a,
+.mobilemenu .current_page_item > a, 
+.mobilemenu .current_page_ancestor > a, 
+.mobilemenu .current-menu-item > a, 
+.mobilemenu .current-menu-ancestor > a {
+	background-color: ; 
+	color: ;
+}
+ul.navmenu ul.sub-menu,
+ul.navmenu1 ul.sub-menu,
+ul.navmenu2 ul.sub-menu, 
+ul.mobilemenu ul.sub-menu {
+	background-color: ; 
+	border-bottom-color:;
+	border-right-color:;
+	border-left-color:;
+}
+ul.navmenu ul.sub-menu:before,
+ul.navmenu1 ul.sub-menu:before,
+ul.navmenu2 ul.sub-menu:before {
+	border-bottom-color: ; 
+	border-top-color: }
+ul.navmenu ul.sub-menu > li,
+ul.navmenu1 ul.sub-menu > li,
+ul.navmenu2 ul.sub-menu > li {
+	border-bottom-color: ; 
+}
+ul.navmenu > li:hover > a,
+ul.navmenu1 > li:hover > a,
+ul.navmenu2 > li:hover > a {
+	background-color:!important; 
+	color: !important; 
+}
+ul.navmenu ul.sub-menu > li > a,
+ul.navmenu1 ul.sub-menu > li > a,
+ul.navmenu2 ul.sub-menu > li > a, 
+ul.mobilemenu ul.sub-menu > li > a {
+	color:;
+}
+ul.navmenu ul.sub-menu .current_page_item > a, 
+ul.navmenu ul.sub-menu .current_page_ancestor > a, 
+ul.navmenu ul.sub-menu .current-menu-item > a, 
+ul.navmenu ul.sub-menu .current-menu-ancestor > a, 
+ul.navmenu1 ul.sub-menu .current_page_item > a, 
+ul.navmenu1 ul.sub-menu .current_page_ancestor > a, 
+ul.navmenu1 ul.sub-menu .current-menu-item > a, 
+ul.navmenu1 ul.sub-menu .current-menu-ancestor > a, 
+ul.navmenu2 ul.sub-menu .current_page_item > a, 
+ul.navmenu2 ul.sub-menu .current_page_ancestor > a, 
+ul.navmenu2 ul.sub-menu .current-menu-item > a, 
+ul.navmenu2 ul.sub-menu .current-menu-ancestor > a,  
+ul.mobilemenu ul.sub-menu .current_page_item > a, 
+ul.mobilemenu ul.sub-menu .current_page_ancestor > a, 
+ul.mobilemenu ul.sub-menu .current-menu-item > a, 
+ul.mobilemenu ul.sub-menu .current-menu-ancestor > a {
+	background-color:!important; 
+	color:;
+}
+ul.navmenu ul.sub-menu > li > a:hover,
+ul.navmenu ul.sub-menu > li > a:focus, 
+ul.navmenu ul.sub-menu > li > a:active, 
+ul.navmenu1 ul.sub-menu > li > a:hover, 
+ul.navmenu1 ul.sub-menu > li > a:focus, 
+ul.navmenu1 ul.sub-menu > li > a:active, 
+ul.navmenu2 ul.sub-menu > li > a:hover, 
+ul.navmenu2 ul.sub-menu > li > a:focus, 
+ul.navmenu2 ul.sub-menu > li > a:active, 
+ul.navmenu3 ul.sub-menu > li > a:hover, 
+ul.navmenu3 ul.sub-menu > li > a:focus, 
+ul.navmenu3 ul.sub-menu > li > a:active, 
+ul.navmenu4 ul.sub-menu > li > a:hover, 
+ul.navmenu4 ul.sub-menu > li > a:focus, 
+ul.navmenu4 ul.sub-menu > li > a:active, 
+ul.mobilemenu ul.sub-menu > li > a:hover, 
+ul.mobilemenu ul.sub-menu > li > a:focus,
+ul.mobilemenu ul.sub-menu > li > a:active {
+	background-color:!important; 
+	color:;
+}
+ul.navmenu ul.sub-menu > li  {
+	border-top-color:;
+}
+/*
+=================================================
+Menu Sizes Customizer
+=================================================
+*/
+ul.navmenu > li > a {font-size: ; }
+ul.navmenu ul.sub-menu > li > a,
+ul.navmenu ul.sub-menu > li > a > span
+{
+	font-size:; 
+}
+
+ul.navmenu ul.sub-menu > li > ul.sub-menu > li > a {font-size:; }
+
+.lavish_footer {background-color:; color: ;}
+.lavish_footer p {color: ;}
+.lr_widgets_bottom_widget {background-color:; color:;  border-top-color:;}
+.lr_widget_content_bottom {background-color:;}
+.lr_widget_inset_bottom {background-color:;}
+.widget_inset_bottom1 {background-color:;}
+.left_sidebar {background-color:;}
+.right_sidebar {background-color:;}
+.lr_widgets_insettop1 {background-color:;}
+.la-contents {background-color:;}
+.manosarywide, .boxedwide, .manosaryleft, .boxedleft, .manosaryright, .boxedright {
+	border-top-color:; border-left-color:;
+}
+.manosarywide, .boxedwide, .manosaryleft, .boxedleft, .manosaryright, .boxedright {
+	background-color:; 
+}
+.manosarywide h2.entry-title a,
+.post.type-post h2.entry-title a,
+.boxedwide h2.entry-title a,
+.manosaryleft h2.entry-title a,
+.boxedleft h2.entry-title a,
+.manosaryright h2.entry-title a,
+.boxedright h2.entry-title a {
+	color: }
+
+.post.type-post .entry-meta,
+.post.type-post .entry-meta span,
+.post.type-post .entry-meta a,
+.manosarywide .entry-meta,
+.manosarywide .entry-meta span,
+.manosarywide .entry-meta a,
+.boxedwide .entry-meta,
+.boxedwide .entry-meta span,
+.boxedwide .entry-meta a,
+.manosaryleft .entry-meta,
+.manosaryleft .entry-meta span,
+.manosaryleft .entry-meta a,
+.boxedleft .entry-meta,
+.boxedleft .entry-meta span,
+.boxedleft .entry-meta a,
+.manosaryright .entry-meta,
+.manosaryright .entry-meta span,
+.manosaryright .entry-meta a,
+.boxedright .entry-meta,
+.boxedright .entry-meta span
+.boxedright .entry-meta a {
+	color: }
+.link_post_type {
+	background-color: ;
+}
+.link_post_type:hover {
+	background-color: ;
+}
+/*
+=================================================
+Pagination Links Color
+=================================================
+*/
+.page_pagination span  {
+	background-color: ;
+	color: ;
+}
+.page_pagination a {
+	background-color: ;
+	color: ;
+}
+.page_pagination a:hover {
+	background-color: ;
+	color: ;
+}
+
+.testomonials_background {border-left-color:; border-bottom-color:;}
+.lr_faqs {border-right-color:; border-bottom-color:;}
+.effect-st-portfolio {border-color:;}
+.lr_widgets_insettop {background-color:;}
+.lr_top_widgets {background-color:;}
+.lr_widgets_cta {background-color:;}
+.style_breadcrumbs {background-color:;}
+.style_breadcrumbs h1 {color:;}
+.style_breadcrumbs span {color:;}
+.style_breadcrumbs span  a {color:;}
+.style_breadcrumbs span  a:hover {color:;}
+.breadcrumb_items {color:;}
+/*.lavish_header {background-color:; }*/
+
+/*site title */
+#la-site-title a {color:#fff;}
+#la-logo-group, #la-text-group {padding: 5px 0px 5px 0px}
+            
+/*Navmenu Customizer */
+
+
+
+	#secondary-nav .nav-menu li a, #secondary-nav .nav-menu li.home a {color:#ffffff;}
+	#secondary-nav .nav-menu li a:hover {color:#6c603c;}
+	#secondary-nav ul.nav-menu ul a,#secondary-nav .nav-menu ul ul a {color: #ffffff;}
+	#secondary-nav ul.nav-menu ul a:hover,#secondary-nav .nav-menu ul ul a:hover,#secondary-nav .nav-menu .current_page_item > a,#secondary-nav .nav-menu .current_page_ancestor > a,#secondary-nav .nav-menu .current-menu-item > a,#secondary-nav .nav-menu .current-menu-ancestor > a {color:#6c603c;}			
+	#secondary-nav ul.sub-menu .current_page_item > a,#secondary-nav ul.sub-menu .current_page_ancestor > a,#secondary-nav ul.sub-menu .current-menu-item > a,#secondary-nav ul.sub-menu .current-menu-ancestor > a {background-color: #d7c58c;}						
+	#secondary-nav ul.nav-menu li:hover > ul,#secondary-nav .nav-menu ul li:hover > ul {background-color: #c6b274;border-color:#707070;}			
+	#secondary-nav ul.nav-menu li:hover > ul li:hover {background-color: #d7c58c;}			
+	.la-breadcrumbs-wrapper span {color:;}
+	.la-breadcrumbs-wrapper span  a {color:;}
+	.la-breadcrumbs-wrapper span  a:hover {color:;}
+	.wsb_primary {background-color: !important;}
+	
+	.wsb_primary:hover, .wsb_primary:focus {background-color: !important;}
+	.added_to_cart:hover, .added_to_cart:focus {background-color: !important;}
+	.wsb_secondary {background-color: !important;}
+	.wsb_secondary:hover, .wsb_secondary:focus {background-color: !important;}
+	
+	.woocommerce_product_title {color: !important;}
+
+/*
+=================================================
+Content Color Customizer
+=================================================
+*/
+.la-contents .entry-content,
+.la-contents .entry-content p {
+	color:}
+.la-contents .entry-content a {
+	color:}
+
+/*
+==========================================================================
+Footer Widget Title Color settig
+==========================================================================
+*/
+.lr_widgets_bottom_widget h3{
+	color:}
+</style>
+<script type="text/javascript">
+	(function ( $ ) {
+		$(document).ready(function(){
+			var active = "";
+			var scroll_number = "180";
+			var top_activated = "1";
+			if (top_activated == 1) {
+				$('#la-banner').css({"min-height" : "110px"});
+			}
+            
+            	
+
+            //if navigation menu is First One
+            
+            	if (active == 1) {
+            			$(window).scroll(function() {
+
+								if ($(window).scrollTop() > scroll_number) {
+									 $(".lavish_top").hide();
+									 $(".lavish_header.header_two").css({"position":"fixed", "right":"0px", "left":"0px", "top": "0px","z-index":"400"});
+									 $(".lavish_header.header_one").css({"position":"fixed", "right":"0px", "left":"0px", "top": "0px","z-index":"400"});
+									 $(".lavish_header.header_two").css({'marginTop': '0px'});
+								}
+								else {
+				                    $(".lavish_top").show();
+				                    $(".lavish_header.header_two").css({"position":"absolute", 'box-shadow':'none', "width": "100%", "z-index":"400"});
+				                    $(".lavish_header.header_one").css({"position":"relative", 'box-shadow':'none', "width": "100%", "z-index":"400"});
+				                    $(".lavish_header.header_two").css({'marginTop': '15px'});
+				            }
+			   				});
+            			}
+
+            			
+     	 
+			
+		});
+})(jQuery);
+
+</script>
+
+            <style type="text/css">
+                   .blog .style_breadcrumbs,
+                   .archive .style_breadcrumbs,
+                   .category .style_breadcrumbs{display:none;}
+            </style>
+  
+	<!-- Clean Archives Reloaded v3.2.0 | http://www.viper007bond.com/wordpress-plugins/clean-archives-reloaded/ -->
+	<style type="text/css">.car-collapse .car-yearmonth { cursor: s-resize; } </style>
+	<script type="text/javascript">
+		/* <![CDATA[ */
+			jQuery(document).ready(function() {
+				jQuery('.car-collapse').find('.car-monthlisting').hide();
+				jQuery('.car-collapse').find('.car-monthlisting:first').show();
+				jQuery('.car-collapse').find('.car-yearmonth').click(function() {
+					jQuery(this).next('ul').slideToggle('fast');
+				});
+				jQuery('.car-collapse').find('.car-toggler').click(function() {
+					if ( 'Expand All' == jQuery(this).text() ) {
+						jQuery(this).parent('.car-container').find('.car-monthlisting').show();
+						jQuery(this).text('Collapse All');
+					}
+					else {
+						jQuery(this).parent('.car-container').find('.car-monthlisting').hide();
+						jQuery(this).text('Expand All');
+					}
+					return false;
+				});
+			});
+		/* ]]> */
+	</script>
+
+</head>
+<body class="post-template-default single single-post postid-12 single-format-standard"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display:none;direction:ltr;" toolbar-mode="auto">
+<div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;">
+<div id="donato" style="position:relative;width:100%;height:0;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20180305091142/http%3A//mindhacks.cn/2007/12/02/probability-theory-in-evolution" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><div id="wm-ipp-inside">
+  <div id="wm-toolbar" style="position:relative;display:flex;flex-flow:row nowrap;justify-content:space-between;" nav="async">
+    <div id="wm-logo" style="/*width:110px;*/padding-top:12px;">
+      <a href="/web/" title="Wayback Machine home page"><img src="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-100.png, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0"></a>
+    </div>
+    <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://mindhacks.cn/2007/12/02/probability-theory-in-evolution" onfocus="this.focus();this.select();" style="flex:1;"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20180305091142"><input type="submit" value="Go">
+      </form>
+      <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
+                <div class="s" id="wm-nav-captures" style="flex:1;">
+                    <a class="t" href="/web/20180305091142*/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution" title="See a list of every capture for this URL">206 captures</a>
+          <div class="r" title="Timespan for captures of this URL">11 Feb 2009 - 25 Feb 2024</div>
+          </div>
+        <div class="k">
+          <a href="" id="wm-graph-anchor">
+            <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+              <canvas id="wm-sparkline-canvas" width="775" height="27" border="0"></canvas>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="n">
+      <table>
+        <tbody>
+          <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+          <tr class="m">
+            <td class="b" nowrap="nowrap">Feb</td>
+            <td class="c" id="displayMonthEl" title="You are here: 09:11:42 Mar 05, 2018">MAR</td>
+            <td class="f" nowrap="nowrap">Apr</td>
+          </tr>
+          <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+          <tr class="d">
+            <td class="b" nowrap="nowrap"><span class="ta"></span></td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 09:11:42 Mar 05, 2018">05</td>
+            <td class="f" nowrap="nowrap"><span class="ta"></span></td>
+          </tr>
+          <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+          <tr class="y">
+            <td class="b" nowrap="nowrap">2017</td>
+            <td class="c" id="displayYearEl" title="You are here: 09:11:42 Mar 05, 2018">2018</td>
+            <td class="f" nowrap="nowrap">2019</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="r" style="display:flex;flex-flow:column nowrap;align-items:flex-end;justify-content:space-between;">
+      <div id="wm-btns" style="text-align:right;height:23px;">
+                <span class="xxs">
+          <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a id="wm-save-snapshot-open" href="#" title="Share via My Web Archive">
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web"></span>
+        </span>
+                <a class="xxs" href="https://help.archive.org/help/category/the-wayback-machine/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+        <a id="wm-tb-close" href="#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" class="xxs">
+        <a href="/web/20180305091142/http://web.archive.org/screenshot/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution" id="wm-screenshot" title="screenshot">
+          <span class="wm-icon-screen-shot"></span>
+        </a>
+        <a href="#" id="wm-video" title="video">
+          <span class="iconochive-movies"></span>
+        </a>
+        <a id="wm-share-facebook" href="#" data-url="https://web.archive.org/web/20180305091142/http://mindhacks.cn:80/2007/12/02/probability-theory-in-evolution/" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="#" data-url="https://web.archive.org/web/20180305091142/http://mindhacks.cn:80/2007/12/02/probability-theory-in-evolution/" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+      <div style="padding-right:2px;text-align:right;white-space:nowrap;">
+        <a id="wm-expand" class="wm-btn wm-closed" href="#expand"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
+      </div>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+        <div id="wm-capinfo-notice" source="api"></div>
+                <div id="wm-capinfo-collected-by">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;">COLLECTED BY</div>
+    <div style="padding:3px;position:relative" id="wm-collected-by-content">
+            <div style="display:inline-block;vertical-align:top;width:50%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls);"></span>
+		Organization: <a style="color:#33f;" href="https://archive.org/details/alexacrawls" target="_new"><span class="wm-title">Alexa Crawls</span></a>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
+	</div>
+	      </div>
+      <div style="display:inline-block;vertical-align:top;width:49%;">
+			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls)"></span>
+		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/alexacrawls" target="_new"><span class="wm-title">Alexa Crawls</span></a></div>
+		<div style="max-height:75px;overflow:hidden;position:relative;">
+	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
+	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
+	</div>
+	      </div>
+    </div>
+    </div>
+    <div id="wm-capinfo-timestamps">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading"></div>
+    </div>
+    </div>
+  </div></div></div></div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20180305091142/http://mindhacks.cn:80/2007/12/02/probability-theory-in-evolution/</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(775,27,25,2,"web","http://mindhacks.cn/2007/12/02/probability-theory-in-evolution","20180305091142",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+    <div id="la-wrapper" style="border-color:#000000;">
+                <div class="lavish_header header_two "><!--Header Starts Here-->
+                                        <div class="lavish_head">
+                    <div class="container">
+                        <div class="lavish_logo"><!--Logo Starts Here -->
+        
+			<div id="la-text-group">
+                    <div id="la-site-title-group" style="margin: 10px 10px 10px 10px;">
+                        <h1 id="la-site-title"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/" title="刘未鹏 | Mind Hacks" rel="home" style="color: ;">刘未鹏 | Mind Hacks</a></h1>
+                        <h2 id="la-site-tagline" style="color: #a3a3a3;">思维改变生活</h2>
+                    </div>	
+                        </div>
+            		
+		
+
+    </div><!--End of Logo Here -->
+                            
+                                    <div class="lavish_menus">
+                        <div class="lavish_menu"><!--Primary Navigation Starts Here -->
+                            <ul id="menu-categories" class="navmenu"><li id="menu-item-447" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-447"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/%e5%bf%83%e6%99%ba%e6%8e%a2%e5%af%bb/">心智探寻</a></li>
+<li id="menu-item-285" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-285"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/mind/">思维改变生活</a></li>
+<li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-284"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/learning-method/">学习方法</a></li>
+<li id="menu-item-288" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-288"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/algorithms/">算法</a></li>
+<li id="menu-item-290" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-290"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/computer-science/">计算机科学</a></li>
+<li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-286"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/math/">数学</a></li>
+<li id="menu-item-287" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-287"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/machine-learning/">机器学习与人工智能</a></li>
+<li id="menu-item-289" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-289"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/programming/">编程</a></li>
+</ul>                        </div>
+                        
+                        <div class="header_extras">
+                            
+                            <ul class="header_extra">
+                                
+                                <li class="search_triger"><i class="fa fa-search"></i></li>
+
+                            </ul>
+                                                    <a class="toggle_button_lavish_menu"></a>
+                        </div><!--End of Primary Navigation -->
+                        
+                    </div>
+   
+                             
+                    </div>
+                     
+                    </div>
+                        <div class="dropdown_search">
+        <div class="container">
+            <div class="col-md-12">
+                <p style="float:left" class="search_triggered_close">X</p>
+                
+<form role="search" method="get" class="search-form" action="https://web.archive.org/web/20180305091142/http://mindhacks.cn/">
+
+<div class="input-group">
+<input type="text" class="form-control" placeholder="Search …" value="" name="s">
+<div class="input-group-addon">
+<button class="btn btn-primary" type="submit" value="Search"><i class="fa fa-search"></i> </button>
+</div>
+</div>
+
+</form>    
+            </div>
+        </div>
+    </div>
+                        <div style="background-color:#fff">
+        <ul id="menu-categories-1" class="mobilemenu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-447"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/%e5%bf%83%e6%99%ba%e6%8e%a2%e5%af%bb/">心智探寻</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-285"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/mind/">思维改变生活</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-284"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/learning-method/">学习方法</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-288"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/algorithms/">算法</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-290"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/computer-science/">计算机科学</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-286"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/math/">数学</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-287"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/machine-learning/">机器学习与人工智能</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-289"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/topics/programming/">编程</a></li>
+</ul>    </div>
+                    </div>
+                    <aside id="la-banner" class="lr_responsive_banner " style="background-color: #EAEAEA; background-image: url(https://web.archive.org/web/20180305091142im_/http://mindhacks.cn/wp-content/uploads/2016/12/mountain_sz.jpg); color: #ffffff;">
+        
+
+
+
+    </aside>
+    	<div class="style_breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					  
+
+						<h1> 数学之美番外篇：进化论中的概率论 </h1>
+									</div>
+				<div class="col-md-6 breadcrumb_items">
+					                    
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+<section id="la-content-area" class="la-contents" role="main">
+
+<div class="container"><div class="row"><div class="col-md-8" role="main">
+
+<article id="post-12" class="post-12 post type-post status-publish format-standard hentry category-math category-algorithms tag-26 tag-31 tag-27">
+            <div class="entry-content clearfix">
+        <p><a href="https://web.archive.org/web/20180305091142/http://www.xiaolai.net/">李笑来</a>老师<a href="https://web.archive.org/web/20180305091142/http://www.xiaolai.net/?p=565">在blog上转了</a>一篇宏文，“<a href="https://web.archive.org/web/20180305091142/http://www.sciam.com/article.cfm?articleID=000D4FEC-7D5B-1D07-8E49809EC588EEDF">15 Answers to Creationist Nonsense</a>”；然后<a href="https://web.archive.org/web/20180305091142/http://www.luanxiang.org/">余晟</a>同学（顺便推荐<a href="https://web.archive.org/web/20180305091142/http://www.luanxiang.org/">余晟</a>同学译的<a href="https://web.archive.org/web/20180305091142/http://www.douban.com/subject/2154713/">《精通正则表达式》（第3版）</a>）把它给<a href="https://web.archive.org/web/20180305091142/http://www.luanxiang.org/blog/?p=348">译了出来</a>。漂亮的文章加上漂亮的翻译，当然是要拜读的:-)</p>
+<p>进化论从其诞生以来受到的非难不计其数。这里提到的这篇便收集了广为神创论者提出以及广为大众误解的一些观点。其中有一点尤其引起了我的兴趣，如下：</p>
+<blockquote>
+<p><b>8. </b><b>严格说起来，我们很难相信复杂如蛋白质的物质能偶然出现，更不用说人或是活细胞了。</b><b></b></p>
+<p>偶然性在进化中确实存在（例如，偶然性的突变可以产生新的特征），但是进化并不依赖偶然性来产生新的器官、蛋白质或其他实体。截然相反的是，自然选择，作为进化中已知的最主要机制，却会明确保留“需要的”（能适应的）特性，消除“不需要的”（无法适应的）特性。只要选择的影响力存在，自然选择就能把进化向一个方向推进，在出乎意料的短时间内产生复杂的结构。举个例子，现有由13个字母构成的序列“TOBEORNOTTOBE”，假设有几百万只猴子，每只猴子每秒钟挑一条短语，需要78,800年才能从26^13种可能中选出这样的排列。不过，Glendale College的Richard Hardison在20世纪80年代写过一个程序，它能够在随机产生序列的同时，保证那些已经出现在正确位置上的字母不会变化（这样做倒有点《汉姆雷特》 的味道。译注：这个句子看了大半天才明白，嘿嘿）。这个程序平均只需要336次迭代就能生成上文提到的短语，时间少于90秒。更神奇的是，把莎士比亚的整个剧本重新生成一遍也只需要四天半时间。</p>
+</blockquote>
+<p>关于这个随机枚举特定的13字母的单词的问题有点意思。如果是纯粹随机枚举的话，由于长度为13的单词一共有26^13个不同的（假设所有组合都是有效单词的话），其中只有一个跟目标单词一样，也就是说平均（数学期望）枚举26^13次才能枚举出目标串来。</p>
+<p>我们不妨把人类的DNA链当成一个长长的单词。突变是产生随机枚举的动力。那么根据上面的分析，要枚举出我们现在用的DNA，需要的迭代次数将是跟DNA链上的“字母数”（碱基对）成指数关系的。枚举一个13个字母的单词就需要26^13次方了，上亿碱基对，需要多少次迭代？更不要说人类的一代更迭就平均要耗上十来二十年了。</p>
+<p>从这个角度来看，作为生命只有短短几十年的我们，似乎的确很难理解像眼睛这么复杂精妙的结构是如何从随机的突变中产生出来的。而这也恰恰是神创论者最经常用来非难进化论的论点之一。那么，这个貌似有力的论点到底正确与否呢？其实，在达尔文同学的<a href="https://web.archive.org/web/20180305091142/http://www.douban.com/subject/1969983/">《物种起源》</a>中就已经进行了一定程度的驳斥。达尔文同学列举了一系列的比我们人类眼睛简单的眼睛结构，从复杂逐渐到简单，其中最简单的“眼睛”只由一些聚集在一起的感光细胞构成；并且，达尔文同学还雄辩了为什么眼睛的复杂性并非是不可归约（irreducible）的。</p>
+<p>然而，达尔文同学毕竟不是专业的理工科出生（在大学里面是学神学的），虽然其实践精神是每个科学家的楷模，虽然在《物种起源》中他运用了一系列的证据和推理，某种程度上论证了随机突变加上自然的选择之手，的确能够进化出如眼睛这么复杂的结构。然而他并没有从数学上加以证明，为什么定向选择能够导致在短得多的时间内产生复杂结构，以及这个时间与纯随机枚举相比到底短到什么程度？</p>
+<p>我们仍以那个13个字母的单词为例TOBEORNOTTOBE。如果是纯随机枚举的话，平均需要26^13次方才能枚举出一个来。那么，自然中的进化过程也是这样的吗？并非如此。虽然每一个基因位都可能发生变异，然而自然选择之手会将那些“好”的部分留下来，差的部分剔掉（因为突变出来的好基因比差基因更有生存繁殖优势，于是渐渐就会在种群中通过遗传扩散开来）。反映在我们枚举单词的过程中就是，一旦我们枚举出了某个或某些特定位上的字母，那么这个字母就确定下来，不再变动，只需继续枚举剩下来的字母。这样，直觉上需要枚举的次数就会大大减少。而实际上也正是如此，引文中提到的Richard同学写的一个程序便说明了这一点：本来需要78,800年，现在只需90秒。差异何等巨大！</p>
+<p>现在，我们关心的问题是，按照后一种枚举方法，能从数学上精确计算出来，要枚举出这个目标单词需要的迭代次数的数学期望吗？（即，平均枚举多少次，才能枚举出它呢？）</p>
+<p>Richard同学写的那个程序显示需要平均336次；然而，问题是他写的是一个程序，而不是用数学来计算到底需要多少次。336次是数学期望吗？不是。它是一个实践值。</p>
+<p>实际上，我也写了一个这样的程序，然而结果显示却是大约82次左右。那么到底谁的正确呢？</p>
+<p>要检验这个结论，更重要的问题是，应该有一个数学方法能够计算出按照这种方法，可（数学）期望通过迭代多少次就迭代出目标串。</p>
+<p>为了从数学上解决这个问题。我们需要用到一点基本的概率论知识：</p>
+<p>如果一个随机变量X的值为x<sub>i</sub>的几率是P<sub>i</sub>，那么X的数学期望Ex就等于∑x<sub>i</sub>P<sub>i</sub>。举个例子，假设小明的考试成绩为90分的概率为30%，为80分的概率为70%，那么小明的成绩的数学期望便是90×30%+80×70%=83（虽然83其实是个不可能的成绩）。</p>
+<p>回到我们要求解的问题：我们想知道需要枚举多少次才能枚举出目标单词。要求解这个问题，我们可以反过来思考：<b>平均每枚举一次能正确枚举出目标单词上的几个字母</b>（这里“正确”的意思当然是要满足“在相同位置上的字母也相同”，比如目标单词是TUBE的话，一旦枚举出POTE，我们就说正确枚举出了最后一个字母E，而T由于位置不对应，因此就不能算是正确的了）。</p>
+<p>很显然，平均一次能正确枚举出的字母数目是一个随机变量，不妨令为X。该随机变量依赖于在这次枚举中，目标单词上的每一个位置上的字母是否被正确枚举出来了，于是我们设目标单词第i位上的字母被枚举的结果（即是否枚举中——只有“中”或“不中”两种结果，因而是一个二元随机变量）为随机变量X<sub>i</sub>；X<sub>i</sub>只有“中”或“不中”两种可能，我们将“中”的值量化为1，“不中”为0。由于每一位上枚举中的概率都是独立同分布的，因此对于任意一个X<sub>i</sub>来说，为0（“不中”）的概率皆为25/26；为1（“中”）的概率皆为1/26。这很容易理解，因为字母表中一共有26个字母，随机选择一个，跟目标字母相同的概率自然是1/26，不同的概率则是25/26。</p>
+<p>有了X<sub>i</sub>，我们进一步发现，X其实是X<sub>i</sub>的函数：X = ∑X<sub>i</sub>。这个式子这样理解：如果在位置i处枚举中了，那么X<sub>i</sub>便是1，这样就给总共枚举中的位数X贡献了1；否则X<sub>i</sub>则为0，即没有贡献。</p>
+<p>现在，我们回过头审视我们想要求得的东西：我们想求得是<b>枚举一次能正确枚举出目标单词上的字母数目的数学期望</b>。也就是X的数学期望EX。由于X = ∑X<sub>i</sub>。于是EX = E(∑X<sub>i</sub>) = ∑EX<sub>i</sub>。而EX<sub>i­</sub>对每个X<sub>i</sub>是相同的（独立同分布嘛），都是0×25/26 + 1×1/26 = 1/26。因此EX = n×EX<sub>i</sub>（其中n是目标单词的长度——本例中是13）= 13×1/26 = 1/2。</p>
+<p>综上，我们得出结论：随机枚举一次可（数学）期望枚举中目标单词上的1/2个字母。</p>
+<p>1/2个字母？是不是开玩笑？哪有“半个字母”的说法？实际上，因为是数学期望，而数学期望的值很可能并非所有可能值中的任一个，而是它们的概率加权平均，所以半个字母的说法在数学期望上是说得通的；更关键的是，这个期望值给我们提供了一个极其重要的信息，那就是<b>要想枚举中其中的一位，我们（数学期望上）需要枚举</b><b>2</b><b>次才行（因为每次枚举中</b><b>1/2</b><b>位）</b>。</p>
+<p>一旦枚举中了其中的一位，那么后面的随机枚举过程便不需要考虑这一位，只需要考虑剩下的了。换句话说，目标单词中的字母便被剔掉了一个，只剩12个字母。而在12个字母的单词中，要想再枚举中一位，需要多少次迭代呢？重用上面的推导过程，EX仍然还是等于n×EX<sub>i</sub>。EX<sub>i</sub>没变，而n变成了12。即迭代一次平均命中12/26个字母，那么要完全命中其中一位字母，便需要26/12（即2.17次）。</p>
+<p>如此类推，每次减掉其中的一个字母需要特定次数的枚举，一直到减至只剩最后一个字母，需要26次。把所有这些枚举次数的期望值加起来，便是总共需要枚举的次数了。即26/13 + 26/12 + 26/11 + … + 26/1 ~= 82.68次。</p>
+<p><b>另一种思路</b><b></b></p>
+<p>我们回顾一下上一个解法过程中的核心问题：<b>要命中其中的一个字母，（数学期望上）需要枚举多少次</b>，我们令这个次数为随机变量X。我们回顾一下数学期望的本质定义：每个可能的值的概率加权平均。于是，要求得X的数学期望EX，我们只需知道X所有可能的取值以及对应于各个取值的概率。</p>
+<p>那么，要命中其中一个字母，究竟需要枚举多少次呢？可能是一次就中了，也可能需要两次，也可能需要三次…你会发现，有可能需要任意次。只不过随着所需次数的增加，概率也越来越小。实际上，这是一个无穷级数求和问题；所幸，你马上就会看到，这个求和其实很简单。</p>
+<p>所谓一次就命中的意思是，只随机枚举一次，就会命中目标单词中的一个且仅一个字母。这个随机事件由三个部分组成，首先是其余n-1个字母不中，然后是剩下的1个字母中了，再然后是那个命中的字母有n种可能的位置。因此，其概率是[(25/26)^(n-1)]×1/26×n。同理，需要两次才能命中其中一个字母的概率是(25/26)^n×1/26×n×[(25/26)^(n-1)]…以此类推。</p>
+<p>而命中其中一个字母所需枚举次数X的数学期望是：</p>
+<p>1×一次就中的概率 + 2×二次才中的概率 + 3×三次才中的概率 + …</p>
+<p>也就是：</p>
+<p>1/26×n×(25/26)^(n-1) [1 + 2×(25/26)^n + 3×(25/26)^2n + 4×(25/26)^3n … ]</p>
+<p>左边方括号内的无穷级数求和的形式为1+2q+3q^2+4q^3+…，结果为1/(1-q)^2（利用类似等比级数求和的技巧——错位相减），所以上式求和简化后的结果为：</p>
+<p>[n×25^(n-1)×26^n]/[(26^n-25^n)^2]</p>
+<p>即，当目标单词长为n时，平均需要[n×25^(n-1)×26^n]/[(26^n-25^n)^2]次枚举才能命中其中一个字母；而一旦命中一个字母之后，该字母就会被从单词当中剔掉，并继续枚举第二个字母，此时n减少了1，因而上式的值也发生了变化。</p>
+<p>简言之，长度为N的单词，需要∑[n×25^(n-1)×26^n]/[(26^n-25^n)^2]次（其中n从1变化到N）迭代便能够完全枚举出来。</p>
+<p>现在我们回到原来的问题：一个长为13的单词，TOBEORNOTTOBE，究竟需要枚举多少次才能够完全枚举出来呢？按照以上的式子，得出的结果是82.39。而采用前面的不精确近似，计算的结果82.68。跟我自己写的一个枚举程序运行一万次平均之后的结果刚好相符，后者也是在82左右徘徊。</p>
+<p>不过，以上两种做法其实都建立在一个假设之上，即我们是一个一个地枚举出目标单词中的字母的。不是两个，也不是三个。然而实际当中可能一次就枚举出多个乃至全部的字母。因此，其实以上两种做法计算出的都是一个不精确的值，这也是为什么它们的结果相近但不一样的原因（真正的结果只有一个）。然而，如果想给出精确表达式或计算方法就非常复杂了，或者说至少我没有想到更简单的表达方法，如果你有不妨告诉我:-)</p>
+<p><b>小结</b><b></b></p>
+<p>本文介绍了隐藏在自然选择中的概率论，并说明了为什么自然选择能够在相对（与纯随机枚举相比）极短的时间内塑造出复杂的有机体；简而言之，选择之手总是不断地将生物的基因向某个方向推进，一旦基因中变异出有益的片段，该片段就会被选择保留下来并逐渐在种群中蔓延开来，反映到文中讨论的枚举单词的例子中就是，一旦某个位上的字母被枚举出来，便会被保留住，不再受到后续变异的影响（除非是更好的变异）（通过一个数学示例，我们看到，原本需要26^13次迭代才能产生的目标序列，只需82次居然就进化出来了，其间的差距是无法估计的；事实上，计算机算法上就有使用进化思想来实现算法的，也就是所谓的<a href="https://web.archive.org/web/20180305091142/http://www.douban.com/subject/1232071/">进化算法</a>）；再则，加以种群中数量巨大的个体（每个个体都是一个单独的枚举器），我们就不难理解为什么自然选择能够进化出复杂如眼睛的结构了。</p>
+<p><b><i>Update 2007-12-3</i></b>：<a href="https://web.archive.org/web/20180305091142/http://blog.youxu.info/">徐宥</a>同学<a href="https://web.archive.org/web/20180305091142/http://blog.csdn.net/pongba/archive/2007/12/02/1912466.aspx#747121">指出</a>，<a href="https://web.archive.org/web/20180305091142/http://surge.ods.org/listarc/20020621.HTM">在Richard原来写的那个程序中</a>，是采用的“挨个枚举”办法。即先枚举出第一个字母（期望需要26次），然后枚举第二个，如此直到把所有字母枚举完。如此需要的时间为13×26=338；符合文中给出的值。如此说来，之所以我得出的结果跟Richard的不一样，是因为<b>采用的枚举策略不一样</b>，我将“一次枚举”定义为“枚举整个单词”，而非“枚举其中某个字母”。不过我感觉Richard的那个枚举策略显然不符合自然选择的工作方式，自然状况下，每一个基因位（“字母”）都可能发生变异（独立分布，不过变异概率未必一样），而对变异基因的择优筛选则发生在“遗传”这一个环节（严格来说是发生在遗传过程中的“差异繁殖率”上）。</p>
+<p>不过，总而言之，尽管计算机模拟的选择算法不同，总的思想是一样的，即一旦加入了“选择之手”，就能够极大地加快进化的速度。</p>
+<p><b>下期预告？</b><b></b></p>
+<p>本来打算写写Google Pagerank算法的，但那玩意往细了写太麻烦，总找不出动力，所以索性先写篇短的:-) Google Pagerank算法是数学与工程的完美结合，其中蕴含了数学的纯粹和工程的务实，实在值得欣赏，所以，强烈推荐下面这篇：</p>
+<p><a href="https://web.archive.org/web/20180305091142/http://www.ams.org/featurecolumn/archive/pagerank.html">How Google Finds Your Needle in the Web’s Haystack</a>，那么这篇有多火呢？del.icio.us上save的人竟有1,774人！可见一斑。</p>
+        <!-- <div style="border-bottom:1px solid #EAEAEA;"></div> -->
+        <!-- <h5><i class="fa fa-quote-left"></i> &nbsp;数学之美番外篇：进化论中的概率论</h5> -->
+    </div>
+    
+    <div class="blog_seperator"></div></article><!-- #post-## -->
+   
+    <nav class="navigation post-navigation" role="navigation">
+        <div class="post-nav-links">
+            <div class="nav-previous">&nbsp;<a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2006/10/15/cantor-godel-turing-an-eternal-golden-diagonal/" rel="prev"><i class="fa fa-long-arrow-left"></i> 康托尔、哥德尔、图灵——永恒的金色对角线(rev#2)</a> </div><div class="nav-next">&nbsp;<a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2008/04/18/learning-from-polya/" rel="next"> 跟波利亚学解题(rev#3) <i class="fa fa-long-arrow-right"></i></a></div>        </div><!-- .nav-links -->
+    </nav><!-- .navigation -->
+    
+<div id="comments" class="comments-area clearfix">
+
+	
+			<h2 class="comments-title">
+            15 Comments         
+		</h2>
+
+		
+		<ol class="comment-list">
+			
+    <li id="comment-33242" class="comment even thread-even depth-1">
+        <article id="div-comment-33242" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/5f0c7d74fd336cb9047cdc36b3d1b801?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/5f0c7d74fd336cb9047cdc36b3d1b801?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">大象无形</cite> |                    <!-- .comment-author -->
+                    <time datetime="2014-03-29T23:06:41+00:00">
+                        March 29, 2014 at 11:06 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/?replytocom=33242#respond" onclick="return addComment.moveForm( &quot;div-comment-33242&quot;, &quot;33242&quot;, &quot;respond&quot;, &quot;12&quot; )" aria-label="Reply to 大象无形">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>对于概率问题，我个人认为比较适用来反对无生命物质“进化”成生命体的理论。宇宙大爆炸理论对该理论带来的冲击会越来越明显。因为在这个问题上除了随机概率，自然选择毫无用处。<br>
+自然选择理论针对的是生命体。支持自然选择的证据基本上都是同一物种生物之间的微进化，如细菌的耐药性。但是对于跨物种的进化，证据几乎没有。<br>
+总的来说，我认为目前许多相信进化论的人，并非是因为证据已经充分，而是因为无神论者目前没有更好地选择来解释生命的起源、多样性和复杂性。所以进化论者对进化论所需要的信心，不会比一个基督徒对相信上帝所需要的信心要少。进化论，已经成为一种信仰。<br>
+最后，推荐一本书，设计还是机遇（作者: 丹妮斯·奥利威 ，出版社: 云南人民出版社）</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-33241" class="comment odd alt thread-odd thread-alt depth-1">
+        <article id="div-comment-33241" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/5f0c7d74fd336cb9047cdc36b3d1b801?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/5f0c7d74fd336cb9047cdc36b3d1b801?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">大象无形</cite> |                    <!-- .comment-author -->
+                    <time datetime="2014-03-29T22:44:42+00:00">
+                        March 29, 2014 at 10:44 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/?replytocom=33241#respond" onclick="return addComment.moveForm( &quot;div-comment-33241&quot;, &quot;33241&quot;, &quot;respond&quot;, &quot;12&quot; )" aria-label="Reply to 大象无形">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>眼睛很复杂，最简单的眼睛也很复杂，最简单的感光细胞也是非常复杂的。博主举得例子，表面上支持进化论，实际上更加支持智慧设计论。首先要有一个目标，比如莎士比亚的小说或者特定的单词，然后怎么样一步步朝着这个目标迈进。如果没有目标，纯粹随机的话，时间远远不够。</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-32420" class="comment even thread-even depth-1">
+        <article id="div-comment-32420" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo avatar-default" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn"><a href="https://web.archive.org/web/20180305091142/http://t.qq.com/jingxiaobo1028735354" rel="external nofollow" class="url">粟裕</a></cite> |                    <!-- .comment-author -->
+                    <time datetime="2013-05-18T09:21:30+00:00">
+                        May 18, 2013 at 9:21 am                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/?replytocom=32420#respond" onclick="return addComment.moveForm( &quot;div-comment-32420&quot;, &quot;32420&quot;, &quot;respond&quot;, &quot;12&quot; )" aria-label="Reply to 粟裕">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>很有趣，大数学不应该拒绝其他学科</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-17952" class="comment odd alt thread-odd thread-alt depth-1">
+        <article id="div-comment-17952" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/a39e1c816af556ba19866ca2408a8aaf?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/a39e1c816af556ba19866ca2408a8aaf?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn"><a href="https://web.archive.org/web/20180305091142/http://joseph.yy.blog.163.com/" rel="external nofollow" class="url">Puriney</a></cite> |                    <!-- .comment-author -->
+                    <time datetime="2011-11-13T00:38:49+00:00">
+                        November 13, 2011 at 12:38 am                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/?replytocom=17952#respond" onclick="return addComment.moveForm( &quot;div-comment-17952&quot;, &quot;17952&quot;, &quot;respond&quot;, &quot;12&quot; )" aria-label="Reply to Puriney">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>很有趣也很平易近人，这样子的题材挺不错的。<br>
+p.s.不过我还是劝英文相关原作者关于进化论-数学期望之类的算法还是少玩比较好，因为生物世界实在是太复杂。基因突变、表观遗传学、RNA editing等等这类的生物事件里无处不在的变量。</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-17454" class="pingback even thread-even depth-1">
+        <div class="comment-body">
+            Pingback: <a href="https://web.archive.org/web/20180305091142/http://blog69.tk/?p=114" rel="external nofollow" class="url">知其所以然（三）：为什么算法这么难？ | 风的天地</a>         </div>
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-16309" class="comment odd alt thread-odd thread-alt depth-1">
+        <article id="div-comment-16309" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/1511d432af44b762b152c5807ae7a2b0?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/1511d432af44b762b152c5807ae7a2b0?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">test</cite> |                    <!-- .comment-author -->
+                    <time datetime="2011-09-05T18:27:05+00:00">
+                        September 5, 2011 at 6:27 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/?replytocom=16309#respond" onclick="return addComment.moveForm( &quot;div-comment-16309&quot;, &quot;16309&quot;, &quot;respond&quot;, &quot;12&quot; )" aria-label="Reply to test">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>蛋白也是字母序列啊，有活性的蛋白就对应这里正确的单词</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-16029" class="comment even thread-even depth-1">
+        <article id="div-comment-16029" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/c8f08c793e6c88e6db9c72772aa5b786?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/c8f08c793e6c88e6db9c72772aa5b786?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">brack</cite> |                    <!-- .comment-author -->
+                    <time datetime="2011-08-23T09:36:08+00:00">
+                        August 23, 2011 at 9:36 am                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/?replytocom=16029#respond" onclick="return addComment.moveForm( &quot;div-comment-16029&quot;, &quot;16029&quot;, &quot;respond&quot;, &quot;12&quot; )" aria-label="Reply to brack">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>zl，你好<br>
+拜读了您的文章，挺有意思的，但是发现了一个小问题。请您解释一下：<br>
+第二种思路，一次命中一个字母概率是[(25/26)^(n-1)]×1/26×n。同理，需要两次才能命中其中一个字母的概率是(25/26)^n×1/26×n×[(25/26)^(n-1)]。。。。。<br>
+但是这些事件的概率加起来和，即1/26×n×(25/26)^(n-1) [1 + (25/26)^n + (25/26)^2n + (25/26)^3n … ]不等于1。所以，你之后用这些概率算的期望并不正确。<br>
+因为期望公式种\sum P_i=1。</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-15889" class="comment odd alt thread-odd thread-alt depth-1 parent">
+        <article id="div-comment-15889" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/c1d868a32c43234fd4a2a8619075e03e?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/c1d868a32c43234fd4a2a8619075e03e?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">Ericooler</cite> |                    <!-- .comment-author -->
+                    <time datetime="2011-08-14T16:17:54+00:00">
+                        August 14, 2011 at 4:17 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/?replytocom=15889#respond" onclick="return addComment.moveForm( &quot;div-comment-15889&quot;, &quot;15889&quot;, &quot;respond&quot;, &quot;12&quot; )" aria-label="Reply to Ericooler">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>这个问题可以通过递推关系得到结果。</p>
+<p>要求平均需要的枚举次数f(n)，先进行一次枚举，猜中i个字母的概率为：P(i) =  C(n, i) * 1^i * 25^(n-i) / 26^n，C(n, i) = n! / [i! * (n-i)!]，表示n中选择i个的方法计数，在此条件概率下的剩余平均枚举次数为f(n-i)。<br>
+i的取值从0到n，从而得到:<br>
+f(n) = 1 + P(0) * f(n) + P(1) * f(n-1) + P(2) * f(n-2) + … + P(n) * f(0)<br>
+将右侧含f(n)的项合并到左侧，变形便得到递推公式：<br>
+f(n) = [1+ P(1) * f(n-1) + P(2) * f(n-2) + … + P(n) * f(0) ] / (1 – P(0))<br>
+注意到：<br>
+f(0) = 0<br>
+这是递归的出口。<br>
+到此，题目可以通过简单的编程求得数值解。</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <ul class="children">
+
+    <li id="comment-15909" class="comment even depth-2">
+        <article id="div-comment-15909" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/c1d868a32c43234fd4a2a8619075e03e?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/c1d868a32c43234fd4a2a8619075e03e?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">Ericooler</cite> |                    <!-- .comment-author -->
+                    <time datetime="2011-08-15T16:26:00+00:00">
+                        August 15, 2011 at 4:26 pm                    </time> 
+                    
+                     |
+                    
+                     
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>今天按照以上的递推关系写了代码，并进行了相当优化（非递归减少重复计算同一个值，减少浮点除，尽量避免溢出，以期更大计算范围的精度保证），结果是81.58302。</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+    <li id="comment-15881" class="comment odd alt thread-even depth-1 parent">
+        <article id="div-comment-15881" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/ffd07a3bd7b80aee4680923a37d4a9e4?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/ffd07a3bd7b80aee4680923a37d4a9e4?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">Sean</cite> |                    <!-- .comment-author -->
+                    <time datetime="2011-08-13T09:54:18+00:00">
+                        August 13, 2011 at 9:54 am                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/?replytocom=15881#respond" onclick="return addComment.moveForm( &quot;div-comment-15881&quot;, &quot;15881&quot;, &quot;respond&quot;, &quot;12&quot; )" aria-label="Reply to Sean">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>虽然次数很小了，我还是不相信这是自然选择和进化的结果：举一个例子，鸟类的肺的双向呼吸功能能够有效地增加氧气供给，这对所有的动物都有意义，为什么没有一种陆生动物进化出来，却所以的鸟类都进化出来呢？</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <ul class="children">
+
+    <li id="comment-17951" class="comment even depth-2">
+        <article id="div-comment-17951" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/a39e1c816af556ba19866ca2408a8aaf?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/a39e1c816af556ba19866ca2408a8aaf?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn"><a href="https://web.archive.org/web/20180305091142/http://joseph.yy.blog.163.com/" rel="external nofollow" class="url">Puriney</a></cite> |                    <!-- .comment-author -->
+                    <time datetime="2011-11-13T00:33:21+00:00">
+                        November 13, 2011 at 12:33 am                    </time> 
+                    
+                     |
+                    
+                     
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>鸟的双向呼吸是加强了氧气的数量供给，并不代表氧气的利用率（类似于补钙和钙吸收能力），同时双向呼吸其实是鸟类振翅高频率的副产物。双向呼吸的机理在于其翅膀一张一身，都可以带来胸腔的舒张与压缩获得氧气，而陆生动物，没有这个高频率。相对应地，陆生动物是氧气携带能力（氧气利用率）的提升，血细胞、血红蛋白。所以，你的结论一“双向呼吸…这对所有的动物都有意义”并不能延伸到“陆生动物也进化…”，不同动物都有其各自不同的独有之处</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+</ul><!-- .children -->
+<!-- #comment-## -->
+
+    <li id="comment-12895" class="comment odd alt thread-odd thread-alt depth-1">
+        <article id="div-comment-12895" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/cf03b37593b5866f6d86322b83fa93ab?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/cf03b37593b5866f6d86322b83fa93ab?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn"><a href="https://web.archive.org/web/20180305091142/http://blog.sina.com.cn/u/2023985021" rel="external nofollow" class="url">Charles</a></cite> |                    <!-- .comment-author -->
+                    <time datetime="2011-03-16T10:45:31+00:00">
+                        March 16, 2011 at 10:45 am                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/?replytocom=12895#respond" onclick="return addComment.moveForm( &quot;div-comment-12895&quot;, &quot;12895&quot;, &quot;respond&quot;, &quot;12&quot; )" aria-label="Reply to Charles">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>单纯就这个概率问题而言，如果不考虑一楼进化方向的问题，利用分布函数（借助MATLAB）计算的期望次数是98.7751.</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-619" class="comment even thread-even depth-1">
+        <article id="div-comment-619" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/934f39866b157c74967484b136a463d3?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/934f39866b157c74967484b136a463d3?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">hfly</cite> |                    <!-- .comment-author -->
+                    <time datetime="2009-10-18T18:46:08+00:00">
+                        October 18, 2009 at 6:46 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/?replytocom=619#respond" onclick="return addComment.moveForm( &quot;div-comment-619&quot;, &quot;619&quot;, &quot;respond&quot;, &quot;12&quot; )" aria-label="Reply to hfly">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>很有意思，不过我觉得您这个对基因变异的模型不够严格，我觉得真实的情况还有很多参数</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-577" class="comment odd alt thread-odd thread-alt depth-1">
+        <article id="div-comment-577" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/ff54e32e5257001438f6646f63cbc32e?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/ff54e32e5257001438f6646f63cbc32e?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn">a</cite> |                    <!-- .comment-author -->
+                    <time datetime="2009-09-09T15:43:03+00:00">
+                        September 9, 2009 at 3:43 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/?replytocom=577#respond" onclick="return addComment.moveForm( &quot;div-comment-577&quot;, &quot;577&quot;, &quot;respond&quot;, &quot;12&quot; )" aria-label="Reply to a">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>生物变异很小，大的变异往往是灾难性的，所以一次枚举一个字母可能更接近自然选择的工作方式</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+
+    <li id="comment-549" class="comment even thread-even depth-1">
+        <article id="div-comment-549" class="comment-wrapper">
+            <div class="comment-avatar">
+                <img alt="" src="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/3929ff39b04f22c260862d94b78d4a0d?s=58&amp;d=monsterid&amp;r=g" srcset="https://web.archive.org/web/20180305091142im_/https://www.gravatar.com/avatar/3929ff39b04f22c260862d94b78d4a0d?s=116&amp;d=monsterid&amp;r=g 2x" class="avatar avatar-58 photo" height="58" width="58">            </div>
+            <div class="comment-body">
+                <div class="comment-author vcard">          
+                    <cite class="fn"><a href="https://web.archive.org/web/20180305091142/http://empty/" rel="external nofollow" class="url">Sidney</a></cite> |                    <!-- .comment-author -->
+                    <time datetime="2009-07-24T16:30:16+00:00">
+                        July 24, 2009 at 4:30 pm                    </time> 
+                    
+                     |
+                    
+                    <span class="reply"><a rel="nofollow" class="comment-reply-link" href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/?replytocom=549#respond" onclick="return addComment.moveForm( &quot;div-comment-549&quot;, &quot;549&quot;, &quot;respond&quot;, &quot;12&quot; )" aria-label="Reply to Sidney">Reply</a></span> 
+            
+                                    </div><!-- .comment author -->
+    
+                <div class="comment-content">
+                    <p>今天我看了这篇文章受益匪浅啊，我觉得Richard Hardison得到336的结果可能是因为进化始终朝着一个方向的，只有前面的基因确定了才能判断后面的基因出现是不是好的。对应到字母的case，就是只有tob确定了才能判断tobe的e是正确的选择，不能一上来就确定第4个位置的e。所以，这样出现tobeornottobe的平均时间是26×13=338次（每一个位置出现正确的几率都是1/26)</p>
+                </div><!-- .comment-content -->
+            </div>
+
+
+        </article><!-- .comment-body -->
+    </li>
+    <!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/web/20180305091142/http://mindhacks.cn/2007/12/02/probability-theory-in-evolution/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://web.archive.org/web/20180305091142/http://mindhacks.cn/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><div class="form-group comment-form-comment">
+             
+            <textarea class="form-control" id="comment" name="comment-62e498b497df79d8abed1db558908d" cols="45" rows="8" aria-required="true"></textarea><textarea name="comment" rows="1" cols="1" style="display:none"></textarea>
+        </div><input type="hidden" name="comment-replaced" value="true"><div class="form-group comment-form-author"><label for="author">Name <span class="required">*</span></label> <input class="form-control" id="author" name="author" type="text" value="" size="30" aria-required="true"></div>
+<div class="form-group comment-form-email"><label for="email">Email <span class="required">*</span></label> <input class="form-control" id="email" name="email" type="email" value="" size="30" aria-required="true"></div>
+<div class="form-group comment-form-url"><label for="url">Website</label> <input class="form-control" id="url" name="url" type="url" value="" size="30"></div>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="12" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display:none;"><input type="text" name="nxts" value="1520241102"><input type="text" name="nxts_signed" value="78aad574a4625c79e5f5f933bcfb7ab7cbd26d86"><input type="text" name="bd44e4ff7cb01d" value=""><input type="text" name="a4447981a813ff9e04fe" value="bd465eb08490f058ccbf2d"></p>			</form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments -->
+</div><div class="col-md-4 right_sidebar"><aside id="la-right" role="complementary"><div id="text-3" class="widget widget_text"><h3><span class="dotbox"></span>关于</h3><div class="dotlinebox"><span class="dot"></span></div>			<div class="textwidget"><div id="me_as_info_source">
+    如果你对我的文章感兴趣，那么<strong>很可能你也对我平时的阅读感兴趣</strong>，以下是一些你可以参考或订阅的资源：
+    <ol>
+    <li><a href="https://web.archive.org/web/20180305091142/http://www.douban.com/people/pongba/">我在豆瓣</a>上的豆列列举了一些看过的好书：<a href="https://web.archive.org/web/20180305091142/http://www.douban.com/doulist/46003/">[只读经典]思维改变生活</a> | <a href="https://web.archive.org/web/20180305091142/http://www.douban.com/doulist/127649/">[只读经典]思考的技术与艺术</a> | <a href="https://web.archive.org/web/20180305091142/http://www.douban.com/doulist/197706/">决策与判断</a> | <a href="https://web.archive.org/web/20180305091142/http://www.douban.com/doulist/176513/">机器学习与人工智能书籍资源导引</a> </li>
+    </ol>
+    我翻译的书：
+    <ol>
+    <li><a href="https://web.archive.org/web/20180305091142/http://book.douban.com/subject/1470838/">《Imperfect C++ 中文版》</a></li>
+    <li><a href="https://web.archive.org/web/20180305091142/http://book.douban.com/subject/1470842/">《Exceptional C++ Style 中文版》</a></li>
+    <li><a href="https://web.archive.org/web/20180305091142/http://book.douban.com/subject/2248759/">《修改代码的艺术》</a></li>
+    </ol>
+    我写的书：
+    <ol>
+    <li><a href="https://web.archive.org/web/20180305091142/http://book.douban.com/subject/6709809/"><img src="https://web.archive.org/web/20180305091142im_/https://img3.doubanio.com/mpic/s6586365.jpg"></a></li>
+    </ol>
+	我的公号：
+    <ol>
+    <li><img src="/assets/wp-content/uploads/2016/12/card1.png"></li>
+    </ol>
+</div></div>
+		</div><div id="views-3" class="widget widget_views"><h3><span class="dotbox"></span>被阅读得最多的</h3><div class="dotlinebox"><span class="dot"></span></div><ul>
+<li><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/" title="数学之美番外篇：平凡而又神奇的贝叶斯方法">数学之美番外篇：平凡而又神奇的贝叶斯方法</a> - 664,863 views</li><li><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2011/11/04/how-to-interview-a-person-for-two-years/" title="怎样花两年时间去面试一个人">怎样花两年时间去面试一个人</a> - 461,376 views</li><li><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/" title="[BetterExplained]为什么你应该（从现在开始就）写博客">[BetterExplained]为什么你应该（从现在开始就）写博客</a> - 317,644 views</li><li><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2009/12/20/dark-time/" title="暗时间">暗时间</a> - 293,767 views</li><li><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2009/05/17/seven-years-in-nju/" title="我在南大的七年">我在南大的七年</a> - 263,592 views</li><li><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2009/03/28/effective-learning-and-memorization/" title="[BetterExplained]如何有效地记忆与学习">[BetterExplained]如何有效地记忆与学习</a> - 256,530 views</li><li><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2009/03/15/preconception-explained/" title="逃出你的肖申克（二）：仁者见仁智者见智？从视觉错觉到偏见">逃出你的肖申克（二）：仁者见仁智者见智？从视觉错觉到偏见</a> - 246,559 views</li><li><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2009/01/18/escape-from-your-shawshank-part1/" title="逃出你的肖申克（一）：为什么一定要亲身经历了之后才能明白？">逃出你的肖申克（一）：为什么一定要亲身经历了之后才能明白？</a> - 232,171 views</li><li><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2009/02/09/writing-is-better-thinking/" title="[BetterExplained]书写是为了更好的思考">[BetterExplained]书写是为了更好的思考</a> - 179,384 views</li><li><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/2010/03/18/escape-from-your-shawshank-part3/" title="逃出你的肖申克（三）：遇见20万年前的自己">逃出你的肖申克（三）：遇见20万年前的自己</a> - 173,579 views</li></ul>
+</div><div id="text-4" class="widget widget_text"><h3><span class="dotbox"></span>我的微博</h3><div class="dotlinebox"><span class="dot"></span></div>			<div class="textwidget"><iframe width="100%" height="550" class="share_self" frameborder="0" scrolling="no" src="https://web.archive.org/web/20180305091142if_/http://widget.weibo.com/weiboshow/index.php?width=0&amp;height=550&amp;fansRow=1&amp;ptype=0&amp;speed=300&amp;skin=-1&amp;isTitle=0&amp;noborder=0&amp;isWeibo=1&amp;isFans=1&amp;uid=1882579600&amp;verifier=1448dc03&amp;colors=d6f3f7,ffffff,666666,0082cb"></iframe></div>
+		</div></aside></div></div></div>
+</section>
+
+
+
+
+
+<div class="lavish_footer ">
+	<div class="container">
+        <div style="border-bottom:1px solid #3C3C3C"></div>
+		<div class="row">
+            <div class="col-md-12">
+                        </div>
+            <div class="col-md-12">
+                <ul id="menu-pages" class="footer"><li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/about/">关于</a></li>
+<li id="menu-item-283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-283"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/former-life-of-mindhacks/">前世档案 | C++的罗浮宫</a></li>
+<li id="menu-item-279" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-279"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/archives/">所有文章</a></li>
+<li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="https://web.archive.org/web/20180305091142/http://mindhacks.cn/about-toplanguage/">TopLanguage 讨论组</a></li>
+</ul>            </div>
+            <div class="col-md-12">
+                <div class="copyright">
+                <p>
+                    Copyright © 
+                    2018 <strong>刘未鹏</strong>. All rights reserved.                </p>
+                </div>
+            </div>
+
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-includes/js/jquery/ui/accordion.min.js?ver=1.11.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-includes/js/jquery/ui/progressbar.min.js?ver=1.11.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-includes/js/jquery/ui/tabs.min.js?ver=1.11.4"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-includes/js/imagesloaded.min.js?ver=3.2.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-includes/js/masonry.min.js?ver=3.3.2"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2b"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/woocommerce-zoom.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/wow.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/lavish-bootstrap.min.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/mytheme-carausel.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/style_portfolio.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/woo_zoom.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/shk_countslider.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-content/themes/lavish-pro/js/lavish_extras.js?ver=1.0.0"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-includes/js/comment-reply.min.js?ver=4.7.9"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20180305091142js_/http://mindhacks.cn/wp-includes/js/wp-embed.min.js?ver=4.7.9"></script>
+
+
+</div></div></div></div></body></html><!--
+     FILE ARCHIVED ON 09:11:42 Mar 05, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 00:21:42 Jan 09, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+--><!--
+playback timings (ms):
+  captures_list: 0.78
+  exclusion.robots: 0.057
+  exclusion.robots.policy: 0.04
+  esindex: 0.015
+  cdx.remote: 32.715
+  LoadShardBlock: 340.778 (3)
+  PetaboxLoader3.datanode: 191.754 (5)
+  PetaboxLoader3.resolve: 376.408 (2)
+  load_resource: 273.73 (2)
+  nav: 0.155 (6)
+-->
