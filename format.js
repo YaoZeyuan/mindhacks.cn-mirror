@@ -96,7 +96,7 @@ function processHtml(inputPath, outputPath) {
 
 function getPostLinks() {
   const postLink = [
-    "_2006_10_15_cantor-godel-turing-an-eternal-golden-diagonal_康托尔、哥德尔、图灵——永恒的金色对角线(rev#2).html",
+    "_2006_10_15_cantor-godel-turing-an-eternal-golden-diagonal_康托尔、哥德尔、图灵——永恒的金色对角线(rev_2).html",
     "_2007_05_24_learn-to-focus_学习密度与专注力.html",
     "_2007_12_02_probability-theory-in-evolution_数学之美番外篇：进化论中的概率论.html",
     "_2008_03_03_failing-to-see-the-big-picture_Failing To See the Big Picture Mistakes we make when learning programming.html",
@@ -133,7 +133,7 @@ function getPostLinks() {
     "_2011_07_10_the-importance-of-knowing-why-part3_知其所以然（三）：为什么算法这么难？.html",
     "_2011_11_04_how-to-interview-a-person-for-two-years_怎样花两年时间去面试一个人.html",
     "_2012_06_04_escape-from-your-shawshank-part5-the-invisible-cage_逃出你的肖申克（五）：看不见的牢笼（上）.html",
-    "_2012_08_27_modern-cpp-practices_C++11（及现代C++风格）和快速迭代式开发.html",
+    "_2012_08_27_modern-cpp-practices_C＋＋11（及现代C＋＋风格）和快速迭代式开发.html",
     "_2015_01_27_escape-from-your-shawshank-part5-2-platos-cave_逃出你的肖申克（六）：看不见的牢笼（下）：柏拉图的洞穴.html",
     "_2016_12_01_independent-reading-part1_信息时代的独立阅读者（一）：内心的小声音.html",
     "_2016_12_01_independent-reading-part2_信息时代的独立阅读者（二）：怎么阅读科普类文章.html",
