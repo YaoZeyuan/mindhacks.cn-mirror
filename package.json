@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "fetch": "node fetch.js",
-    "postContent": "node post-content.js"
+    "format": "node format.js"
   },
   "keywords": [],
   "author": "",

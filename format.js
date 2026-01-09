@@ -1,10 +1,9 @@
+// scripts/rewrite-html.js
 import axios from "axios";
 import * as cheerio from "cheerio";
 import fs from "fs-extra";
 import path from "path";
 import { fileURLToPath } from "url";
-import { SocksProxyAgent } from "socks-proxy-agent";
-const agent = new SocksProxyAgent("socks5h://127.0.0.1:1080");
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -14,6 +13,86 @@ const ASSETS_DIR = path.join(Base_Output_Dir, "..", "assets");
 
 await fs.ensureDir(Base_Output_Dir);
 await fs.ensureDir(ASSETS_DIR);
+
+const ASSET_PREFIX = "/assets";
+const SITE_HOST = "mindhacks.cn";
+
+/**
+ * 从 Wayback URL 中提取原始 URL
+ */
+function unwrapWayback(url) {
+  if (!url) return url;
+
+  // //web.archive.org/web/xxxx/http://...
+  const m1 = url.match(
+    /web\.archive\.org\/web\/\d+(?:[a-z_]+)?\/(https?:\/\/.+)$/
+  );
+  if (m1) return m1[1];
+
+  // https://web.archive.org/web/.../http://...
+  const m2 = url.match(/\/web\/\d+(?:[a-z_]+)?\/(https?:\/\/.+)$/);
+  if (m2) return m2[1];
+
+  return url;
+}
+
+/**
+ * 将站内资源映射到本地 assets
+ */
+function mapToLocal(url) {
+  try {
+    const u = new URL(url);
+    if (u.hostname === SITE_HOST) {
+      return ASSET_PREFIX + u.pathname + u.search;
+    }
+  } catch {
+    // ignore
+  }
+  return url;
+}
+
+/**
+ * 处理单个 HTML 文件
+ */
+function processHtml(inputPath, outputPath) {
+  const html = fs.readFileSync(inputPath, "utf8");
+  const $ = cheerio.load(html, { decodeEntities: false });
+
+  /** 1️⃣ 移除 Wayback 注入的脚本 / 样式 */
+  $('script[src*="archive.org"]').remove();
+  $('script:contains("__wm")').remove();
+  $('link[href*="web-static.archive.org"]').remove();
+  $('link[href*="iconochive"]').remove();
+  $('link[href*="banner-styles"]').remove();
+
+  /** 2️⃣ 处理 link / script / img / a */
+  const ATTRS = ["href", "src"];
+
+  ATTRS.forEach((attr) => {
+    `[${attr}]`.split(",").forEach(() => {
+      $(`[${attr}]`).each((_, el) => {
+        let val = $(el).attr(attr);
+        if (!val) return;
+
+        // //xxx → https://xxx
+        if (val.startsWith("//")) {
+          val = "https:" + val;
+        }
+
+        val = unwrapWayback(val);
+        val = mapToLocal(val);
+
+        $(el).attr(attr, val);
+      });
+    });
+  });
+
+  /** 3️⃣ 清理 pingback / xmlrpc / api */
+  $('link[href*="xmlrpc.php"]').remove();
+  $('link[href*="wp-json"]').remove();
+
+  fs.writeFileSync(outputPath, $.html(), "utf8");
+}
 
 function getPostLinks() {
   const postLink = [
@@ -71,6 +150,14 @@ function getPostLinks() {
 const asyncMain = async () => {
   const posts = await getPostLinks();
   console.log(`发现文章 ${posts.length} 篇`);
+
+  const postFile = posts[0];
+  console.log(`开始处理${postFile}`);
+  const inputFile = path.resolve(Base_Input_Dir, postFile);
+  const outputFile = path.resolve(Base_Output_Dir, postFile);
+  processHtml(inputFile, outputFile);
+
+  console.log(`✔ Processed: ${outputFile}`);
 
   console.log("✅ 完成");
 };
