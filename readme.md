@@ -1,6 +1,12 @@
 # mindhacks.cn-mirror
 
-借助web.archive.org，还原mindhacks.cn上的文章
+刘未鹏老师的《暗时间》对我影响很大，我也是按照[怎样花两年时间去面试一个人](https://mindhacks-mirror.yaozeyuan.online/posts/_2011_11_04_how-to-interview-a-person-for-two-years_%E6%80%8E%E6%A0%B7%E8%8A%B1%E4%B8%A4%E5%B9%B4%E6%97%B6%E9%97%B4%E5%8E%BB%E9%9D%A2%E8%AF%95%E4%B8%80%E4%B8%AA%E4%BA%BA.html)的建议，来到的互联网行业。
+
+但是随着时间推移，mindhack.cn无法访问, 看到有人[整理了电子书](https://github.com/evmn/Mind-Hacks)，所以想能不能向他一样，把mindhack从webarchive中还原出来
+
+于是参考[https://github.com/evmn/Mind-Hacks](https://github.com/evmn/Mind-Hacks)的经验，请ChatGPT帮忙写脚本，借助web.archive.org，还原mindhacks.cn上的文章。最终一天搞定，完成了这个[项目](https://github.com/yaozeyuan/mindhacks.cn-mirror)。虽然也不一定能持久保存，但预期在十年内，都可以给大家提供一个入口，以正常浏览刘老师的文章
+
+感谢mindhack的引路，感谢时代的AI
 
 点击浏览：https://mindhacks-mirror.yaozeyuan.online
 
