@@ -90,8 +90,49 @@ function processHtml(inputPath, outputPath) {
   /** 3️⃣ 清理 pingback / xmlrpc / api */
   $('link[href*="xmlrpc.php"]').remove();
   $('link[href*="wp-json"]').remove();
+  const rawHtmlContent = $.html()
+  const injectContent =`
+    <!-- 返回主页悬浮按钮 -->
+    <a href="https://mindhacks-mirror.yaozeyuan.online"  target="_blank" class="back-home-minimal" title="返回主页">
+      ← 返回主页
+    </a>
 
-  fs.writeFileSync(outputPath, $.html(), "utf8");
+    <style>
+      .back-home-minimal {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        z-index: 9999;
+
+        padding: 6px 10px;
+        font-size: 13px;
+        line-height: 1;
+
+        color: #555;
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid #ddd;
+        border-radius: 6px;
+
+        text-decoration: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+        backdrop-filter: blur(4px);
+
+        transition: all 0.15s ease;
+      }
+
+      .back-home-minimal:hover {
+        color: #000;
+        border-color: #bbb;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+      }
+    </style>
+  ` 
+  const htmlContent = rawHtmlContent.replace("</body>", `
+    ${injectContent}
+    </body>
+    `)
+
+  fs.writeFileSync(outputPath, htmlContent, "utf8");
 }
 
 function getPostLinks() {
